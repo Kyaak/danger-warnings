@@ -1,1 +1,1 @@
-require "warnings/plugin"
+require 'warnings/plugin'

@@ -1,1 +1,1 @@
-require "warnings/gem_version"
+require 'warnings/gem_version'

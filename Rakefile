@@ -14,9 +14,9 @@ end
 
 desc 'Run RuboCop on the lib/specs directory'
 RuboCop::RakeTask.new(:rubocop) do |task|
-  task.patterns = ['lib/**/*.rb', 'spec/**/*.rb']
+  task.patterns = %w(lib/**/*.rb spec/**/*.rb)
   task.fail_on_error = false
-  task.formatters = %w(json)
+  task.formatters = %w(simple json)
   task.options = %w(--out rubocop-result.json)
 end
 
