@@ -2,3 +2,6 @@
 pkg
 .idea/
 .yardoc
+Gemfile.lock
+coverage
+rubocop-result.json
