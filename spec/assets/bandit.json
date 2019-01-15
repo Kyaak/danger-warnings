@@ -1,0 +1,60 @@
+{
+  "errors": [],
+  "generated_at": "2019-01-08T22:29:03Z",
+  "metrics": {
+    "_totals": {
+      "CONFIDENCE.HIGH": 46.0,
+      "CONFIDENCE.LOW": 0.0,
+      "CONFIDENCE.MEDIUM": 0.0,
+      "CONFIDENCE.UNDEFINED": 0.0,
+      "SEVERITY.HIGH": 0.0,
+      "SEVERITY.LOW": 34.0,
+      "SEVERITY.MEDIUM": 12.0,
+      "SEVERITY.UNDEFINED": 0.0,
+      "loc": 14685,
+      "nosec": 0
+    },
+    "example/CppHeaderParser.py": {
+      "CONFIDENCE.HIGH": 29.0,
+      "CONFIDENCE.LOW": 0.0,
+      "CONFIDENCE.MEDIUM": 0.0,
+      "CONFIDENCE.UNDEFINED": 0.0,
+      "SEVERITY.HIGH": 0.0,
+      "SEVERITY.LOW": 29.0,
+      "SEVERITY.MEDIUM": 0.0,
+      "SEVERITY.UNDEFINED": 0.0,
+      "loc": 2282,
+      "nosec": 0
+    }
+  },
+  "results": [
+    {
+      "code": "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
+      "filename": "example/ply/yacc.py",
+      "issue_confidence": "HIGH",
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with pickle module.",
+      "line_number": 2853,
+      "line_range": [
+        2853
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b403-import-pickle",
+      "test_id": "B403",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "3254                 pkgname = '.'.join(parts[:-1])\n3255                 exec('import %s' % pkgname)\n3256                 srcfile = getattr(sys.modules[pkgname], '__file__', '')\n",
+      "filename": "example/ply/yacc.py",
+      "issue_confidence": "HIGH",
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of exec detected.",
+      "line_number": 3255,
+      "line_range": [
+        3255
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html",
+      "test_id": "B102",
+      "test_name": "exec_used"
+    }
+  ]
+}

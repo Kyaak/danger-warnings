@@ -1,0 +1,20 @@
+{
+  "errors": [],
+  "generated_at": "2019-01-08T22:29:03Z",
+  "metrics": {
+    "_totals": {
+      "CONFIDENCE.HIGH": 0.0,
+      "CONFIDENCE.LOW": 0.0,
+      "CONFIDENCE.MEDIUM": 0.0,
+      "CONFIDENCE.UNDEFINED": 0.0,
+      "SEVERITY.HIGH": 0.0,
+      "SEVERITY.LOW": 0.0,
+      "SEVERITY.MEDIUM": 12.0,
+      "SEVERITY.UNDEFINED": 0.0,
+      "loc": 1000,
+      "nosec": 0
+    }
+  },
+  "results": [
+  ]
+}

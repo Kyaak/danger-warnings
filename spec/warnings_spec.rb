@@ -19,6 +19,13 @@ module Danger
         # json = File.read(File.dirname(__FILE__) + '/support/fixtures/github_pr.json') # example json: `curl https://api.github.com/repos/danger/danger-plugin-template/pulls/18 > github_pr.json`
         # allow(@my_plugin.github).to receive(:pr_json).and_return(json)
       end
+
+      it 'has name' do
+        @my_plugin.report(
+          parser: 'bandit',
+          name: 'blablabla'
+        )
+      end
     end
   end
 end
