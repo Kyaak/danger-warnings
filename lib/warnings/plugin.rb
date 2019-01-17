@@ -1,6 +1,25 @@
 require_relative 'reporter'
 
 module Danger
+  # Create uniform issue reports for different parser types.
+  # @example Create a basic bandit report.
+  #       warnings.report(
+  #         name: 'Bandit Report',
+  #         parser: :bandit,
+  #         file: report/bandit.json
+  #       )
+  #
+  # @example Create a bandit report and comment inline for all files.
+  #       warnings.report(
+  #         name: 'Bandit Report',
+  #         parser: :bandit,
+  #         file: report/bandit.json,
+  #         inline: true,
+  #         filter: false
+  #       )
+  #
+  # @see Kyaak/danger-warnings
+  # @tags warnings, danger, parser, issues, report
   class DangerWarnings < Plugin
     # Whether to comment a markdown report or do an inline comment on the file.
     #
