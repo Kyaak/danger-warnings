@@ -12,7 +12,7 @@ module Warnings
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
       filename: 'example/ply/yacc.py',
       issue_confidence: 'HIGH',
-      issue_severity: 'LOW',
+      issue_severity: :low,
       issue_text: 'Consider possible security implications associated with pickle module.',
       line_number: 2853,
       line_range: [
@@ -81,20 +81,25 @@ module Warnings
 
         context 'missing results' do
           it 'raises error' do
-            expect { @parser.parse(BANDIT_MISSING_RESULTS) }.to raise_error('Missing bandit key \'results\'.')
+            expect { @parser.parse(BANDIT_MISSING_RESULTS) }.to raise_error(BanditParser::ERROR_MISSING_KEY)
           end
         end
 
         context 'missing file' do
           it 'raises error' do
-            expect { @parser.parse('invalid.json') }.to raise_error("File 'invalid.json' does not exist.")
+            file_name = 'invalid.json'
+            expect { @parser.parse(file_name) }.to raise_error(format(Parser::ERROR_FILE_NOT_EXIST, file_name))
           end
         end
       end
 
       describe 'unsupported type' do
         it 'raises error' do
-          expect { @parser.parse('hello.txt') }.to raise_error('File type \'txt\' is not supported for parser Warnings::BanditParser.')
+          file_name = 'hello.txt'
+          ext = File.extname(file_name).delete('.')
+          expect { @parser.parse(file_name) }.to raise_error(format(Parser::ERROR_EXT_NOT_SUPPORTED,
+                                                                    ext,
+                                                                    @parser.class.name))
         end
       end
     end

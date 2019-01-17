@@ -2,6 +2,10 @@ require File.expand_path('spec_helper', __dir__)
 
 module Danger
   describe Danger::DangerWarnings do
+    ASSETS_DIR = File.expand_path('assets', __dir__)
+    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_empty.json".freeze
+    BANDIT_FILE = "#{ASSETS_DIR}/bandit.json".freeze
+
     it 'should be a plugin' do
       expect(Danger::DangerWarnings.new(nil)).to be_a Danger::Plugin
     end
@@ -20,11 +24,12 @@ module Danger
         # allow(@my_plugin.github).to receive(:pr_json).and_return(json)
       end
 
-      it 'has name' do
+      it 'creates a markdown report' do
         @my_plugin.report(
-          parser: 'bandit',
-          name: 'blablabla'
+          parser: :bandit,
+          file: BANDIT_FILE
         )
+        expect(@dangerfile)
       end
     end
   end

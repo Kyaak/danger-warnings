@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>=2.2.0'
 
+  spec.add_runtime_dependency 'abstract_method', '~> 1.2'
   spec.add_runtime_dependency 'danger-plugin-api', '~> 1.0'
 
   # General ruby development

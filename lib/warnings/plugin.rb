@@ -2,10 +2,6 @@ require_relative 'reporter'
 
 module Danger
   class DangerWarnings < Plugin
-    DEFAULT_INLINE = false
-    DEFAULT_FILTER = true
-    DEFAULT_FAIL = false
-
     # Whether to comment a markdown report or do an inline comment on the file.
     #
     # This will be set as default for all reporters used in this danger run.
@@ -27,18 +23,15 @@ module Danger
     # It can still be overridden by setting the value when using #report.
     #
     # @return [Bool] Fail on high issues.
-    attr_accessor :fail
+    attr_accessor :fail_error
 
-    def initialize(_dangerfile)
-      @inline = DEFAULT_INLINE
-      @filter = DEFAULT_FILTER
-      @fail = DEFAULT_FAIL
+    def initialize(dangerfile)
+      super(dangerfile)
     end
 
     def report(*args)
       options = args.first
       reporter = create_reporter(options)
-      reporter.danger = self
       reporter.report
     end
 
@@ -46,15 +39,14 @@ module Danger
 
     # rubocop:disable Metrics/AbcSize
     def create_reporter(options)
-      reporter = Warnings::Reporter.new
-      reporter.danger = self
+      reporter = Warnings::Reporter.new(self)
       reporter.parser = options[:parser]
       reporter.name = options[:name]
       reporter.file = options[:file]
       reporter.baseline = options[:baseline]
-      reporter.inline = options[:inline].nil? ? inline : options[:inline]
-      reporter.filter = options[:filter].nil? ? filter : options[:filter]
-      reporter.fail = options[:fail].nil? ? raise : options[:fail]
+      reporter.inline = options[:inline] unless options[:inline].nil?
+      reporter.filter = options[:filter] unless options[:filter].nil?
+      reporter.fail_error = options[:fail_error] unless options[:fail_error].nil?
       reporter
       # rubocop:enable Metrics/AbcSize
     end
