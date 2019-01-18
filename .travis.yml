@@ -13,6 +13,8 @@ rvm:
 addons:
   sonarcloud:
     organization: "kyaak-github"
+    token:
+      secure: "W3BNwC9uNk85qCO6MN74gYEpZ1J63iQ/1bDS7TE69QZzuvwzcyt4tRB5rH2YXXrDgxX+f+pNEKyordR3C92PKZDcUXTiLJH5eWWBJNKf37yv38dw7hrz48hoCzOXYkIuEO9nU9+SUmQUDTshy3h05cfJOKRQihvaRzucP7OJzb8vXX8UEY2V71Yf6xyxkAzvqogBxyr21yIh90WuSE7MCwFqu05bQIIXao7oILUAWRqh1zHZaIPEWSS8rdldbh9BXSWLHkCgYo6kajZHKo+fG5tol9MLkann5TiqVHoLkTjh76V6zDgWGa5EpMjnSxUKp8KkshVtF8u3QHKkFcFRV51s1t6XRYPKfDRtgOQ3+Yq2+F93L3MNtkgfmrgoKXsZ4Sdf9y2cwSGp+GH0YSjsaTcmC/K2irZuKEOtr44Ye3jfcDzMpZRiGgpvx2+cXXvGWvJoMaOWgyIjJbkjIBKAM4/Tq15uWnv7W5ajaQnxHH/gSaC3OwI3aebPjeJV5/RaBpOGK/MaYS8AohGY8HAlvM+UWRhcI2rZ9sMvMl/jQxjF3BiZwE2KpsNiyoQ8s/wDMJeC27uMFmljyiUXu77OWeWGRV3hWWeaWJLbRbWVJRzoIAsJ/PyZX0LudS5k5lJZePutHHxcf/rAHUyT/eMqbnFtIOOxyH0nR/esvPghz90="
 
 env:
   global:
