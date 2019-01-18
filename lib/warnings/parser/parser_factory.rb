@@ -10,7 +10,7 @@ module Warnings
 
     # Create a new parser implementation.
     #
-    # @param key [Symbol|String] A key symbol / name to identify the parser.
+    # @param type [Symbol] A key symbol / name to identify the parser.
     # @raise If no implementation could be found for the key.
     # @return [Parser] Implementation
     def self.create(type)
