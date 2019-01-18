@@ -10,6 +10,10 @@ rvm:
   - 2.4
   - 2.5
 
+addons:
+  sonarcloud:
+    organization: "kyaak-github"
+
 env:
   global:
     - CC_TEST_REPORTER_ID=9226f0d36ca27b394a8c02615dcb54857e2ffbb5099288307016c5c78718dd98
