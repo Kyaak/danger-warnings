@@ -114,6 +114,7 @@ module Warnings
         before do
           @reporter.parser = :bandit
           @reporter.file = BANDIT_JSON
+          @reporter.filter = false
         end
 
         it 'defaults inline false' do
@@ -156,6 +157,7 @@ module Warnings
         context 'markdown' do
           before do
             @reporter.inline = false
+            @reporter.filter = false
           end
 
           it 'fail_error false generates no error' do
@@ -184,6 +186,7 @@ module Warnings
         context 'inline' do
           before do
             @reporter.inline = true
+            @reporter.filter = false
           end
 
           it 'fail_error false generates no error' do

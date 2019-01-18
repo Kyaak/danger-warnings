@@ -23,14 +23,6 @@ module Danger
         # json = File.read(File.dirname(__FILE__) + '/support/fixtures/github_pr.json') # example json: `curl https://api.github.com/repos/danger/danger-plugin-template/pulls/18 > github_pr.json`
         # allow(@my_plugin.github).to receive(:pr_json).and_return(json)
       end
-
-      it 'creates a markdown report' do
-        @my_plugin.report(
-          parser: :bandit,
-          file: BANDIT_FILE
-        )
-        expect(@dangerfile)
-      end
     end
   end
 end

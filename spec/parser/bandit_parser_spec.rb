@@ -10,7 +10,7 @@ module Warnings
 
     FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
-      filename: 'example/ply/yacc.py',
+      filename: 'example/ply/yacc_1.py',
       issue_confidence: 'HIGH',
       issue_severity: :low,
       issue_text: 'Consider possible security implications associated with pickle module.',
@@ -44,7 +44,7 @@ module Warnings
 
           it 'parses issues' do
             expect(@parser.issues).not_to be_empty
-            expect(@parser.issues.count).to eq(2)
+            expect(@parser.issues.count).to eq(3)
           end
 
           it 'maps name' do
