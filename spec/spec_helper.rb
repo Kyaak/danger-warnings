@@ -11,6 +11,8 @@ require 'danger'
 require 'mocha'
 require 'simplecov'
 
+require_relative 'assets/assets'
+
 SimpleCov.start
 
 if `git remote -v` == ''

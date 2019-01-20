@@ -4,9 +4,6 @@ require 'danger'
 
 module Warnings
   describe Reporter do
-    ASSETS_DIR = File.expand_path('assets', __dir__)
-    BANDIT_JSON = "#{ASSETS_DIR}/bandit.json".freeze
-    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_empty.json".freeze
     BANDIT_FILE_1 = 'example/ply/yacc_1.py'.freeze
 
     before do
@@ -23,22 +20,22 @@ module Warnings
       end
 
       context 'set' do
-        TEST_NAME = 'My Test Name Report'.freeze
+        REPORTER_TEST_NAME = 'My Test Name Report'.freeze
 
         before do
-          @reporter.name = TEST_NAME
+          @reporter.name = REPORTER_TEST_NAME
         end
 
         it 'without parser' do
           expect(@reporter.parser).to be_nil
-          expect(@reporter.name).to eq(TEST_NAME)
+          expect(@reporter.name).to eq(REPORTER_TEST_NAME)
         end
 
         it 'with parser' do
           @reporter.parser = :bandit
           expect(@reporter.parser).not_to be_nil
           expect(@reporter.parser_impl).not_to be_nil
-          expect(@reporter.name).to eq(TEST_NAME)
+          expect(@reporter.name).to eq(REPORTER_TEST_NAME)
         end
       end
 
@@ -90,7 +87,7 @@ module Warnings
 
       it 'does not report markdown if no issues' do
         @reporter.parser = :bandit
-        @reporter.file = BANDIT_EMPTY
+        @reporter.file = Assets::BANDIT_EMPTY
         @reporter.report
         @reporter.inline = false
         expect(@dangerfile.status_report[:markdowns]).to be_empty
@@ -101,7 +98,7 @@ module Warnings
 
       it 'does not report inline if no issues' do
         @reporter.parser = :bandit
-        @reporter.file = BANDIT_EMPTY
+        @reporter.file = Assets::BANDIT_EMPTY
         @reporter.inline = true
         @reporter.report
         expect(@dangerfile.status_report[:markdowns]).to be_empty
@@ -113,7 +110,7 @@ module Warnings
       context 'inline' do
         before do
           @reporter.parser = :bandit
-          @reporter.file = BANDIT_JSON
+          @reporter.file = Assets::BANDIT_JSON
           @reporter.filter = false
         end
 
@@ -147,7 +144,7 @@ module Warnings
       context 'fail_error' do
         before do
           @reporter.parser = :bandit
-          @reporter.file = BANDIT_JSON
+          @reporter.file = Assets::BANDIT_JSON
         end
 
         it 'default fail_error false' do
@@ -216,7 +213,7 @@ module Warnings
       context 'filter' do
         before do
           @reporter.parser = :bandit
-          @reporter.file = BANDIT_JSON
+          @reporter.file = Assets::BANDIT_JSON
           @dangerfile.git.stubs(:modified_files).returns(%W(#{BANDIT_FILE_1}))
         end
 

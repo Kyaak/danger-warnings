@@ -3,10 +3,6 @@ require_relative '../../lib/warnings/parser/bandit_parser'
 
 module Warnings
   describe BanditParser do
-    ASSETS_DIR = File.expand_path('../assets', __dir__)
-    BANDIT_JSON = "#{ASSETS_DIR}/bandit.json".freeze
-    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_empty.json".freeze
-    BANDIT_MISSING_RESULTS = "#{ASSETS_DIR}/bandit_missing_results.json".freeze
 
     FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
@@ -37,7 +33,7 @@ module Warnings
       describe 'json' do
         context 'filled results' do
           before do
-            @parser.parse(BANDIT_JSON)
+            @parser.parse(Assets::BANDIT_JSON)
             @issue = @parser.issues[0]
             expect(@issue).not_to be_nil
           end
@@ -74,14 +70,14 @@ module Warnings
 
         context 'empty results' do
           it 'has no issues' do
-            @parser.parse(BANDIT_EMPTY)
+            @parser.parse(Assets::BANDIT_EMPTY)
             expect(@parser.issues).to be_empty
           end
         end
 
         context 'missing results' do
           it 'raises error' do
-            expect { @parser.parse(BANDIT_MISSING_RESULTS) }.to raise_error(BanditParser::ERROR_MISSING_KEY)
+            expect { @parser.parse(Assets::BANDIT_MISSING_RESULTS) }.to raise_error(BanditParser::ERROR_MISSING_KEY)
           end
         end
 

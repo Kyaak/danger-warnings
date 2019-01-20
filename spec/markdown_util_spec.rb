@@ -3,24 +3,24 @@ require_relative '../lib/warnings/markdown_util'
 
 module Warnings
   describe Warnings::MarkdownUtil do
-    TEST_NAME = 'My Report Name'.freeze
+    MARKDOWN_TEST_REPORT_NAME = 'My Report Name'.freeze
 
     context '#generate' do
       context 'header' do
         it 'adds header name at first line' do
-          result = MarkdownUtil.generate(TEST_NAME, [])
+          result = MarkdownUtil.generate(MARKDOWN_TEST_REPORT_NAME, [])
           header_name = result.split(MarkdownUtil::LINE_SEPARATOR).first
-          expect(header_name).to eq("# #{TEST_NAME}")
+          expect(header_name).to eq("# #{MARKDOWN_TEST_REPORT_NAME}")
         end
 
         it 'adds table header at second line' do
-          result = MarkdownUtil.generate(TEST_NAME, [])
+          result = MarkdownUtil.generate(MARKDOWN_TEST_REPORT_NAME, [])
           table_header = result.split(MarkdownUtil::LINE_SEPARATOR)[1]
           expect(table_header).to eq(MarkdownUtil::TABLE_HEADER)
         end
 
         it 'adds table separator at third line' do
-          result = MarkdownUtil.generate(TEST_NAME, [])
+          result = MarkdownUtil.generate(MARKDOWN_TEST_REPORT_NAME, [])
           table_header = result.split(MarkdownUtil::LINE_SEPARATOR)[2]
           expect(table_header).to eq(MarkdownUtil::TABLE_SEPARATOR)
         end
@@ -36,7 +36,7 @@ module Warnings
           @issue.line = 1234
           @issue.id = 'B403'
 
-          result = MarkdownUtil.generate(TEST_NAME, [@issue])
+          result = MarkdownUtil.generate(MARKDOWN_TEST_REPORT_NAME, [@issue])
           @issue_line = result.split(MarkdownUtil::LINE_SEPARATOR)[3]
           @issue_columns = @issue_line.split(MarkdownUtil::COLUMN_SEPARATOR)
         end
