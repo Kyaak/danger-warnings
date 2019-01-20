@@ -44,7 +44,7 @@ module Warnings
         it 'first column contains severity upcase' do
           text = @issue_columns[0]
           expect(text).not_to be_nil
-          expect(text).to eq(@issue.severity.to_s.upcase)
+          expect(text).to eq(@issue.severity.to_s.capitalize)
         end
 
         it 'second column contains filename:line' do

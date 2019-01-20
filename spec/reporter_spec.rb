@@ -205,7 +205,7 @@ module Warnings
             expect(@dangerfile.status_report[:messages]).to be_empty
             expect(@dangerfile.status_report[:errors]).not_to be_empty
             error = @dangerfile.status_report[:errors].first
-            expect(error).to include('HIGH')
+            expect(error).to include('High')
           end
         end
       end

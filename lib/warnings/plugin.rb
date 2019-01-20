@@ -21,7 +21,7 @@ module Danger
   # @see Kyaak/danger-warnings
   # @tags warnings, danger, parser, issues, report
   class DangerWarnings < Plugin
-    # Whether to comment a markdown report or do an inline comment on the file.
+    # Whether to comment as markdown report or do an inline comment on the file.
     #
     # This will be set as default for all reporters used in this danger run.
     # It can still be overridden by setting the value when using #report.

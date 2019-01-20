@@ -4,8 +4,8 @@ module Warnings
   # Utility class to write the markdown report.
   module MarkdownUtil
     TABLE_HEADER = 'Severity|File|Message'.freeze
-    TABLE_SEPARATOR = '---'.freeze
     COLUMN_SEPARATOR = '|'.freeze
+    TABLE_SEPARATOR = "---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---".freeze
     LINE_SEPARATOR = "\n".freeze
 
     module_function
@@ -47,7 +47,7 @@ module Warnings
     def issues(issues)
       result = ''
       issues.each do |issue|
-        result << issue.severity.to_s.upcase
+        result << issue.severity.to_s.capitalize
         result << COLUMN_SEPARATOR
         result << "#{issue.file_name}:#{issue.line}"
         result << COLUMN_SEPARATOR
