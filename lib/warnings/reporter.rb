@@ -134,7 +134,7 @@ module Warnings
     end
 
     def inline_text(issue)
-      "[#{issue.severity.to_s.capitalize}-#{issue.id}-#{issue.name}]\n#{issue.message}"
+      "#{issue.severity.to_s.capitalize}\n[#{issue.id}-#{issue.name}]\n#{issue.message}"
     end
 
     def markdown_comment
