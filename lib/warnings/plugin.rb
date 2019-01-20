@@ -48,10 +48,19 @@ module Danger
       super(dangerfile)
     end
 
+    # Create a report for given arguments.
+    #         name: 'Bandit Report',
+    #         parser: :bandit,
+    #         file: report/bandit.json,
+    #         inline: true,
+    #         filter: false
+    # @param args List of arguments to be used.
+    # @return [Reporter] The current reporter class which handles the issues.
     def report(*args)
       options = args.first
       reporter = create_reporter(options)
       reporter.report
+      reporter
     end
 
     private
