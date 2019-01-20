@@ -15,7 +15,7 @@ module Warnings
     # @return [Parser] Implementation
     def self.create(type)
       key = type
-      key = key.to_sym if key.method_exists?(:to_sym)
+      key = key.to_sym if key.respond_to?(:to_sym)
       parser = AVAILABLE_PARSERS[key]
       raise(format(ERROR_NOT_SUPPORTED, key)) if parser.nil?
 
