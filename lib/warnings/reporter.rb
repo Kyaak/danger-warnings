@@ -124,13 +124,17 @@ module Warnings
 
     def inline_comment
       @issues.each do |issue|
-        text = "[#{issue.severity.to_s.upcase}-#{issue.id}-#{issue.name}]\n#{issue.message}"
+        text = inline_text(issue)
         if fail_error && high_issue?(issue)
           @danger.fail(text, line: issue.line, file: issue.file_name)
         else
           @danger.warn(text, line: issue.line, file: issue.file_name)
         end
       end
+    end
+
+    def inline_text(issue)
+      "[#{issue.severity.to_s.upcase}-#{issue.id}-#{issue.name}]\n#{issue.message}"
     end
 
     def markdown_comment

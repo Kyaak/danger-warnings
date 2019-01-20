@@ -3,7 +3,6 @@ require_relative '../../lib/warnings/parser/bandit_parser'
 
 module Warnings
   describe BanditParser do
-
     FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
       filename: 'example/ply/yacc_1.py',
