@@ -201,6 +201,6 @@ These will override the configuration for this report **only**.
 
 ## Parser
 
-|Name|ID|File Format|
-|---|---|---|
-|[bandit](https://github.com/PyCQA/bandit)|bandit|json|
+|Number|Name|ID|File Format|
+|:---:|---|---|---|
+|1|[bandit](https://github.com/PyCQA/bandit)|bandit|json|
