@@ -79,10 +79,17 @@
 
 </br>
 
-This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various lint [tools](#parser). <br>
+This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various lint [tools](#parsers). <br>
 The purpose is a simple to use plugin regardless of the linter tool used to create the issues.
 
-## How does it look
+## Table of Contents
+- [How it looks like](#how-does-it-look)
+- [Installation](#installation)
+- [Examples](#examples)
+- [Configuration](#configuration)
+- [Parsers](#parsers)
+
+## How it looks like
 
 ### As markdown
 **Bandit Report**
@@ -106,7 +113,7 @@ Consider possible security implications associated with pickle module.
 $ gem install danger-warnings
 ``` 
 
-## Usage
+## Examples
 ```text
 Methods and attributes from this plugin are available in 
 your `Dangerfile` under the `warnings` namespace.
@@ -188,18 +195,18 @@ Configure the details of your report using the arguments passed by.
 |Parameter|Class|Description|
 |---|---|---|
 |name|`String`| A custom name for this report. If none is given, the parser name is used. Useful to separate different reports using the same common style (e.g. checkstyle).
-|parser|`Symbol`, `String`| Define the parser to evaluate the report file. Must be a key of the supported [parser](#parser)
+|parser|`Symbol`, `String`| Define the parser to evaluate the report file. Must be a key of the supported [parser](#parsers)
 |file|`String`| Path to the file to read and parse.
 |baseline|`String`| Define a baseline for your files. Useful if the report removes a path segment but is required to identify them in the repository. E.g. `/src/main/java`
 
 All [default](#override-default-settings) fields can be passed as parameters to `report`.
-* inline
-* filter
-* fail_error
+- inline
+- filter
+- fail_error
 
 These will override the configuration for this report **only**.
 
-## Parser
+## Parsers
 
 |Number|Name|ID|File Format|
 |:---:|---|---|---|
