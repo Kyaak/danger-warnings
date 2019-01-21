@@ -5,3 +5,4 @@ pkg
 Gemfile.lock
 coverage
 rubocop-result.json
+*.gem

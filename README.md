@@ -1,17 +1,86 @@
-[![Build Status](https://travis-ci.org/Kyaak/danger-warnings.svg?branch=master)](https://travis-ci.org/Kyaak/danger-warnings)
-[![Maintainability](https://api.codeclimate.com/v1/badges/2e657e2a49ddf9696ece/maintainability)](https://codeclimate.com/github/Kyaak/danger-warnings/maintainability)
-[![Inline docs](http://inch-ci.org/github/Kyaak/danger-warnings.svg?branch=master)](http://inch-ci.org/github/Kyaak/danger-warnings)
+<h1 align="center">danger-warnings</h1>
 
-# danger-warnings
+<div align="center">
+  <!-- Sonar Cloud -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg"
+      alt="Sonar Cloud" />
+  </a>
+</div>
 
-This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various [tools](#parser). <br>
+</br>
+
+<div align="center">
+  <!-- Build Status -->
+  <a href="https://travis-ci.org/Kyaak/danger-warnings">
+    <img src="https://img.shields.io/travis/choojs/choo/master.svg"
+      alt="Build Status" />
+  </a>
+  <!-- Quality Gate -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=alert_status"
+      alt="Quality Gate" />
+  </a>
+</div>
+
+<div align="center">
+  <!-- Reliability Rating -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=reliability_rating"
+      alt="Reliability Rating" />
+  </a>
+  <!-- Security Rating -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=security_rating"
+      alt="Security Rating" />
+  </a>
+  <!-- Maintainabiltiy -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=sqale_rating"
+      alt="Maintainabiltiy" />
+  </a>
+</div>
+
+<div align="center">
+  <!-- Code Smells -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=code_smells"
+      alt="Code Smells" />
+  </a>
+  <!-- Bugs -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=bugs"
+      alt="Bugs" />
+  </a>
+  <!-- Vulnerabilities -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=vulnerabilities"
+      alt="Vulnerabilities" />
+  </a>
+  <!-- Technical Dept -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=sqale_index"
+      alt="Technical Dept" />
+  </a>
+</div>
+
+<div align="center">
+  <!-- Coverage -->
+  <a href="https://sonarcloud.io/dashboard?id=Kyaak_danger-warnings">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Kyaak_danger-warnings&metric=coverage"
+      alt="Coverage" />
+  </a>
+  <!-- Docs -->
+  <a href="http://inch-ci.org/github/Kyaak/danger-warnings">
+    <img src="http://inch-ci.org/github/Kyaak/danger-warnings.svg?branch=master"
+      alt="Docs" />
+  </a>
+</div>
+
+</br>
+
+This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various lint [tools](#parser). <br>
 The purpose is a simple to use plugin regardless of the linter tool used to create the issues.
-
-## Installation
-
-```bash
-gem install danger-warnings
-``` 
 
 ## How does it look
 
@@ -31,12 +100,17 @@ Low
 Consider possible security implications associated with pickle module.
 ```
 
+## Installation
+
+```bash
+$ gem install danger-warnings
+``` 
+
 ## Usage
 ```text
 Methods and attributes from this plugin are available in 
 your `Dangerfile` under the `warnings` namespace.
 ```
-
 
 #### Minimal example:
 ```ruby
@@ -47,7 +121,7 @@ warnings.report(
 )
 ```
 
-#### Simple example:
+#### Simple example: 
 ```ruby
 # Create a bandit report with a custom name, fails if any high warning exists 
 # and evaluates all issues (not only the changed files) .
@@ -93,14 +167,13 @@ warnings.report(
   inline: false,
   fail_error: false      
 )
-
 ```
 
 ## Configuration
 
 #### Override default settings
 These values apply to all reports. <br>
-It is possible to override the values in the `#report` method.
+It is possible to override the values in the `report` method.
 
 |Field|Default|Description|
 |---|---|---|
@@ -119,7 +192,7 @@ Configure the details of your report using the arguments passed by.
 |file|`String`| Path to the file to read and parse.
 |baseline|`String`| Define a baseline for your files. Useful if the report removes a path segment but is required to identify them in the repository. E.g. `/src/main/java`
 
-Additional all [default](#override-default-settings) fields can be passed as parameter to `report`.
+All [default](#override-default-settings) fields can be passed as parameters to `report`.
 * inline
 * filter
 * fail_error
@@ -128,7 +201,6 @@ These will override the configuration for this report **only**.
 
 ## Parser
 
-|Tool|Key|Format|
+|Name|ID|File Format|
 |---|---|---|
 |[bandit](https://github.com/PyCQA/bandit)|bandit|json|
-
