@@ -23,8 +23,8 @@ module Warnings
       issue = Issue.new
       issue.file_name = match[0]
       issue.line = match[1]
-      issue.id = match[2]
-      issue.severity = map_severity(issue.id)
+      issue.category = match[2]
+      issue.severity = map_severity(issue.category)
       issue.message = match[3]
       @issues << issue
     end

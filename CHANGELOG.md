@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added 
 - PylintParser - Support pylint formatted reports
 
+### Changed
+- Renamed issue.id to issue.category
+
 ## [0.0.1] - 2019-01-21
 ### Added
 - Initial release

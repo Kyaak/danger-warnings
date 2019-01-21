@@ -6,7 +6,7 @@ module Warnings
     PYLINT_FIRST_ISSUE = {
       filename: 'test_project/__init__.py',
       line: '1',
-      id: 'F403',
+      category: 'F403',
       message: "'from test_project import *' used; unable to detect undefined names"
     }.freeze
 
@@ -30,7 +30,7 @@ module Warnings
         end
 
         it 'maps id' do
-          expect(@issue.id).to eq(PYLINT_FIRST_ISSUE[:id])
+          expect(@issue.category).to eq(PYLINT_FIRST_ISSUE[:category])
         end
 
         it 'maps line' do

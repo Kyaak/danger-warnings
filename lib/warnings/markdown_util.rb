@@ -51,7 +51,7 @@ module Warnings
         result << COLUMN_SEPARATOR
         result << "#{issue.file_name}:#{issue.line}"
         result << COLUMN_SEPARATOR
-        result << "[#{issue.id}-#{issue.name}] #{issue.message}"
+        result << "[#{issue.category}-#{issue.name}] #{issue.message}"
         result << LINE_SEPARATOR
       end
       # rubocop:enable Metrics/AbcSize

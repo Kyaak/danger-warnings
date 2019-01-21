@@ -34,7 +34,7 @@ module Warnings
           @issue.file_name = 'hello/test.py'
           @issue.message = 'Consider possible security implications associated with pickle module.'
           @issue.line = 1234
-          @issue.id = 'B403'
+          @issue.category = 'B403'
 
           result = MarkdownUtil.generate(MARKDOWN_TEST_REPORT_NAME, [@issue])
           @issue_line = result.split(MarkdownUtil::LINE_SEPARATOR)[3]
@@ -56,7 +56,7 @@ module Warnings
         it 'third column contains [id-name]' do
           text = @issue_columns[2]
           expect(text).not_to be_nil
-          match = text.match(/^\[#{@issue.id}-#{@issue.name}\]/)
+          match = text.match(/^\[#{@issue.category}-#{@issue.name}\]/)
           expect(match).not_to be_nil
         end
       end

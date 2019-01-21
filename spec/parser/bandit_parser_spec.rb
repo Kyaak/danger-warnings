@@ -47,7 +47,7 @@ module Warnings
           end
 
           it 'maps id' do
-            expect(@issue.id).to eq(BANDIT_FIRST_ISSUE[:test_id])
+            expect(@issue.category).to eq(BANDIT_FIRST_ISSUE[:test_id])
           end
 
           it 'maps line' do
