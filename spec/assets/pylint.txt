@@ -1,0 +1,582 @@
+test_project/__init__.py:1: [F403] 'from test_project import *' used; unable to detect undefined names
+test_project/__init__.py:1: [F401] 'test_project.*' imported but unused
+test_project/__init__.py:1: [W292] no newline at end of file
+test_project/Singleton.py:37: [W292] no newline at end of file
+test_project/test_project.py:1: [F403] 'from Singleton import *' used; unable to detect undefined names
+test_project/test_project.py:2: [F401] 'thread' imported but unused
+test_project/test_project.py:4: [F401] 'sys' imported but unused
+test_project/test_project.py:4: [F401] 'time' imported but unused
+test_project/test_project.py:4: [E401] multiple imports on one line
+test_project/test_project.py:7: [F401] 'multiprocessing.dummy.Pool as ThreadPool' imported but unused
+test_project/test_project.py:9: [F401] 'os' imported but unused
+test_project/test_project.py:9: [E401] multiple imports on one line
+test_project/test_project.py:12: [E302] expected 2 blank lines, found 1
+test_project/test_project.py:12: [F405] 'Singleton' may be undefined, or defined from star imports: Singleton
+test_project/test_project.py:14: [W293] blank line contains whitespace
+test_project/test_project.py:21: [E501] line too long (82 > 79 characters)
+test_project/test_project.py:24: [E501] line too long (94 > 79 characters)
+test_project/test_project.py:25: [W293] blank line contains whitespace
+test_project/test_project.py:27: [E303] too many blank lines (2)
+test_project/test_project.py:28: [E225] missing whitespace around operator
+test_project/test_project.py:28: [E211] whitespace before '('
+test_project/test_project.py:39: [W293] blank line contains whitespace
+test_project/test_project.py:43: [W293] blank line contains whitespace
+test_project/test_project.py:48: [E303] too many blank lines (2)
+test_project/test_project.py:50: [E701] multiple statements on one line (colon)
+test_project/test_project.py:50: [W291] trailing whitespace
+test_project/test_project.py:54: [E701] multiple statements on one line (colon)
+test_project/test_project.py:54: [E231] missing whitespace after ','
+test_project/test_project.py:54: [E501] line too long (113 > 79 characters)
+test_project/test_project.py:55: [E701] multiple statements on one line (colon)
+test_project/test_project.py:55: [E231] missing whitespace after ','
+test_project/test_project.py:55: [E501] line too long (131 > 79 characters)
+test_project/test_project.py:56: [E701] multiple statements on one line (colon)
+test_project/test_project.py:56: [E501] line too long (111 > 79 characters)
+test_project/test_project.py:57: [E701] multiple statements on one line (colon)
+test_project/test_project.py:57: [W291] trailing whitespace
+test_project/test_project.py:58: [E722] do not use bare 'except'
+test_project/test_project.py:59: [E501] line too long (106 > 79 characters)
+test_project/test_project.py:66: [E501] line too long (165 > 79 characters)
+test_project/test_project.py:68: [E501] line too long (125 > 79 characters)
+test_project/test_project.py:70: [E501] line too long (84 > 79 characters)
+test_project/test_project.py:74: [W291] trailing whitespace
+test_project/test_project.py:81: [W293] blank line contains whitespace
+test_project/test_project.py:82: [W293] blank line contains whitespace
+test_project/test_project.py:83: [W293] blank line contains whitespace
+test_project/test_project.py:86: [E303] too many blank lines (5)
+test_project/test_project.py:91: [W291] trailing whitespace
+test_project/test_project.py:92: [W291] trailing whitespace
+test_project/test_project.py:94: [W291] trailing whitespace
+test_project/test_project.py:102: [E501] line too long (100 > 79 characters)
+test_project/test_project.py:103: [E111] indentation is not a multiple of four
+test_project/test_project.py:104: [E111] indentation is not a multiple of four
+test_project/test_project.py:105: [E111] indentation is not a multiple of four
+test_project/test_project.py:106: [E111] indentation is not a multiple of four
+test_project/test_project.py:107: [E111] indentation is not a multiple of four
+test_project/test_project.py:108: [E111] indentation is not a multiple of four
+test_project/test_project.py:109: [E111] indentation is not a multiple of four
+test_project/test_project.py:114: [E402] module level import not at top of file
+test_project/test_project.py:114: [E305] expected 2 blank lines after class or function definition, found 1
+test_project/test_project.py:114: [F811] redefinition of unused 'Mode' from line 90
+test_project/test_project.py:115: [E302] expected 2 blank lines, found 0
+test_project/test_project.py:115: [E251] unexpected spaces around keyword / parameter equals
+test_project/test_project.py:115: [E251] unexpected spaces around keyword / parameter equals
+test_project/test_project.py:115: [E251] unexpected spaces around keyword / parameter equals
+test_project/test_project.py:115: [E251] unexpected spaces around keyword / parameter equals
+test_project/test_project.py:117: [E306] expected 1 blank line before a nested definition, found 0
+test_project/test_project.py:119: [E306] expected 1 blank line before a nested definition, found 0
+test_project/test_project.py:120: [W291] trailing whitespace
+test_project/test_project.py:123: [W391] blank line at end of file
+test_project/tests/IO_performance_testing.py:1: [F403] 'from test_project import *' used; unable to detect undefined names
+test_project/tests/IO_performance_testing.py:3: [F401] 'numpy' imported but unused
+test_project/tests/IO_performance_testing.py:8: [E302] expected 2 blank lines, found 1
+test_project/tests/IO_performance_testing.py:13: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:15: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:17: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:19: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:26: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:28: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:30: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:32: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:39: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:41: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:43: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:45: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:52: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:54: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:56: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:58: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:65: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:67: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:69: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:71: [E301] expected 1 blank line, found 0
+test_project/tests/IO_performance_testing.py:74: [E302] expected 2 blank lines, found 1
+test_project/tests/IO_performance_testing.py:79: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:85: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:86: [E501] line too long (103 > 79 characters)
+test_project/tests/IO_performance_testing.py:92: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:93: [E501] line too long (109 > 79 characters)
+test_project/tests/IO_performance_testing.py:99: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:100: [E501] line too long (107 > 79 characters)
+test_project/tests/IO_performance_testing.py:106: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:107: [E501] line too long (107 > 79 characters)
+test_project/tests/IO_performance_testing.py:113: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:114: [E501] line too long (109 > 79 characters)
+test_project/tests/IO_performance_testing.py:116: [E302] expected 2 blank lines, found 1
+test_project/tests/IO_performance_testing.py:119: [W293] blank line contains whitespace
+test_project/tests/IO_performance_testing.py:121: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:123: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:127: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:130: [E501] line too long (104 > 79 characters)
+test_project/tests/IO_performance_testing.py:131: [W293] blank line contains whitespace
+test_project/tests/IO_performance_testing.py:132: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:132: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:132: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:132: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:136: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:138: [E501] line too long (110 > 79 characters)
+test_project/tests/IO_performance_testing.py:140: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:140: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:140: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:140: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:140: [E501] line too long (83 > 79 characters)
+test_project/tests/IO_performance_testing.py:144: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:146: [E501] line too long (101 > 79 characters)
+test_project/tests/IO_performance_testing.py:148: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:148: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:148: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:148: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:148: [E501] line too long (83 > 79 characters)
+test_project/tests/IO_performance_testing.py:152: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:154: [E501] line too long (101 > 79 characters)
+test_project/tests/IO_performance_testing.py:156: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:156: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:156: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:156: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:156: [E501] line too long (87 > 79 characters)
+test_project/tests/IO_performance_testing.py:160: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:162: [E501] line too long (103 > 79 characters)
+test_project/tests/IO_performance_testing.py:164: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:168: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:170: [E501] line too long (104 > 79 characters)
+test_project/tests/IO_performance_testing.py:171: [W293] blank line contains whitespace
+test_project/tests/IO_performance_testing.py:172: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:172: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:172: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:172: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:176: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:178: [E501] line too long (110 > 79 characters)
+test_project/tests/IO_performance_testing.py:180: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:180: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:180: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:180: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:180: [E501] line too long (83 > 79 characters)
+test_project/tests/IO_performance_testing.py:184: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:186: [E501] line too long (101 > 79 characters)
+test_project/tests/IO_performance_testing.py:188: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:188: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:188: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:188: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:188: [E501] line too long (83 > 79 characters)
+test_project/tests/IO_performance_testing.py:192: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:194: [E501] line too long (101 > 79 characters)
+test_project/tests/IO_performance_testing.py:196: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:196: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:196: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:196: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:196: [E501] line too long (87 > 79 characters)
+test_project/tests/IO_performance_testing.py:200: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:202: [E501] line too long (104 > 79 characters)
+test_project/tests/IO_performance_testing.py:204: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:208: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:210: [E501] line too long (105 > 79 characters)
+test_project/tests/IO_performance_testing.py:211: [W293] blank line contains whitespace
+test_project/tests/IO_performance_testing.py:212: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:212: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:212: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:212: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:216: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:218: [E501] line too long (111 > 79 characters)
+test_project/tests/IO_performance_testing.py:220: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:220: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:220: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:220: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:220: [E501] line too long (83 > 79 characters)
+test_project/tests/IO_performance_testing.py:224: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:226: [E501] line too long (102 > 79 characters)
+test_project/tests/IO_performance_testing.py:228: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:228: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:228: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:228: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:228: [E501] line too long (83 > 79 characters)
+test_project/tests/IO_performance_testing.py:232: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:234: [E501] line too long (102 > 79 characters)
+test_project/tests/IO_performance_testing.py:236: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:236: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:236: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/IO_performance_testing.py:236: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/IO_performance_testing.py:236: [E501] line too long (87 > 79 characters)
+test_project/tests/IO_performance_testing.py:240: [F841] local variable 'data' is assigned to but never used
+test_project/tests/IO_performance_testing.py:242: [E501] line too long (104 > 79 characters)
+test_project/tests/IO_performance_testing.py:255: [E701] multiple statements on one line (colon)
+test_project/tests/IO_performance_testing.py:256: [E701] multiple statements on one line (colon)
+test_project/tests/IO_performance_testing.py:256: [E501] line too long (85 > 79 characters)
+test_project/tests/IO_performance_testing.py:257: [E701] multiple statements on one line (colon)
+test_project/tests/IO_performance_testing.py:257: [E501] line too long (81 > 79 characters)
+test_project/tests/IO_performance_testing.py:258: [E701] multiple statements on one line (colon)
+test_project/tests/IO_performance_testing.py:258: [E501] line too long (81 > 79 characters)
+test_project/tests/IO_performance_testing.py:259: [E701] multiple statements on one line (colon)
+test_project/tests/IO_performance_testing.py:259: [E501] line too long (85 > 79 characters)
+test_project/tests/IO_performance_testing.py:260: [W293] blank line contains whitespace
+test_project/tests/IO_performance_testing.py:263: [E303] too many blank lines (3)
+test_project/tests/performance_testing.py:1: [F403] 'from test_project import *' used; unable to detect undefined names
+test_project/tests/performance_testing.py:6: [E302] expected 2 blank lines, found 1
+test_project/tests/performance_testing.py:10: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:12: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:15: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:17: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:21: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:23: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:25: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:27: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:34: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:36: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:38: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:40: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:47: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:49: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:51: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:53: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:60: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:62: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:64: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:66: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:73: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:75: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:77: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:79: [E301] expected 1 blank line, found 0
+test_project/tests/performance_testing.py:82: [E302] expected 2 blank lines, found 1
+test_project/tests/performance_testing.py:87: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:93: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:94: [E501] line too long (104 > 79 characters)
+test_project/tests/performance_testing.py:100: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:101: [E501] line too long (110 > 79 characters)
+test_project/tests/performance_testing.py:107: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:108: [E501] line too long (108 > 79 characters)
+test_project/tests/performance_testing.py:114: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:115: [E501] line too long (108 > 79 characters)
+test_project/tests/performance_testing.py:121: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:122: [E501] line too long (110 > 79 characters)
+test_project/tests/performance_testing.py:124: [E302] expected 2 blank lines, found 1
+test_project/tests/performance_testing.py:127: [W293] blank line contains whitespace
+test_project/tests/performance_testing.py:129: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:131: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:133: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:133: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:134: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:134: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:138: [E501] line too long (105 > 79 characters)
+test_project/tests/performance_testing.py:139: [W293] blank line contains whitespace
+test_project/tests/performance_testing.py:140: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:140: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:140: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:140: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:140: [E501] line too long (80 > 79 characters)
+test_project/tests/performance_testing.py:142: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:142: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:143: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:143: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:147: [E501] line too long (111 > 79 characters)
+test_project/tests/performance_testing.py:149: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:149: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:149: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:149: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:149: [E501] line too long (84 > 79 characters)
+test_project/tests/performance_testing.py:151: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:151: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:152: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:152: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:156: [E501] line too long (102 > 79 characters)
+test_project/tests/performance_testing.py:158: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:158: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:158: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:158: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:158: [E501] line too long (84 > 79 characters)
+test_project/tests/performance_testing.py:160: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:160: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:161: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:161: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:165: [E501] line too long (102 > 79 characters)
+test_project/tests/performance_testing.py:167: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:167: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:167: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:167: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:167: [E501] line too long (88 > 79 characters)
+test_project/tests/performance_testing.py:169: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:169: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:170: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:170: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:174: [E501] line too long (104 > 79 characters)
+test_project/tests/performance_testing.py:176: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:178: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:178: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:179: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:179: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:183: [E501] line too long (105 > 79 characters)
+test_project/tests/performance_testing.py:184: [W293] blank line contains whitespace
+test_project/tests/performance_testing.py:185: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:185: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:185: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:185: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:185: [E501] line too long (80 > 79 characters)
+test_project/tests/performance_testing.py:187: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:187: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:188: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:188: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:192: [E501] line too long (111 > 79 characters)
+test_project/tests/performance_testing.py:194: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:194: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:194: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:194: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:194: [E501] line too long (84 > 79 characters)
+test_project/tests/performance_testing.py:196: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:196: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:197: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:197: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:201: [E501] line too long (102 > 79 characters)
+test_project/tests/performance_testing.py:203: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:203: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:203: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:203: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:203: [E501] line too long (84 > 79 characters)
+test_project/tests/performance_testing.py:205: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:205: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:206: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:206: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:210: [E501] line too long (102 > 79 characters)
+test_project/tests/performance_testing.py:212: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:212: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:212: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:212: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:212: [E501] line too long (88 > 79 characters)
+test_project/tests/performance_testing.py:214: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:214: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:215: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:215: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:219: [E501] line too long (105 > 79 characters)
+test_project/tests/performance_testing.py:221: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:223: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:223: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:224: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:224: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:228: [E501] line too long (106 > 79 characters)
+test_project/tests/performance_testing.py:229: [W293] blank line contains whitespace
+test_project/tests/performance_testing.py:230: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:230: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:230: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:230: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:230: [E501] line too long (80 > 79 characters)
+test_project/tests/performance_testing.py:232: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:232: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:233: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:233: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:237: [E501] line too long (112 > 79 characters)
+test_project/tests/performance_testing.py:239: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:239: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:239: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:239: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:239: [E501] line too long (84 > 79 characters)
+test_project/tests/performance_testing.py:241: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:241: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:242: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:242: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:246: [E501] line too long (103 > 79 characters)
+test_project/tests/performance_testing.py:248: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:248: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:248: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:248: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:248: [E501] line too long (84 > 79 characters)
+test_project/tests/performance_testing.py:250: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:250: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:251: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:251: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:255: [E501] line too long (103 > 79 characters)
+test_project/tests/performance_testing.py:257: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:257: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:257: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/performance_testing.py:257: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/performance_testing.py:257: [E501] line too long (88 > 79 characters)
+test_project/tests/performance_testing.py:259: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:259: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:260: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:260: [E231] missing whitespace after ','
+test_project/tests/performance_testing.py:264: [E501] line too long (105 > 79 characters)
+test_project/tests/performance_testing.py:277: [E701] multiple statements on one line (colon)
+test_project/tests/performance_testing.py:278: [E701] multiple statements on one line (colon)
+test_project/tests/performance_testing.py:278: [E501] line too long (87 > 79 characters)
+test_project/tests/performance_testing.py:279: [E701] multiple statements on one line (colon)
+test_project/tests/performance_testing.py:279: [E501] line too long (83 > 79 characters)
+test_project/tests/performance_testing.py:280: [E701] multiple statements on one line (colon)
+test_project/tests/performance_testing.py:280: [E501] line too long (83 > 79 characters)
+test_project/tests/performance_testing.py:281: [E701] multiple statements on one line (colon)
+test_project/tests/performance_testing.py:281: [E501] line too long (87 > 79 characters)
+test_project/tests/performance_testing.py:282: [W293] blank line contains whitespace
+test_project/tests/performance_testing.py:285: [E303] too many blank lines (3)
+test_project/tests/network_performance_testing.py:1: [F403] 'from test_project import *' used; unable to detect undefined names
+test_project/tests/network_performance_testing.py:3: [F401] 'numpy' imported but unused
+test_project/tests/network_performance_testing.py:5: [F401] 'os.getcwd' imported but unused
+test_project/tests/network_performance_testing.py:6: [F401] 'json' imported but unused
+test_project/tests/network_performance_testing.py:11: [E303] too many blank lines (3)
+test_project/tests/network_performance_testing.py:16: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:18: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:20: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:22: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:29: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:31: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:33: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:35: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:42: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:44: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:46: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:48: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:55: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:57: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:59: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:61: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:68: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:70: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:72: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:74: [E301] expected 1 blank line, found 0
+test_project/tests/network_performance_testing.py:77: [E302] expected 2 blank lines, found 1
+test_project/tests/network_performance_testing.py:82: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:88: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:89: [E501] line too long (108 > 79 characters)
+test_project/tests/network_performance_testing.py:95: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:96: [E501] line too long (114 > 79 characters)
+test_project/tests/network_performance_testing.py:102: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:103: [E501] line too long (112 > 79 characters)
+test_project/tests/network_performance_testing.py:109: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:110: [E501] line too long (112 > 79 characters)
+test_project/tests/network_performance_testing.py:116: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:117: [E501] line too long (114 > 79 characters)
+test_project/tests/network_performance_testing.py:119: [E302] expected 2 blank lines, found 1
+test_project/tests/network_performance_testing.py:122: [W293] blank line contains whitespace
+test_project/tests/network_performance_testing.py:124: [F405] 'PyBus' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:126: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:128: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:128: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:128: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:130: [E501] line too long (109 > 79 characters)
+test_project/tests/network_performance_testing.py:131: [W293] blank line contains whitespace
+test_project/tests/network_performance_testing.py:132: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:132: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:132: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:132: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:132: [E501] line too long (84 > 79 characters)
+test_project/tests/network_performance_testing.py:134: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:134: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:134: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:136: [E501] line too long (115 > 79 characters)
+test_project/tests/network_performance_testing.py:138: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:138: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:138: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:138: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:138: [E501] line too long (88 > 79 characters)
+test_project/tests/network_performance_testing.py:140: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:140: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:140: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:142: [E501] line too long (106 > 79 characters)
+test_project/tests/network_performance_testing.py:144: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:144: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:144: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:144: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:144: [E501] line too long (88 > 79 characters)
+test_project/tests/network_performance_testing.py:146: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:146: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:146: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:148: [E501] line too long (106 > 79 characters)
+test_project/tests/network_performance_testing.py:150: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:150: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:150: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:150: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:150: [E501] line too long (92 > 79 characters)
+test_project/tests/network_performance_testing.py:152: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:152: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:152: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:154: [E501] line too long (108 > 79 characters)
+test_project/tests/network_performance_testing.py:156: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:158: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:158: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:158: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:160: [E501] line too long (109 > 79 characters)
+test_project/tests/network_performance_testing.py:161: [W293] blank line contains whitespace
+test_project/tests/network_performance_testing.py:162: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:162: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:162: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:162: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:162: [E501] line too long (84 > 79 characters)
+test_project/tests/network_performance_testing.py:164: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:164: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:164: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:166: [E501] line too long (115 > 79 characters)
+test_project/tests/network_performance_testing.py:168: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:168: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:168: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:168: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:168: [E501] line too long (88 > 79 characters)
+test_project/tests/network_performance_testing.py:170: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:170: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:170: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:172: [E501] line too long (106 > 79 characters)
+test_project/tests/network_performance_testing.py:174: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:174: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:174: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:174: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:174: [E501] line too long (88 > 79 characters)
+test_project/tests/network_performance_testing.py:176: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:176: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:176: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:178: [E501] line too long (106 > 79 characters)
+test_project/tests/network_performance_testing.py:180: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:180: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:180: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:180: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:180: [E501] line too long (92 > 79 characters)
+test_project/tests/network_performance_testing.py:182: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:182: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:182: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:184: [E501] line too long (109 > 79 characters)
+test_project/tests/network_performance_testing.py:186: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:188: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:188: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:188: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:190: [E501] line too long (110 > 79 characters)
+test_project/tests/network_performance_testing.py:191: [W293] blank line contains whitespace
+test_project/tests/network_performance_testing.py:192: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:192: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:192: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:192: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:192: [E501] line too long (84 > 79 characters)
+test_project/tests/network_performance_testing.py:194: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:194: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:194: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:196: [E501] line too long (116 > 79 characters)
+test_project/tests/network_performance_testing.py:198: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:198: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:198: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:198: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:198: [E501] line too long (88 > 79 characters)
+test_project/tests/network_performance_testing.py:200: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:200: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:200: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:202: [E501] line too long (107 > 79 characters)
+test_project/tests/network_performance_testing.py:204: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:204: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:204: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:204: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:204: [E501] line too long (88 > 79 characters)
+test_project/tests/network_performance_testing.py:206: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:206: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:206: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:208: [E501] line too long (107 > 79 characters)
+test_project/tests/network_performance_testing.py:210: [F405] 'subscribe' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:210: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:210: [E251] unexpected spaces around keyword / parameter equals
+test_project/tests/network_performance_testing.py:210: [F405] 'Mode' may be undefined, or defined from star imports: test_project
+test_project/tests/network_performance_testing.py:210: [E501] line too long (92 > 79 characters)
+test_project/tests/network_performance_testing.py:212: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:212: [F841] local variable 'response' is assigned to but never used
+test_project/tests/network_performance_testing.py:212: [E501] line too long (100 > 79 characters)
+test_project/tests/network_performance_testing.py:214: [E501] line too long (109 > 79 characters)
+test_project/tests/network_performance_testing.py:227: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:227: [E501] line too long (81 > 79 characters)
+test_project/tests/network_performance_testing.py:228: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:228: [E501] line too long (95 > 79 characters)
+test_project/tests/network_performance_testing.py:229: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:229: [E501] line too long (91 > 79 characters)
+test_project/tests/network_performance_testing.py:230: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:230: [E501] line too long (91 > 79 characters)
+test_project/tests/network_performance_testing.py:231: [E701] multiple statements on one line (colon)
+test_project/tests/network_performance_testing.py:231: [E501] line too long (95 > 79 characters)
+test_project/tests/network_performance_testing.py:232: [W293] blank line contains whitespace
+test_project/tests/network_performance_testing.py:235: [E303] too many blank lines (3)

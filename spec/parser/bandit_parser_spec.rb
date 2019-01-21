@@ -42,7 +42,7 @@ module Warnings
             expect(@parser.issues.count).to eq(3)
           end
 
-          it 'maps name' do
+          it 'maps filename' do
             expect(@issue.file_name).to eq(FIRST_ISSUE[:filename])
           end
 

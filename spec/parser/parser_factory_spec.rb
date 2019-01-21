@@ -29,6 +29,20 @@ module Warnings
           expect(result).to be_a(BanditParser)
         end
       end
+
+      context 'pylint' do
+        it 'symbol' do
+          result = ParserFactory.create(:pylint)
+          expect(result).not_to be_nil
+          expect(result).to be_a(PylintParser)
+        end
+
+        it 'string' do
+          result = ParserFactory.create('pylint')
+          expect(result).not_to be_nil
+          expect(result).to be_a(PylintParser)
+        end
+      end
     end
   end
 end
