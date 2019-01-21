@@ -3,7 +3,7 @@ require_relative '../../lib/warnings/parser/pylint_parser'
 
 module Warnings
   describe PylintParser do
-    FIRST_ISSUE = {
+    PYLINT_FIRST_ISSUE = {
       filename: 'test_project/__init__.py',
       line: '1',
       id: 'F403',
@@ -26,19 +26,19 @@ module Warnings
         end
 
         it 'maps filename' do
-          expect(@issue.file_name).to eq(FIRST_ISSUE[:filename])
+          expect(@issue.file_name).to eq(PYLINT_FIRST_ISSUE[:filename])
         end
 
         it 'maps id' do
-          expect(@issue.id).to eq(FIRST_ISSUE[:id])
+          expect(@issue.id).to eq(PYLINT_FIRST_ISSUE[:id])
         end
 
         it 'maps line' do
-          expect(@issue.line).to eq(FIRST_ISSUE[:line])
+          expect(@issue.line).to eq(PYLINT_FIRST_ISSUE[:line])
         end
 
         it 'maps message' do
-          expect(@issue.message).to eq(FIRST_ISSUE[:message])
+          expect(@issue.message).to eq(PYLINT_FIRST_ISSUE[:message])
         end
 
         it 'maps severity' do
