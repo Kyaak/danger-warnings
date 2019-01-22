@@ -11,7 +11,7 @@ require 'danger'
 require 'mocha'
 require 'simplecov'
 
-require_relative 'assets/assets'
+require_relative 'helper/assets'
 
 SimpleCov.start
 

@@ -4,6 +4,7 @@ require_relative '../issue'
 module Warnings
   # Parser class for pylint formatted files.
   class PylintParser < Parser
+    NAME = 'PyLint'.freeze
     ISSUE_PATTERN = /(.*):(\d+):\s*\[(\w\d+)\]\s*(.*)/.freeze
 
     def parse(file)
@@ -11,6 +12,10 @@ module Warnings
         match = line.scan(ISSUE_PATTERN)
         store_issue(match[0]) unless match.empty?
       end
+    end
+
+    def name
+      NAME
     end
 
     private

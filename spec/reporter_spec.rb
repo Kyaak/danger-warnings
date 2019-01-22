@@ -251,5 +251,45 @@ module Warnings
         end
       end
     end
+
+    context 'bandit' do
+      it 'runs markdown' do
+        @reporter.inline = false
+        @reporter.filter = false
+        @reporter.parser = :bandit
+        @reporter.file = Assets::BANDIT_JSON
+        @reporter.report
+        expect(@dangerfile.status_report[:markdowns]).not_to be_empty
+      end
+
+      it 'runs inline' do
+        @reporter.inline = true
+        @reporter.filter = false
+        @reporter.parser = :bandit
+        @reporter.file = Assets::BANDIT_JSON
+        @reporter.report
+        expect(@dangerfile.status_report[:warnings]).not_to be_empty
+      end
+    end
+
+    context 'pylint' do
+      it 'runs markdown' do
+        @reporter.inline = false
+        @reporter.filter = false
+        @reporter.parser = :pylint
+        @reporter.file = Assets::PYLINT_TXT
+        @reporter.report
+        expect(@dangerfile.status_report[:markdowns]).not_to be_empty
+      end
+
+      it 'runs inline' do
+        @reporter.inline = true
+        @reporter.filter = false
+        @reporter.parser = :pylint
+        @reporter.file = Assets::PYLINT_TXT
+        @reporter.report
+        expect(@dangerfile.status_report[:warnings]).not_to be_empty
+      end
+    end
   end
 end

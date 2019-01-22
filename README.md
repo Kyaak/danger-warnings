@@ -230,5 +230,5 @@ Your parser is missing and you cannot export into another format? -> [Create an 
 
 |Number|Name|ID|File Format|Comment|
 |:---:|:---|:---|:---:|:---|
-|1|[bandit](https://github.com/PyCQA/bandit)|bandit|json|
-|2|[pylint](https://github.com/PyCQA/pylint)|pylint|any| Can also be used with different tools like [flake8](https://github.com/PyCQA/flake8)
+|1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|
+|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|any| Can also be used with different tools like [flake8](https://github.com/PyCQA/flake8)

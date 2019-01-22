@@ -3,13 +3,6 @@ require_relative '../../lib/warnings/parser/pylint_parser'
 
 module Warnings
   describe PylintParser do
-    PYLINT_FIRST_ISSUE = {
-      filename: 'test_project/__init__.py',
-      line: '1',
-      category: 'F403',
-      message: "'from test_project import *' used; unable to detect undefined names"
-    }.freeze
-
     before do
       @parser = PylintParser.new
     end
@@ -26,19 +19,19 @@ module Warnings
         end
 
         it 'maps filename' do
-          expect(@issue.file_name).to eq(PYLINT_FIRST_ISSUE[:filename])
+          expect(@issue.file_name).to eq(Assets::PYLINT_FIRST_ISSUE[:filename])
         end
 
         it 'maps id' do
-          expect(@issue.category).to eq(PYLINT_FIRST_ISSUE[:category])
+          expect(@issue.category).to eq(Assets::PYLINT_FIRST_ISSUE[:category])
         end
 
         it 'maps line' do
-          expect(@issue.line).to eq(PYLINT_FIRST_ISSUE[:line])
+          expect(@issue.line).to eq(Assets::PYLINT_FIRST_ISSUE[:line])
         end
 
         it 'maps message' do
-          expect(@issue.message).to eq(PYLINT_FIRST_ISSUE[:message])
+          expect(@issue.message).to eq(Assets::PYLINT_FIRST_ISSUE[:message])
         end
 
         it 'maps severity' do

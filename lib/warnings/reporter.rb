@@ -1,5 +1,5 @@
 require_relative 'parser/parser_factory'
-require_relative 'markdown_util'
+require_relative 'message_util'
 require_relative 'severity'
 
 module Warnings
@@ -124,7 +124,7 @@ module Warnings
 
     def inline_comment
       @issues.each do |issue|
-        text = inline_text(issue)
+        text = MessageUtil.inline(issue)
         if fail_error && high_issue?(issue)
           @danger.fail(text, line: issue.line, file: issue.file_name)
         else
@@ -133,12 +133,8 @@ module Warnings
       end
     end
 
-    def inline_text(issue)
-      "#{issue.severity.to_s.capitalize}\n[#{issue.category}-#{issue.name}]\n#{issue.message}"
-    end
-
     def markdown_comment
-      text = MarkdownUtil.generate(name, @issues)
+      text = MessageUtil.markdown(name, @issues)
       @danger.markdown(text)
       @danger.fail(format(ERROR_HIGH_SEVERITY, name)) if fail_error && high_issues?
     end
