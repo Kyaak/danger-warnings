@@ -208,6 +208,16 @@ These will override the configuration for this report **only**.
 
 ## Parsers
 
-|Number|Name|ID|File Format|
-|:---:|---|---|---|
+Find a list with supported report formats and their parsers. 
+
+If your desired parser is not explicitly named, look into your tools documentation - maybe you can format 
+the report in a different style (and give it a custom name when calling `warnings.report`). 
+
+`any` file format means that the file is most likely read line by line, so it the extension is not important.
+
+Your parser is missing and you cannot export into another format? -> [Create an Issue](https://github.com/Kyaak/danger-warnings/issues) 
+
+|Number|Name|ID|File Format|Comment|
+|:---:|---|---|---|---|
 |1|[bandit](https://github.com/PyCQA/bandit)|bandit|json|
+|2|[pylint](https://github.com/PyCQA/pylint)|pylint|any| Can also be used with different tools like [flake8](https://github.com/PyCQA/flake8)
