@@ -4,6 +4,9 @@ require_relative '../../lib/warnings/helper/message_util'
 module Warnings
   describe Warnings::MessageUtil do
     MARKDOWN_TEST_REPORT_NAME = 'My Report Name'.freeze
+    COLUMN_ONE = 1
+    COLUMN_TWO = 2
+    COLUMN_THREE = 3
 
     context '#markdown' do
       context 'header' do
@@ -42,19 +45,19 @@ module Warnings
         end
 
         it 'first column contains severity upcase' do
-          text = @issue_columns[0]
+          text = @issue_columns[COLUMN_ONE]
           expect(text).not_to be_nil
           expect(text).to eq(@issue.severity.to_s.capitalize)
         end
 
         it 'second column contains filename:line' do
-          text = @issue_columns[1]
+          text = @issue_columns[COLUMN_TWO]
           expect(text).not_to be_nil
           expect(text).to eq("#{@issue.file_name}:#{@issue.line}")
         end
 
         it 'third column contains [category-name]' do
-          text = @issue_columns[2]
+          text = @issue_columns[COLUMN_THREE]
           expect(text).not_to be_nil
           match = text.match(/^\[#{@issue.category}-#{@issue.name}\]/)
           expect(match).not_to be_nil
@@ -66,14 +69,14 @@ module Warnings
           issue_line = result.split(MessageUtil::LINE_SEPARATOR)[3]
           @issue_columns = issue_line.split(MessageUtil::COLUMN_SEPARATOR)
 
-          text = @issue_columns[2]
+          text = @issue_columns[COLUMN_THREE]
           expect(text).not_to be_nil
           match = text.match(/^\[#{@issue.category}\]/)
           expect(match).not_to be_nil
         end
 
         it 'third column contains message' do
-          text = @issue_columns[2]
+          text = @issue_columns[COLUMN_THREE]
           expect(text).not_to be_nil
           match = text.match(/#{@issue.message}/)
           expect(match).not_to be_nil
