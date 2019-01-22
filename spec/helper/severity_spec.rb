@@ -1,5 +1,5 @@
-require_relative 'spec_helper'
-require_relative '../lib/warnings/severity'
+require_relative '../spec_helper'
+require_relative '../../lib/warnings/helper/severity'
 
 module Warnings
   describe Severity do

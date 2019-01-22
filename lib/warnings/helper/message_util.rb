@@ -1,8 +1,8 @@
-require_relative 'issue'
+require_relative '../report/issue'
 
 module Warnings
-  # Utility class to write the markdown report.
-  module MarkdownUtil
+  # Utility class to write the markdown and inline reports.
+  module MessageUtil
     TABLE_HEADER = 'Severity|File|Message'.freeze
     COLUMN_SEPARATOR = '|'.freeze
     TABLE_SEPARATOR = "---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---".freeze
@@ -15,10 +15,18 @@ module Warnings
     # @param name [String] The name of the report to be printed.
     # @param issues [Array<Issue>] List of parsed issues.
     # @return [String] String in danger markdown format.
-    def generate(name, issues)
+    def markdown(name, issues)
       result = header_name(name)
       result << header
       result << issues(issues)
+    end
+
+    # Create an inline comment containing all issue information.
+    #
+    # @param issue [Issue] The issue to report.
+    # @return String Text to add as comment.
+    def inline(issue)
+      "#{issue.severity.to_s.capitalize}\n#{meta_information(issue)}\n#{issue.message}"
     end
 
     # Create the report name string.
@@ -43,7 +51,6 @@ module Warnings
     #
     # @param issues [Array<Issue>] List of parsed issues.
     # @return [String] String containing all issues.
-    # rubocop:disable Metrics/AbcSize
     def issues(issues)
       result = ''
       issues.each do |issue|
@@ -51,11 +58,25 @@ module Warnings
         result << COLUMN_SEPARATOR
         result << "#{issue.file_name}:#{issue.line}"
         result << COLUMN_SEPARATOR
-        result << "[#{issue.id}-#{issue.name}] #{issue.message}"
+        result << "#{meta_information(issue)} #{issue.message}"
         result << LINE_SEPARATOR
       end
-      # rubocop:enable Metrics/AbcSize
+
       result
+    end
+
+    # Combine meta information about the issue.
+    # Meta information are considered infos about the check itself.
+    # e.g. category, name of the check
+    #
+    # @param issue [Issue] Issue to extract information.
+    # @return String combined information.
+    def meta_information(issue)
+      result = '['
+      result << issue.category.dup
+      result << '-' if issue.name
+      result << issue.name if issue.name
+      result << ']'
     end
   end
 end

@@ -11,6 +11,17 @@
 </br>
 
 <div align="center">
+  <!-- Version -->
+  <a href="https://badge.fury.io/rb/danger-warnings">
+    <img src="https://badge.fury.io/rb/danger-warnings.svg" alt="Version" />
+  </a>
+  <!-- Downloads -->
+  <a href="https://badge.fury.io/rb/danger-warnings">
+    <img src="https://img.shields.io/gem/dt/danger-warnings.svg" alt="Downloads" />
+  </a>
+</div>
+
+<div align="center">
   <!-- Build Status -->
   <a href="https://travis-ci.org/Kyaak/danger-warnings">
     <img src="https://img.shields.io/travis/choojs/choo/master.svg"
@@ -208,6 +219,16 @@ These will override the configuration for this report **only**.
 
 ## Parsers
 
+Find a list with supported report formats and their parsers. 
+
+If your desired parser is not explicitly named, look into your tools documentation - maybe you can format 
+the report in a different style (and give it a custom name when calling `warnings.report`). 
+
+`any` file format means that the file is most likely read line by line, so the extension is not important.
+
+Your parser is missing and you cannot export into another format? -> [Create an Issue](https://github.com/Kyaak/danger-warnings/issues) 
+
 |Number|Name|ID|File Format|
-|:---:|---|---|---|
-|1|[bandit](https://github.com/PyCQA/bandit)|bandit|json|
+|:---:|:---|:---|:---:|
+|1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|
+|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|any|

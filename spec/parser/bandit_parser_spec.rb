@@ -3,21 +3,6 @@ require_relative '../../lib/warnings/parser/bandit_parser'
 
 module Warnings
   describe BanditParser do
-    FIRST_ISSUE = {
-      code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
-      filename: 'example/ply/yacc_1.py',
-      issue_confidence: 'HIGH',
-      issue_severity: :low,
-      issue_text: 'Consider possible security implications associated with pickle module.',
-      line_number: 2853,
-      line_range: [
-        2853
-      ],
-      more_info: 'https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b403-import-pickle',
-      test_id: 'B403',
-      test_name: 'blacklist'
-    }.freeze
-
     before do
       @parser = BanditParser.new
     end
@@ -42,28 +27,28 @@ module Warnings
             expect(@parser.issues.count).to eq(3)
           end
 
-          it 'maps name' do
-            expect(@issue.file_name).to eq(FIRST_ISSUE[:filename])
+          it 'maps filename' do
+            expect(@issue.file_name).to eq(Assets::BANDIT_FIRST_ISSUE[:filename])
           end
 
           it 'maps id' do
-            expect(@issue.id).to eq(FIRST_ISSUE[:test_id])
+            expect(@issue.category).to eq(Assets::BANDIT_FIRST_ISSUE[:test_id])
           end
 
           it 'maps line' do
-            expect(@issue.line).to eq(FIRST_ISSUE[:line_number])
+            expect(@issue.line).to eq(Assets::BANDIT_FIRST_ISSUE[:line_number])
           end
 
           it 'maps severity' do
-            expect(@issue.severity).to eq(FIRST_ISSUE[:issue_severity])
+            expect(@issue.severity).to eq(Assets::BANDIT_FIRST_ISSUE[:issue_severity])
           end
 
           it 'maps message' do
-            expect(@issue.message).to eq(FIRST_ISSUE[:issue_text])
+            expect(@issue.message).to eq(Assets::BANDIT_FIRST_ISSUE[:issue_text])
           end
 
           it 'maps name' do
-            expect(@issue.name).to eq(FIRST_ISSUE[:test_name])
+            expect(@issue.name).to eq(Assets::BANDIT_FIRST_ISSUE[:test_name])
           end
         end
 

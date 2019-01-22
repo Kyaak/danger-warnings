@@ -5,10 +5,10 @@ module Warnings
     #
     # @return [String]
     attr_accessor :file_name
-    # The issue id the linter tool provides.
+    # The issue category the linter tool provides.
     #
     # @return [String]
-    attr_accessor :id
+    attr_accessor :category
     # The line this issue targets.
     #
     # @return [Integer]
@@ -22,7 +22,6 @@ module Warnings
     #
     # @return [String]
     attr_accessor :message
-
     # The name of the issue id.
     #
     # @return [String]

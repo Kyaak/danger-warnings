@@ -39,6 +39,17 @@ module Warnings
       JSON.parse(content)
     end
 
+    # Read the file into memory and serve each line.
+    #
+    # @param file_path [String] Path to a file to be read.
+    # @raise If file does not exist.
+    # @return [String] Array of line contents.
+    def read_lines(file_path)
+      raise(format(ERROR_FILE_NOT_EXIST, file_path)) unless File.exist?(file_path)
+
+      File.readlines(file_path, chomp: true)
+    end
+
     private
 
     # Evaluate and read the file into memory.
