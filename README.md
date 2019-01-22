@@ -228,7 +228,7 @@ the report in a different style (and give it a custom name when calling `warning
 
 Your parser is missing and you cannot export into another format? -> [Create an Issue](https://github.com/Kyaak/danger-warnings/issues) 
 
-|Number|Name|ID|File Format|Comment|
-|:---:|:---|:---|:---:|:---|
+|Number|Name|ID|File Format|
+|:---:|:---|:---|:---:|
 |1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|
-|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|any| Can also be used with different tools like [flake8](https://github.com/PyCQA/flake8)
+|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|any|
