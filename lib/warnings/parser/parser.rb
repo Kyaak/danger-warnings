@@ -32,7 +32,7 @@ module Warnings
     # @param file_path [String] Path to a file to be read as json.
     # @return [Bool] Whether the file is a json or not.
     def json?(file_path)
-      File.extname(file_path).delete('.').casecmp?(EXT_JSON)
+      File.extname(file_path).delete('.').downcase.eql?(EXT_JSON)
     end
 
     # Parse a file as json content.
