@@ -1,5 +1,5 @@
-require_relative 'spec_helper'
-require_relative '../lib/warnings/reporter'
+require_relative '../spec_helper'
+require_relative '../../lib/warnings/report/reporter'
 require 'danger'
 
 module Warnings

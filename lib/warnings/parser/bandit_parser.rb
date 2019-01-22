@@ -1,5 +1,5 @@
 require_relative 'parser'
-require_relative '../issue'
+require_relative '../report/issue'
 
 module Warnings
   # Parser class for bandit generated json files.

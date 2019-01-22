@@ -1,5 +1,5 @@
-require_relative 'spec_helper'
-require_relative '../lib/warnings/message_util'
+require_relative '../spec_helper'
+require_relative '../../lib/warnings/helper/message_util'
 
 module Warnings
   describe Warnings::MessageUtil do

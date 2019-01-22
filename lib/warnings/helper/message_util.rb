@@ -1,4 +1,4 @@
-require_relative 'issue'
+require_relative '../report/issue'
 
 module Warnings
   # Utility class to write the markdown and inline reports.
