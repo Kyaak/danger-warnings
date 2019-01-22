@@ -1,6 +1,5 @@
 require_relative '../parser/parser_factory'
 require_relative '../helper/message_util'
-require_relative '../helper/severity'
 
 module Warnings
   # Base reporter class to define attributes and common method to create a report.

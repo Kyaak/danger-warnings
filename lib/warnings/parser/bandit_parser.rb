@@ -5,13 +5,8 @@ module Warnings
   # Parser class for bandit generated json files.
   class BanditParser < Parser
     RESULTS_KEY = 'results'.freeze
-    FILE_TYPES = %i(json).freeze
     NAME = 'Bandit'.freeze
     ERROR_MISSING_KEY = "Missing bandit key '#{RESULTS_KEY}'.".freeze
-
-    def file_types
-      FILE_TYPES
-    end
 
     def parse(file)
       json_hash = json(file)

@@ -7,12 +7,6 @@ module Warnings
       @parser = BanditParser.new
     end
 
-    context '#file_types' do
-      it 'include json' do
-        expect(@parser.file_types).to include(:json)
-      end
-    end
-
     context '#parse' do
       describe 'json' do
         context 'filled results' do
@@ -76,10 +70,7 @@ module Warnings
       describe 'unsupported type' do
         it 'raises error' do
           file_name = 'hello.txt'
-          ext = File.extname(file_name).delete('.')
-          expect { @parser.parse(file_name) }.to raise_error(format(Parser::ERROR_EXT_NOT_SUPPORTED,
-                                                                    ext,
-                                                                    @parser.class.name))
+          expect { @parser.parse(file_name) }.to raise_error(format(Parser::ERROR_EXT_NOT_JSON, file_name))
         end
       end
     end

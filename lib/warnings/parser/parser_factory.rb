@@ -1,5 +1,6 @@
 require_relative 'bandit_parser'
 require_relative 'pylint_parser'
+require_relative 'rubocop_parser'
 
 module Warnings
   # Factory class for supported parsers.
@@ -7,7 +8,8 @@ module Warnings
     ERROR_NOT_SUPPORTED = 'Parser \'%s\' not supported.'.freeze
     AVAILABLE_PARSERS = {
       bandit: BanditParser,
-      pylint: PylintParser
+      pylint: PylintParser,
+      rubocop: RubocopParser
     }.freeze
 
     # Create a new parser implementation.
