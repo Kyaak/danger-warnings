@@ -11,6 +11,17 @@
 </br>
 
 <div align="center">
+  <!-- Version -->
+  <a href="https://badge.fury.io/rb/danger-warnings">
+    <img src="https://badge.fury.io/rb/danger-warnings.svg" alt="Version" />
+  </a>
+  <!-- Downloads -->
+  <a href="https://badge.fury.io/rb/danger-warnings">
+    <img src="https://img.shields.io/gem/dt/danger-warnings.svg" alt="Downloads" />
+  </a>
+</div>
+
+<div align="center">
   <!-- Build Status -->
   <a href="https://travis-ci.org/Kyaak/danger-warnings">
     <img src="https://img.shields.io/travis/choojs/choo/master.svg"
