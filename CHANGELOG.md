@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added 
-- PylintParser - Support pylint formatted reports
+- PylintParser - Support Pylint formatted reports
+- RuboCopParser - Support RuboCop formatted reports
 
 ### Changed
 - Renamed issue.id to issue.category
