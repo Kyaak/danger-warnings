@@ -33,11 +33,10 @@ module Warnings
         before do
           @issue = Issue.new
           @issue.severity = :low
-          @issue.name = 'blacklist'
           @issue.file_name = 'hello/test.py'
           @issue.message = 'Consider possible security implications associated with pickle module.'
           @issue.line = 1234
-          @issue.category = 'B403'
+          @issue.category = 'B403-blacklist'
 
           result = MessageUtil.markdown(MARKDOWN_TEST_REPORT_NAME, [@issue])
           issue_line = result.split(MessageUtil::LINE_SEPARATOR)[3]
@@ -59,18 +58,6 @@ module Warnings
         it 'third column contains [category-name]' do
           text = @issue_columns[COLUMN_THREE]
           expect(text).not_to be_nil
-          match = text.match(/^\[#{@issue.category}-#{@issue.name}\]/)
-          expect(match).not_to be_nil
-        end
-
-        it 'does not append name' do
-          @issue.name = nil
-          result = MessageUtil.markdown(MARKDOWN_TEST_REPORT_NAME, [@issue])
-          issue_line = result.split(MessageUtil::LINE_SEPARATOR)[3]
-          @issue_columns = issue_line.split(MessageUtil::COLUMN_SEPARATOR)
-
-          text = @issue_columns[COLUMN_THREE]
-          expect(text).not_to be_nil
           match = text.match(/^\[#{@issue.category}\]/)
           expect(match).not_to be_nil
         end
@@ -88,11 +75,10 @@ module Warnings
       before do
         @issue = Issue.new
         @issue.severity = :low
-        @issue.name = 'blacklist'
         @issue.file_name = 'hello/test.py'
         @issue.message = 'Consider possible security implications associated with pickle module.'
         @issue.line = 1234
-        @issue.category = 'B403'
+        @issue.category = 'B403-blacklist'
 
         result = MessageUtil.inline(@issue)
         @issue_lines = result.split(MessageUtil::LINE_SEPARATOR)
@@ -105,17 +91,6 @@ module Warnings
       end
 
       it 'second line contains [category-name]' do
-        text = @issue_lines[1]
-        expect(text).not_to be_nil
-        match = text.match(/^\[#{@issue.category}-#{@issue.name}\]/)
-        expect(match).not_to be_nil
-      end
-
-      it 'does not append name' do
-        @issue.name = nil
-        result = MessageUtil.inline(@issue)
-        @issue_lines = result.split(MessageUtil::LINE_SEPARATOR)
-
         text = @issue_lines[1]
         expect(text).not_to be_nil
         match = text.match(/^\[#{@issue.category}\]/)

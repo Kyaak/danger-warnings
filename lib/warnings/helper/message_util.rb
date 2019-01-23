@@ -70,15 +70,15 @@ module Warnings
 
     # Combine meta information about the issue.
     # Meta information are considered infos about the check itself.
-    # e.g. category, name of the check
+    # e.g. category
     #
     # @param issue [Issue] Issue to extract information.
     # @return String combined information.
     def meta_information(issue)
+      return unless issue.category
+
       result = '['
-      result << issue.category.dup
-      result << '-' if issue.name
-      result << issue.name if issue.name
+      result << issue.category
       result << ']'
     end
   end

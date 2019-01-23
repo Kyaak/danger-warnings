@@ -3,10 +3,11 @@ require_relative '../report/issue'
 require_relative '../helper/severity_util'
 
 module Warnings
-  # Parser class for pylint formatted files.
+  # Parser class for rubocop reports.
   class RubocopParser < Parser
     NAME = 'RuboCop'.freeze
-    ISSUE_PATTERN = /(.*):(\d+):\s*\[(\w\d+)\]\s*(.*)/.freeze
+    FILE_PATTERN = /==\s(.*)\s==/.freeze
+    ISSUE_PATTERN = /(\w):\s*(\d+):\s*\d+:\s(.*)/.freeze
 
     def parse(file)
       if json?(file)
@@ -29,9 +30,23 @@ module Warnings
     end
 
     def extract_pattern_issues(file)
+      last_file = nil
       read_lines(file).each do |line|
-        match = line.scan(ISSUE_PATTERN)
-        store_issue(match[0]) unless match.empty?
+        file_match = line.scan(FILE_PATTERN)
+        unless file_match.empty?
+          last_file = file_match[0][0]
+          next
+        end
+        issue_match = line.scan(ISSUE_PATTERN)
+        next if issue_match.empty?
+
+        issue_content = issue_match[0]
+        issue = {
+          severity: issue_content[0],
+          line: issue_content[1],
+          message: issue_content[2]
+        }
+        store_simple_issue(last_file, issue)
       end
     end
 
@@ -48,6 +63,15 @@ module Warnings
         issue.message = offense['message']
         @issues << issue
       end
+    end
+
+    def store_simple_issue(file, issue_hash)
+      issue = Issue.new
+      issue.file_name = file
+      issue.line = issue_hash[:line].to_i
+      issue.severity = SeverityUtil.rcwef_full(issue_hash[:severity])
+      issue.message = issue_hash[:message]
+      @issues << issue
     end
   end
 end

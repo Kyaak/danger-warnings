@@ -28,8 +28,7 @@ module Warnings
       issue.severity = to_severity(hash['issue_severity'])
       issue.message = hash['issue_text']
       issue.line = hash['line_number']
-      issue.category = hash['test_id']
-      issue.name = hash['test_name']
+      issue.category = "#{hash['test_id']}-#{hash['test_name']}"
       @issues << issue
     end
 

@@ -1,5 +1,5 @@
 warnings.report(
   parser: :rubocop,
-  file: 'spec/assets/rubocop_multi_offenses.json',
+  file: 'spec/assets/rubocop.txt',
   filter: false
 )

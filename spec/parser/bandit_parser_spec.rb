@@ -25,8 +25,8 @@ module Warnings
             expect(@issue.file_name).to eq(Assets::BANDIT_FIRST_ISSUE[:filename])
           end
 
-          it 'maps id' do
-            expect(@issue.category).to eq(Assets::BANDIT_FIRST_ISSUE[:test_id])
+          it 'maps id-name' do
+            expect(@issue.category).to eq("#{Assets::BANDIT_FIRST_ISSUE[:test_id]}-#{Assets::BANDIT_FIRST_ISSUE[:test_name]}")
           end
 
           it 'maps line' do
@@ -39,10 +39,6 @@ module Warnings
 
           it 'maps message' do
             expect(@issue.message).to eq(Assets::BANDIT_FIRST_ISSUE[:issue_text])
-          end
-
-          it 'maps name' do
-            expect(@issue.name).to eq(Assets::BANDIT_FIRST_ISSUE[:test_name])
           end
         end
 
