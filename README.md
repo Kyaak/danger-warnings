@@ -90,8 +90,10 @@
 
 </br>
 
-This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various lint [tools](#parsers). <br>
-The purpose is a simple to use plugin regardless of the linter tool used to create the issues.
+This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various [tools](#parsers). <br>
+The purpose is a simple to use plugin regardless of the tool used to find issues in your project :detective:
+
+This plugin was inspired by the work of [warnings-ng-plugin](https://github.com/jenkinsci/warnings-ng-plugin) :bowing_man:
 
 ## Table of Contents
 - [How it looks like](#how-does-it-look)
@@ -216,6 +218,10 @@ All [default](#override-default-settings) fields can be passed as parameters to 
 - fail_error
 
 These will override the configuration for this report **only**.
+
+#### What it does not
+It is not the responsibility of this plugin to exclude / include files or directories. We will only process the result and present it to you.
+Something like this belongs to your tool configuration before running it.
 
 ## Parsers
 
