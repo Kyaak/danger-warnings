@@ -3,9 +3,9 @@ require_relative '../report/issue'
 module Warnings
   # Utility class to write the markdown and inline reports.
   module MessageUtil
-    TABLE_HEADER = 'Severity|File|Message'.freeze
+    TABLE_HEADER = '|Severity|File|Message|'.freeze
     COLUMN_SEPARATOR = '|'.freeze
-    TABLE_SEPARATOR = "---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---".freeze
+    TABLE_SEPARATOR = "#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}".freeze
     LINE_SEPARATOR = "\n".freeze
 
     module_function
@@ -51,31 +51,34 @@ module Warnings
     #
     # @param issues [Array<Issue>] List of parsed issues.
     # @return [String] String containing all issues.
+    # rubocop:disable Metrics/AbcSize
     def issues(issues)
       result = ''
       issues.each do |issue|
+        result << COLUMN_SEPARATOR.dup
         result << issue.severity.to_s.capitalize
         result << COLUMN_SEPARATOR
         result << "#{issue.file_name}:#{issue.line}"
         result << COLUMN_SEPARATOR
         result << "#{meta_information(issue)} #{issue.message}"
+        result << COLUMN_SEPARATOR
         result << LINE_SEPARATOR
       end
-
+      # rubocop:enable Metrics/AbcSize
       result
     end
 
     # Combine meta information about the issue.
     # Meta information are considered infos about the check itself.
-    # e.g. category, name of the check
+    # e.g. category
     #
     # @param issue [Issue] Issue to extract information.
     # @return String combined information.
     def meta_information(issue)
+      return unless issue.category
+
       result = '['
-      result << issue.category.dup
-      result << '-' if issue.name
-      result << issue.name if issue.name
+      result << issue.category
       result << ']'
     end
   end

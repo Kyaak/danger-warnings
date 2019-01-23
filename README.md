@@ -90,8 +90,10 @@
 
 </br>
 
-This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various lint [tools](#parsers). <br>
-The purpose is a simple to use plugin regardless of the linter tool used to create the issues.
+This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various [tools](#parsers). <br>
+The purpose is a simple to use plugin regardless of the tool used to find issues in your project :detective:
+
+This plugin was inspired by the work of [warnings-ng-plugin](https://github.com/jenkinsci/warnings-ng-plugin) :bowing_man:
 
 ## Table of Contents
 - [How it looks like](#how-does-it-look)
@@ -217,6 +219,10 @@ All [default](#override-default-settings) fields can be passed as parameters to 
 
 These will override the configuration for this report **only**.
 
+#### What it does not
+It is not the responsibility of this plugin to exclude / include files or directories. We will only process the result and present it to you.
+Something like this belongs to your tool configuration before running it.
+
 ## Parsers
 
 Find a list with supported report formats and their parsers. 
@@ -228,7 +234,8 @@ the report in a different style (and give it a custom name when calling `warning
 
 Your parser is missing and you cannot export into another format? -> [Create an Issue](https://github.com/Kyaak/danger-warnings/issues) 
 
-|Number|Name|ID|File Format|
-|:---:|:---|:---|:---:|
-|1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|
-|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|any|
+|Number|Name|ID|File Format|Formatter|
+|:---:|:---|:---|:---:|:----:|
+|1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json
+|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|any|parseable
+|3|[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|json, any|json, simple

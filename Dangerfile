@@ -1,5 +1,5 @@
 warnings.report(
-  parser: :pylint,
-  file: 'spec/assets/pylint.txt',
+  parser: :rubocop,
+  file: 'spec/assets/rubocop.txt',
   filter: false
 )

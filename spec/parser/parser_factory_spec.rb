@@ -16,32 +16,30 @@ module Warnings
         expect { ParserFactory.create('unknown') }.to raise_error('Parser \'unknown\' not supported.')
       end
 
-      context 'bandit' do
-        it 'symbol' do
-          result = ParserFactory.create(:bandit)
-          expect(result).not_to be_nil
-          expect(result).to be_a(BanditParser)
-        end
-
-        it 'string' do
-          result = ParserFactory.create('bandit')
-          expect(result).not_to be_nil
-          expect(result).to be_a(BanditParser)
-        end
+      it 'known symbol' do
+        expect(ParserFactory.create(:bandit)).to be_a(BanditParser)
       end
 
-      context 'pylint' do
-        it 'symbol' do
-          result = ParserFactory.create(:pylint)
-          expect(result).not_to be_nil
-          expect(result).to be_a(PylintParser)
-        end
+      it 'known string' do
+        expect(ParserFactory.create('bandit')).to be_a(BanditParser)
+      end
 
-        it 'string' do
-          result = ParserFactory.create('pylint')
-          expect(result).not_to be_nil
-          expect(result).to be_a(PylintParser)
-        end
+      it 'bandit' do
+        result = ParserFactory.create(:bandit)
+        expect(result).not_to be_nil
+        expect(result).to be_a(BanditParser)
+      end
+
+      it 'pylint' do
+        result = ParserFactory.create(:pylint)
+        expect(result).not_to be_nil
+        expect(result).to be_a(PylintParser)
+      end
+
+      it 'rubocop' do
+        result = ParserFactory.create(:rubocop)
+        expect(result).not_to be_nil
+        expect(result).to be_a(RubocopParser)
       end
     end
   end

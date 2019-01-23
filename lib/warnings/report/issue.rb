@@ -22,9 +22,5 @@ module Warnings
     #
     # @return [String]
     attr_accessor :message
-    # The name of the issue id.
-    #
-    # @return [String]
-    attr_accessor :name
   end
 end

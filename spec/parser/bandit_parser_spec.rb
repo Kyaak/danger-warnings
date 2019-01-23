@@ -7,12 +7,6 @@ module Warnings
       @parser = BanditParser.new
     end
 
-    context '#file_types' do
-      it 'include json' do
-        expect(@parser.file_types).to include(:json)
-      end
-    end
-
     context '#parse' do
       describe 'json' do
         context 'filled results' do
@@ -31,8 +25,8 @@ module Warnings
             expect(@issue.file_name).to eq(Assets::BANDIT_FIRST_ISSUE[:filename])
           end
 
-          it 'maps id' do
-            expect(@issue.category).to eq(Assets::BANDIT_FIRST_ISSUE[:test_id])
+          it 'maps id-name' do
+            expect(@issue.category).to eq("#{Assets::BANDIT_FIRST_ISSUE[:test_id]}-#{Assets::BANDIT_FIRST_ISSUE[:test_name]}")
           end
 
           it 'maps line' do
@@ -45,10 +39,6 @@ module Warnings
 
           it 'maps message' do
             expect(@issue.message).to eq(Assets::BANDIT_FIRST_ISSUE[:issue_text])
-          end
-
-          it 'maps name' do
-            expect(@issue.name).to eq(Assets::BANDIT_FIRST_ISSUE[:test_name])
           end
         end
 
@@ -76,10 +66,7 @@ module Warnings
       describe 'unsupported type' do
         it 'raises error' do
           file_name = 'hello.txt'
-          ext = File.extname(file_name).delete('.')
-          expect { @parser.parse(file_name) }.to raise_error(format(Parser::ERROR_EXT_NOT_SUPPORTED,
-                                                                    ext,
-                                                                    @parser.class.name))
+          expect { @parser.parse(file_name) }.to raise_error(format(Parser::ERROR_EXT_NOT_JSON, file_name))
         end
       end
     end
