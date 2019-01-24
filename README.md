@@ -11,6 +11,17 @@
 </br>
 
 <div align="center">
+  <!-- Version -->
+  <a href="https://badge.fury.io/rb/danger-warnings">
+    <img src="https://badge.fury.io/rb/danger-warnings.svg" alt="Version" />
+  </a>
+  <!-- Downloads -->
+  <a href="https://badge.fury.io/rb/danger-warnings">
+    <img src="https://img.shields.io/gem/dt/danger-warnings.svg" alt="Downloads" />
+  </a>
+</div>
+
+<div align="center">
   <!-- Build Status -->
   <a href="https://travis-ci.org/Kyaak/danger-warnings">
     <img src="https://img.shields.io/travis/choojs/choo/master.svg"
@@ -79,8 +90,10 @@
 
 </br>
 
-This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various lint [tools](#parsers). <br>
-The purpose is a simple to use plugin regardless of the linter tool used to create the issues.
+This [danger](https://github.com/danger/danger) plugin provides a uniform report format for various [tools](#parsers). <br>
+The purpose is a simple to use plugin regardless of the tool used to find issues in your project :detective:
+
+This plugin was inspired by the work of [warnings-ng-plugin](https://github.com/jenkinsci/warnings-ng-plugin) :bowing_man:
 
 ## Table of Contents
 - [How it looks like](#how-does-it-look)
@@ -206,8 +219,23 @@ All [default](#override-default-settings) fields can be passed as parameters to 
 
 These will override the configuration for this report **only**.
 
+#### What it does not
+It is not the responsibility of this plugin to exclude / include files or directories. We will only process the result and present it to you.
+Something like this belongs to your tool configuration before running it.
+
 ## Parsers
 
-|Number|Name|ID|File Format|
-|:---:|---|---|---|
-|1|[bandit](https://github.com/PyCQA/bandit)|bandit|json|
+Find a list with supported report formats and their parsers. 
+
+If your desired parser is not explicitly named, look into your tools documentation - maybe you can format 
+the report in a different style (and give it a custom name when calling `warnings.report`). 
+
+`any` file format means that the file is most likely read line by line, so the extension is not important.
+
+Your parser is missing and you cannot export into another format? -> [Create an Issue](https://github.com/Kyaak/danger-warnings/issues) 
+
+|Number|Name|ID|File Format|Formatter|
+|:---:|:---|:---|:---:|:----:|
+|1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json
+|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|any|parseable
+|3|[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|json, any|json, simple

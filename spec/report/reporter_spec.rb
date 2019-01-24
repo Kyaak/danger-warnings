@@ -1,5 +1,5 @@
-require_relative 'spec_helper'
-require_relative '../lib/warnings/reporter'
+require_relative '../spec_helper'
+require_relative '../../lib/warnings/report/reporter'
 require 'danger'
 
 module Warnings
@@ -249,6 +249,46 @@ module Warnings
           expect(@dangerfile.violation_report[:warnings].size).to eq(1)
           expect(@dangerfile.violation_report[:warnings].first.file).to eq(BANDIT_FILE_1)
         end
+      end
+    end
+
+    context 'bandit' do
+      it 'runs markdown' do
+        @reporter.inline = false
+        @reporter.filter = false
+        @reporter.parser = :bandit
+        @reporter.file = Assets::BANDIT_JSON
+        @reporter.report
+        expect(@dangerfile.status_report[:markdowns]).not_to be_empty
+      end
+
+      it 'runs inline' do
+        @reporter.inline = true
+        @reporter.filter = false
+        @reporter.parser = :bandit
+        @reporter.file = Assets::BANDIT_JSON
+        @reporter.report
+        expect(@dangerfile.status_report[:warnings]).not_to be_empty
+      end
+    end
+
+    context 'pylint' do
+      it 'runs markdown' do
+        @reporter.inline = false
+        @reporter.filter = false
+        @reporter.parser = :pylint
+        @reporter.file = Assets::PYLINT_TXT
+        @reporter.report
+        expect(@dangerfile.status_report[:markdowns]).not_to be_empty
+      end
+
+      it 'runs inline' do
+        @reporter.inline = true
+        @reporter.filter = false
+        @reporter.parser = :pylint
+        @reporter.file = Assets::PYLINT_TXT
+        @reporter.report
+        expect(@dangerfile.status_report[:warnings]).not_to be_empty
       end
     end
   end

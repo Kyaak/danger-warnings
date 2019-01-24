@@ -1,0 +1,27 @@
+== spec/lib/danger/danger_core/plugins/dangerfile_gitlab_plugin_spec.rb ==
+C: 82: 65: Do not use semicolons to terminate expressions.
+== spec/lib/danger/request_sources/github_spec.rb ==
+C:598: 16: Avoid comma after the last parameter of a method call.
+== lib/danger/danger_core/plugins/dangerfile_messaging_plugin.rb ==
+C:181:  5: Use alias instead of alias_method in a class body.
+== lib/danger/danger_core/plugins/dangerfile_local_only_plugin.rb ==
+C:  9: 66: Trailing whitespace detected.
+C: 14: 82: Trailing whitespace detected.
+== lib/danger/request_sources/gitlab.rb ==
+C:171: 20: Prefer double-quoted strings unless you need single quotes to avoid extra backslashes for escaping.
+== lib/danger/ci_source/support/find_repo_info_from_url.rb ==
+C: 11:  1: Trailing whitespace detected.
+== lib/danger/ci_source/code_build.rb ==
+W: 19: 31: Assignment in condition - you probably meant to use ==.
+C: 33:  5: Keep a blank line before and after private.
+W: 33:  5: Useless private access modifier.
+C: 34:  7: Inconsistent indentation detected.
+W: 34:  7: private (on line 33) does not make singleton methods private. Use private_class_method or private inside a class << self block instead.
+C: 37: 47: Use %r around regular expression.
+C: 40:  7: Inconsistent indentation detected.
+W: 40:  7: private (on line 33) does not make singleton methods private. Use private_class_method or private inside a class << self block instead.
+C: 46:  7: Inconsistent indentation detected.
+W: 46:  7: private (on line 33) does not make singleton methods private. Use private_class_method or private inside a class << self block instead.
+W: 51:  9: Useless assignment to variable - source_origin. Use _ or _source_origin as a variable name to indicate that it won't be used.
+
+183 files inspected, 18 offenses detected

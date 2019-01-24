@@ -1,4 +1,4 @@
-require_relative 'reporter'
+require_relative 'report/reporter'
 
 module Danger
   # Create uniform issue reports for different parser types.

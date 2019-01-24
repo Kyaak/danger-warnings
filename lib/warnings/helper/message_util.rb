@@ -1,11 +1,11 @@
-require_relative 'issue'
+require_relative '../report/issue'
 
 module Warnings
-  # Utility class to write the markdown report.
-  module MarkdownUtil
-    TABLE_HEADER = 'Severity|File|Message'.freeze
+  # Utility class to write the markdown and inline reports.
+  module MessageUtil
+    TABLE_HEADER = '|Severity|File|Message|'.freeze
     COLUMN_SEPARATOR = '|'.freeze
-    TABLE_SEPARATOR = "---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---".freeze
+    TABLE_SEPARATOR = "#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}".freeze
     LINE_SEPARATOR = "\n".freeze
 
     module_function
@@ -15,10 +15,18 @@ module Warnings
     # @param name [String] The name of the report to be printed.
     # @param issues [Array<Issue>] List of parsed issues.
     # @return [String] String in danger markdown format.
-    def generate(name, issues)
+    def markdown(name, issues)
       result = header_name(name)
       result << header
       result << issues(issues)
+    end
+
+    # Create an inline comment containing all issue information.
+    #
+    # @param issue [Issue] The issue to report.
+    # @return String Text to add as comment.
+    def inline(issue)
+      "#{issue.severity.to_s.capitalize}\n#{meta_information(issue)}\n#{issue.message}"
     end
 
     # Create the report name string.
@@ -47,15 +55,31 @@ module Warnings
     def issues(issues)
       result = ''
       issues.each do |issue|
+        result << COLUMN_SEPARATOR.dup
         result << issue.severity.to_s.capitalize
         result << COLUMN_SEPARATOR
         result << "#{issue.file_name}:#{issue.line}"
         result << COLUMN_SEPARATOR
-        result << "[#{issue.id}-#{issue.name}] #{issue.message}"
+        result << "#{meta_information(issue)} #{issue.message}"
+        result << COLUMN_SEPARATOR
         result << LINE_SEPARATOR
       end
       # rubocop:enable Metrics/AbcSize
       result
+    end
+
+    # Combine meta information about the issue.
+    # Meta information are considered infos about the check itself.
+    # e.g. category
+    #
+    # @param issue [Issue] Issue to extract information.
+    # @return String combined information.
+    def meta_information(issue)
+      return unless issue.category
+
+      result = '['
+      result << issue.category
+      result << ']'
     end
   end
 end
