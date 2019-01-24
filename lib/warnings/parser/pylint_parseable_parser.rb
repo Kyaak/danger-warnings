@@ -1,11 +1,10 @@
 require_relative 'parser'
-require_relative '../report/issue'
+require_relative '../reporter/issue'
 require_relative '../helper/severity_util'
 
 module Warnings
-  # Parser class for pylint formatted files.
-  class PylintParser < Parser
-    NAME = 'Pylint'.freeze
+  # Parser class for pylint 'parseable' formatted reports.
+  class PylintParseableParser < Parser
     ISSUE_PATTERN = /(.*):(\d+):\s*\[(\w\d+)\]\s*(.*)/.freeze
 
     def parse(file)
@@ -15,16 +14,12 @@ module Warnings
       end
     end
 
-    def name
-      NAME
-    end
-
     private
 
-    # Match the regex result and store it as issue implementation.
+    # Extract values to create an issue item.
+    # It is stored in @issues.
     #
-    # @param match [Array<String>] The regex matches for a single issue.
-    # @return Void
+    # @param match [Array] Issue match array.
     def store_issue(match)
       issue = Issue.new
       issue.file_name = match[0]

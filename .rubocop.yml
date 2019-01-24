@@ -43,3 +43,6 @@ PercentLiteralDelimiters:
     "%w": ()
     "%W": ()
     "%x": ()
+
+Layout/CaseIndentation:
+  IndentOneStep: true

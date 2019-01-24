@@ -3,13 +3,13 @@ module Warnings
     ASSETS_DIR = Pathname.new(File.expand_path('../assets', __dir__))
     EMPTY_FILE = "#{ASSETS_DIR}/empty.txt".freeze
 
-    BANDIT_JSON = "#{ASSETS_DIR}/bandit.json".freeze
-    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_empty.json".freeze
-    BANDIT_MISSING_RESULTS = "#{ASSETS_DIR}/bandit_missing_results.json".freeze
-    PYLINT_TXT = "#{ASSETS_DIR}/pylint.txt".freeze
-    RUBOCOP_JSON = "#{ASSETS_DIR}/rubocop.json".freeze
-    RUBOCOP_MULTI_JSON = "#{ASSETS_DIR}/rubocop_multi_offenses.json".freeze
-    RUBOCOP_SIMPLE = "#{ASSETS_DIR}/rubocop.txt".freeze
+    BANDIT_JSON = "#{ASSETS_DIR}/bandit_json.json".freeze
+    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_json_empty.json".freeze
+    BANDIT_MISSING_RESULTS = "#{ASSETS_DIR}/bandit_json_missing_results.json".freeze
+    PYLINT_PARSEABLE = "#{ASSETS_DIR}/pylint_parseable.txt".freeze
+    RUBOCOP_JSON = "#{ASSETS_DIR}/rubocop_json.json".freeze
+    RUBOCOP_MULTI_JSON = "#{ASSETS_DIR}/rubocop_json_multi_offenses.json".freeze
+    RUBOCOP_SIMPLE = "#{ASSETS_DIR}/rubocop_simple.txt".freeze
 
     BANDIT_FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",

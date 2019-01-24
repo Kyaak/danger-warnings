@@ -100,7 +100,7 @@ This plugin was inspired by the work of [warnings-ng-plugin](https://github.com/
 - [Installation](#installation)
 - [Examples](#examples)
 - [Configuration](#configuration)
-- [Parsers](#parsers)
+- [Reporters](#reporters)
 
 ## How it looks like
 
@@ -134,20 +134,32 @@ your `Dangerfile` under the `warnings` namespace.
 
 #### Minimal example:
 ```ruby
-# Create a bandit report with default settings.
+# Use the default format of the reporter
+ 
 warnings.report(          
-  parser: :bandit,
-  file: 'reports/bandit.json'         
+  id: :bandit,
+  file: 'bandit.json'         
+)
+```
+
+```ruby
+# Define the format the reporter uses to parse the file
+  
+warnings.report(          
+  id: :bandit,
+  format: :json,
+  file: 'bandit.json'         
 )
 ```
 
 #### Simple example: 
 ```ruby
 # Create a bandit report with a custom name, fails if any high warning exists 
-# and evaluates all issues (not only the changed files) .
+# and evaluates all issues (not only the changed files) 
+ 
 warnings.report( 
   name: 'My Bandit Report',            
-  parser: :bandit,
+  id: :bandit,
   file: 'reports/bandit.json',
   fail_error: true,
   filter: false         
@@ -163,7 +175,7 @@ warning.fail_error = true
 # Use custom names to separate the table reports in the danger comment. 
 warnings.report(
   name: 'Report 1',          
-  parser: :bandit,
+  id: :bandit,
   file: 'reports/bandit.json'
   # Not necessary because already defined as default.   
   # inline: true,
@@ -172,7 +184,7 @@ warnings.report(
 
 warnings.report( 
   name: 'Report 2',         
-  parser: :bandit,
+  id: :bandit,
   file: 'reports/bandit.json'         
   # Not necessary because already defined as default.   
   # inline: true,
@@ -181,7 +193,7 @@ warnings.report(
 
 warnings.report( 
   name: 'Report 3',         
-  parser: :bandit,
+  id: :bandit,
   file: 'reports/bandit.json',         
   # Override the newly defined default settings only for this reporter.   
   inline: false,
@@ -207,8 +219,9 @@ Configure the details of your report using the arguments passed by.
 
 |Parameter|Class|Description|
 |---|---|---|
-|name|`String`| A custom name for this report. If none is given, the parser name is used. Useful to separate different reports using the same common style (e.g. checkstyle).
-|parser|`Symbol`, `String`| Define the parser to evaluate the report file. Must be a key of the supported [parser](#parsers)
+|id|`Symbol`| Define the reporter to evaluate the report file. Must be a key of the supported [reporters](#reporters)
+|format|`Symbol`| Define the format the reporter uses If not set, the default format is used. Must be a key of the supported [reporters](#reporters)
+|name|`String`| A custom name for this report. If none is given, the reporter name is used. Useful to separate different reports using the same common style (e.g. checkstyle).
 |file|`String`| Path to the file to read and parse.
 |baseline|`String`| Define a baseline for your files. Useful if the report removes a path segment but is required to identify them in the repository. E.g. `/src/main/java`
 
@@ -223,19 +236,18 @@ These will override the configuration for this report **only**.
 It is not the responsibility of this plugin to exclude / include files or directories. We will only process the result and present it to you.
 Something like this belongs to your tool configuration before running it.
 
-## Parsers
+## Reporters
 
-Find a list with supported report formats and their parsers. 
+Find a list with supported reporters and their format parsers. 
 
-If your desired parser is not explicitly named, look into your tools documentation - maybe you can format 
+If your desired reporter or format is not explicitly named, look into your tools documentation - maybe you can format 
 the report in a different style (and give it a custom name when calling `warnings.report`). 
 
-`any` file format means that the file is most likely read line by line, so the extension is not important.
 
-Your parser is missing and you cannot export into another format? -> [Create an Issue](https://github.com/Kyaak/danger-warnings/issues) 
+Your reporter / format is missing and you cannot export into another format? -> [Create an Issue](https://github.com/Kyaak/danger-warnings/issues) 
 
-|Number|Name|ID|File Format|Formatter|
-|:---:|:---|:---|:---:|:----:|
-|1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json
-|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|any|parseable
-|3|[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|json, any|json, simple
+|Number|Name|ID|Formats|Default|
+|:---:|:---:|:---:|:---:|:----:|
+|1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json|
+|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|parseable|parseable|
+|3|[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|json, simple|simple|

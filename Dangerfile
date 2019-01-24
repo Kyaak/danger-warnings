@@ -1,5 +1,5 @@
 warnings.report(
-  parser: :rubocop,
-  file: 'spec/assets/rubocop.txt',
+  id: :rubocop,
+  file: 'spec/assets/rubocop_simple.txt',
   filter: false
 )

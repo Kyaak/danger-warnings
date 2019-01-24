@@ -1,4 +1,4 @@
-require_relative '../report/issue'
+require_relative '../reporter/issue'
 
 module Warnings
   # Utility class to write the markdown and inline reports.
@@ -12,7 +12,7 @@ module Warnings
 
     # Generate a markdown text message listing all issues as table.
     #
-    # @param name [String] The name of the report to be printed.
+    # @param name [String] The name of the reporter to be printed.
     # @param issues [Array<Issue>] List of parsed issues.
     # @return [String] String in danger markdown format.
     def markdown(name, issues)
@@ -23,16 +23,16 @@ module Warnings
 
     # Create an inline comment containing all issue information.
     #
-    # @param issue [Issue] The issue to report.
+    # @param issue [Issue] The issue to reporter.
     # @return String Text to add as comment.
     def inline(issue)
       "#{issue.severity.to_s.capitalize}\n#{meta_information(issue)}\n#{issue.message}"
     end
 
-    # Create the report name string.
+    # Create the reporter name string.
     #
-    # @param report_name [String] The name of the report.
-    # @return [String] Text containing header name of the report.
+    # @param report_name [String] The name of the reporter.
+    # @return [String] Text containing header name of the reporter.
     def header_name(report_name)
       "# #{report_name}#{LINE_SEPARATOR}"
     end

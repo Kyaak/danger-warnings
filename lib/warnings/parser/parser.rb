@@ -1,28 +1,27 @@
 require 'json'
-require 'abstract_method'
 
 module Warnings
   # Base parser class to define common methods.
   class Parser
-    ERROR_FILE_NOT_EXIST = 'File \'%s\' does not exist.'.freeze
+    ERROR_FILE_NOT_EXIST = 'File <%s> does not exist.'.freeze
     ERROR_EXT_NOT_JSON = '%s is not a json file.'.freeze
     EXT_JSON = 'json'.freeze
     # All issues found by the parser.
     #
-    # @return [Array<Issue>]
-    attr_accessor :issues
-    # Execute the parser.
-    # Read the file and create an array of issues.
-    #
     # @return [Array<Issue>] Array of issues.
-    abstract_method :parse
-    # Define a default name for the parser implementation.
-    #
-    # @return [String] Name of the parser implementation.
-    abstract_method :name
+    attr_accessor :issues
 
     def initialize
       @issues = []
+    end
+
+    # Execute the parser.
+    # Read the file and create an array of issues.
+    #
+    # @param file [String] Path to file.
+    # @return [Array<Issue>] Array of issues.
+    def parse(file)
+      raise "#{self.class.name}#parse(file) must be overridden.\n#{file}"
     end
 
     protected
