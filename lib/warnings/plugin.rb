@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'reporter/reporter_factory'
 
 module Danger
@@ -21,7 +23,7 @@ module Danger
   # @see Kyaak/danger-warnings
   # @tags warnings, danger, parser, issues, reporter
   class DangerWarnings < Plugin
-    ERROR_ID_NOT_SET = 'danger.warnings requires an :id'.freeze
+    ERROR_ID_NOT_SET = 'danger.warnings requires an :id'
     # Whether to comment as markdown reporter or do an inline comment on the file.
     #
     # This will be set as default for all reporters used in this danger run.

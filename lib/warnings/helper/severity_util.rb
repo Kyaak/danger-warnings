@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Warnings
   # Defines severity levels and provides helper methods.
   module SeverityUtil

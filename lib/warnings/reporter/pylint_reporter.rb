@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require_relative 'reporter'
 require_relative '../parser/pylint_parseable_parser'
 
 module Warnings
   # Reporter implementation for Pylint.
   class PylintReporter < Reporter
-    NAME = 'Pylint'.freeze
+    NAME = 'Pylint'
 
     def parsers
       {

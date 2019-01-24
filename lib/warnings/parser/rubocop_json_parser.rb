@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'parser'
 require_relative '../helper/severity_util'
 require_relative '../reporter/issue'

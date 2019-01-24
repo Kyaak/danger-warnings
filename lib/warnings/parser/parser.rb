@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require 'json'
 
 module Warnings
   # Base parser class to define common methods.
   class Parser
-    ERROR_FILE_NOT_EXIST = 'File <%s> does not exist.'.freeze
-    ERROR_EXT_NOT_JSON = '%s is not a json file.'.freeze
-    EXT_JSON = 'json'.freeze
+    ERROR_FILE_NOT_EXIST = 'File <%s> does not exist.'
+    ERROR_EXT_NOT_JSON = '%s is not a json file.'
+    EXT_JSON = 'json'
     # All issues found by the parser.
     #
     # @return [Array<Issue>] Array of issues.

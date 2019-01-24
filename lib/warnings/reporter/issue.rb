@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Warnings
   # An issue definition to be used for reports.
   class Issue

@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require_relative 'reporter'
 require_relative '../parser/bandit_json_parser'
 
 module Warnings
   # Reporter implementation for Bandit.
   class BanditReporter < Reporter
-    NAME = 'Bandit'.freeze
+    NAME = 'Bandit'
 
     def parsers
       {

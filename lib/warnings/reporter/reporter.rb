@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../helper/message_util'
 
 module Warnings
@@ -6,11 +8,11 @@ module Warnings
     DEFAULT_INLINE = false
     DEFAULT_FILTER = true
     DEFAULT_FAIL = false
-    DEFAULT_SUFFIX = 'Report'.freeze
-    ERROR_PARSER_NOT_SET = 'Parser is not set.'.freeze
-    ERROR_FILE_NOT_SET = 'File is not set.'.freeze
-    ERROR_HIGH_SEVERITY = '%s has high severity errors.'.freeze
-    ERROR_NOT_SUPPORTED = 'Parser \'%s\' not supported.'.freeze
+    DEFAULT_SUFFIX = 'Report'
+    ERROR_PARSER_NOT_SET = 'Parser is not set.'
+    ERROR_FILE_NOT_SET = 'File is not set.'
+    ERROR_HIGH_SEVERITY = '%s has high severity errors.'
+    ERROR_NOT_SUPPORTED = 'Parser \'%s\' not supported.'
 
     # The name of this reporter. It is used to identify your reporter in the comments.
     attr_writer :name
@@ -111,7 +113,7 @@ module Warnings
     end
 
     def issue_filename(item)
-      result = ''
+      result = +''
       if baseline
         result << baseline
         result << '/' unless baseline.chars.last == '/'

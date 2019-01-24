@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require_relative '../spec_helper'
 require_relative '../../lib/warnings/reporter/bandit_reporter'
 require 'danger'
 
 module Warnings
   describe Reporter do
-    BANDIT_FILE_1 = 'example/ply/yacc_1.py'.freeze
+    BANDIT_FILE_1 = 'example/ply/yacc_1.py'
 
     before do
       @dangerfile = testing_dangerfile

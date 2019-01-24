@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require File.expand_path('spec_helper', __dir__)
 require_relative 'spec_helper/assets'
 
 module Danger
   describe Danger::DangerWarnings do
     ASSETS_DIR = File.expand_path('assets', __dir__)
-    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_json_empty.json".freeze
-    BANDIT_FILE = "#{ASSETS_DIR}/bandit.json".freeze
+    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_json_empty.json"
+    BANDIT_FILE = "#{ASSETS_DIR}/bandit.json"
 
     it 'should be a plugin' do
       expect(Danger::DangerWarnings.new(nil)).to be_a Danger::Plugin

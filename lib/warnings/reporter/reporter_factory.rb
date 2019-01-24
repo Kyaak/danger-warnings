@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'bandit_reporter'
 require_relative 'pylint_reporter'
 require_relative 'rubocop_reporter'
@@ -5,7 +7,7 @@ require_relative 'rubocop_reporter'
 module Warnings
   # Factory class for supported reporter.
   class ReporterFactory
-    ERROR_NOT_SUPPORTED = 'Reporter \'%s\' not supported.'.freeze
+    ERROR_NOT_SUPPORTED = 'Reporter \'%s\' not supported.'
     REPORTERS = {
       bandit: BanditReporter,
       pylint: PylintReporter,
