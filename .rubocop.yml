@@ -1,7 +1,7 @@
 # Defaults can be found here: https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 
 AllCops:
-  TargetRubyVersion: 2.2
+  TargetRubyVersion: 2.3
 
 # kind_of? is a good way to check a type
 Style/ClassCheck:
@@ -43,3 +43,9 @@ PercentLiteralDelimiters:
     "%w": ()
     "%W": ()
     "%x": ()
+
+Layout/CaseIndentation:
+  IndentOneStep: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: true

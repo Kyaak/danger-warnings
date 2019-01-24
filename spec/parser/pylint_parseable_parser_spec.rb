@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 require_relative '../spec_helper'
-require_relative '../../lib/warnings/parser/pylint_parser'
+require_relative '../../lib/warnings/parser/pylint_parseable_parser'
 
 module Warnings
-  describe PylintParser do
+  describe PylintParseableParser do
     before do
-      @parser = PylintParser.new
+      @parser = PylintParseableParser.new
     end
 
     context '#parse' do
       context 'filled results' do
         before do
-          @parser.parse(Assets::PYLINT_TXT)
+          @parser.parse(Assets::PYLINT_PARSEABLE)
           @issue = @parser.issues.first
         end
 

@@ -1,92 +1,40 @@
+# frozen_string_literal: true
+
 require_relative '../spec_helper'
-require_relative '../../lib/warnings/report/reporter'
+require_relative '../../lib/warnings/reporter/bandit_reporter'
 require 'danger'
 
 module Warnings
   describe Reporter do
-    BANDIT_FILE_1 = 'example/ply/yacc_1.py'.freeze
+    BANDIT_FILE_1 = 'example/ply/yacc_1.py'
 
     before do
       @dangerfile = testing_dangerfile
-      @reporter = Reporter.new(@dangerfile)
+      @reporter = BanditReporter.new(@dangerfile)
 
       @dangerfile.git.stubs(:modified_files).returns(%w())
       @dangerfile.git.stubs(:added_files).returns(%w())
     end
 
     context '#name' do
-      it 'returns default' do
-        expect(@reporter.name).to eq(Reporter::DEFAULT_NAME)
+      it 'set' do
+        test_name = 'My Test Name Report'
+        @reporter.name = test_name
+        expect(@reporter.name).to eq(test_name)
       end
 
-      context 'set' do
-        REPORTER_TEST_NAME = 'My Test Name Report'.freeze
-
-        before do
-          @reporter.name = REPORTER_TEST_NAME
-        end
-
-        it 'without parser' do
-          expect(@reporter.parser).to be_nil
-          expect(@reporter.name).to eq(REPORTER_TEST_NAME)
-        end
-
-        it 'with parser' do
-          @reporter.parser = :bandit
-          expect(@reporter.parser).not_to be_nil
-          expect(@reporter.parser_impl).not_to be_nil
-          expect(@reporter.name).to eq(REPORTER_TEST_NAME)
-        end
-      end
-
-      context 'not set' do
-        it 'without parser' do
-          expect(@reporter.parser).to be_nil
-          expect(@reporter.parser_impl).to be_nil
-          expect(@reporter.name).to eq(Reporter::DEFAULT_NAME)
-        end
-
-        it 'with parser' do
-          @reporter.parser = :bandit
-          expect(@reporter.parser).not_to be_nil
-          expect(@reporter.parser_impl).not_to be_nil
-          expect(@reporter.name).to eq("#{BanditParser::NAME} #{Reporter::DEFAULT_NAME}")
-        end
+      it 'not set' do
+        expect(@reporter.name).to eq("#{BanditReporter::NAME} #{Reporter::DEFAULT_SUFFIX}")
       end
     end
 
-    context '#parser' do
-      context 'valid name' do
-        it 'sets #parser and #parser_impl' do
-          @reporter.parser = :bandit
-          expect(@reporter.parser).to eq(:bandit)
-          expect(@reporter.parser_impl).not_to be_nil
-          expect(@reporter.parser_impl).to be_a(BanditParser)
-        end
-      end
-
-      context 'invalid name' do
-        it 'setter raises error' do
-          expect { @reporter.parser = :unknown }.to raise_error(format(ParserFactory::ERROR_NOT_SUPPORTED,
-                                                                       'unknown'))
-        end
-      end
-    end
-
-    context '#report' do
-      it 'raises if no parser' do
-        expect(@reporter.parser).to be_nil
-        expect { @reporter.report }.to raise_error(Reporter::ERROR_PARSER_NOT_SET)
-      end
-
+    context '#reporter' do
       it 'raises if no file' do
-        @reporter.parser = :bandit
         expect(@reporter.file).to be_nil
         expect { @reporter.report }.to raise_error(Reporter::ERROR_FILE_NOT_SET)
       end
 
-      it 'does not report markdown if no issues' do
-        @reporter.parser = :bandit
+      it 'does not reporter markdown if no issues' do
         @reporter.file = Assets::BANDIT_EMPTY
         @reporter.report
         @reporter.inline = false
@@ -96,8 +44,7 @@ module Warnings
         expect(@dangerfile.status_report[:errors]).to be_empty
       end
 
-      it 'does not report inline if no issues' do
-        @reporter.parser = :bandit
+      it 'does not reporter inline if no issues' do
         @reporter.file = Assets::BANDIT_EMPTY
         @reporter.inline = true
         @reporter.report
@@ -109,7 +56,7 @@ module Warnings
 
       context 'inline' do
         before do
-          @reporter.parser = :bandit
+          @reporter.format = :json
           @reporter.file = Assets::BANDIT_JSON
           @reporter.filter = false
         end
@@ -143,7 +90,7 @@ module Warnings
 
       context 'fail_error' do
         before do
-          @reporter.parser = :bandit
+          @reporter.format = :json
           @reporter.file = Assets::BANDIT_JSON
         end
 
@@ -212,7 +159,7 @@ module Warnings
 
       context 'filter' do
         before do
-          @reporter.parser = :bandit
+          @reporter.format = :json
           @reporter.file = Assets::BANDIT_JSON
           @dangerfile.git.stubs(:modified_files).returns(%W(#{BANDIT_FILE_1}))
         end
@@ -249,46 +196,6 @@ module Warnings
           expect(@dangerfile.violation_report[:warnings].size).to eq(1)
           expect(@dangerfile.violation_report[:warnings].first.file).to eq(BANDIT_FILE_1)
         end
-      end
-    end
-
-    context 'bandit' do
-      it 'runs markdown' do
-        @reporter.inline = false
-        @reporter.filter = false
-        @reporter.parser = :bandit
-        @reporter.file = Assets::BANDIT_JSON
-        @reporter.report
-        expect(@dangerfile.status_report[:markdowns]).not_to be_empty
-      end
-
-      it 'runs inline' do
-        @reporter.inline = true
-        @reporter.filter = false
-        @reporter.parser = :bandit
-        @reporter.file = Assets::BANDIT_JSON
-        @reporter.report
-        expect(@dangerfile.status_report[:warnings]).not_to be_empty
-      end
-    end
-
-    context 'pylint' do
-      it 'runs markdown' do
-        @reporter.inline = false
-        @reporter.filter = false
-        @reporter.parser = :pylint
-        @reporter.file = Assets::PYLINT_TXT
-        @reporter.report
-        expect(@dangerfile.status_report[:markdowns]).not_to be_empty
-      end
-
-      it 'runs inline' do
-        @reporter.inline = true
-        @reporter.filter = false
-        @reporter.parser = :pylint
-        @reporter.file = Assets::PYLINT_TXT
-        @reporter.report
-        expect(@dangerfile.status_report[:warnings]).not_to be_empty
       end
     end
   end

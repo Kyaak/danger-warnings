@@ -1,47 +1,49 @@
-require_relative '../report/issue'
+# frozen_string_literal: true
+
+require_relative '../reporter/issue'
 
 module Warnings
   # Utility class to write the markdown and inline reports.
   module MessageUtil
-    TABLE_HEADER = '|Severity|File|Message|'.freeze
-    COLUMN_SEPARATOR = '|'.freeze
-    TABLE_SEPARATOR = "#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}".freeze
-    LINE_SEPARATOR = "\n".freeze
+    TABLE_HEADER = '|Severity|File|Message|'
+    COLUMN_SEPARATOR = '|'
+    TABLE_SEPARATOR = "#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}---#{COLUMN_SEPARATOR}"
+    LINE_SEPARATOR = "\n"
 
     module_function
 
     # Generate a markdown text message listing all issues as table.
     #
-    # @param name [String] The name of the report to be printed.
+    # @param name [String] The name of the reporter to be printed.
     # @param issues [Array<Issue>] List of parsed issues.
     # @return [String] String in danger markdown format.
     def markdown(name, issues)
-      result = header_name(name)
+      result = header_name(name).dup
       result << header
       result << issues(issues)
     end
 
     # Create an inline comment containing all issue information.
     #
-    # @param issue [Issue] The issue to report.
+    # @param issue [Issue] The issue to reporter.
     # @return String Text to add as comment.
     def inline(issue)
       "#{issue.severity.to_s.capitalize}\n#{meta_information(issue)}\n#{issue.message}"
     end
 
-    # Create the report name string.
+    # Create the reporter name string.
     #
-    # @param report_name [String] The name of the report.
-    # @return [String] Text containing header name of the report.
+    # @param report_name [String] The name of the reporter.
+    # @return [String] Text containing header name of the reporter.
     def header_name(report_name)
-      "# #{report_name}#{LINE_SEPARATOR}"
+      "## #{report_name}#{LINE_SEPARATOR}"
     end
 
     # Create the base table header line.
     #
     # @return [String] String containing a markdown table header line.
     def header
-      result = TABLE_HEADER.dup
+      result = +TABLE_HEADER
       result << LINE_SEPARATOR
       result << TABLE_SEPARATOR
       result << LINE_SEPARATOR
@@ -53,7 +55,7 @@ module Warnings
     # @return [String] String containing all issues.
     # rubocop:disable Metrics/AbcSize
     def issues(issues)
-      result = ''
+      result = +''
       issues.each do |issue|
         result << COLUMN_SEPARATOR.dup
         result << issue.severity.to_s.capitalize
@@ -77,7 +79,7 @@ module Warnings
     def meta_information(issue)
       return unless issue.category
 
-      result = '['
+      result = +'['
       result << issue.category
       result << ']'
     end

@@ -1,25 +1,27 @@
-require_relative '../parser/parser_factory'
+# frozen_string_literal: true
+
 require_relative '../helper/message_util'
 
 module Warnings
-  # Base reporter class to define attributes and common method to create a report.
+  # Base reporter class to define attributes and common method to create a reporter.
   class Reporter
     DEFAULT_INLINE = false
     DEFAULT_FILTER = true
     DEFAULT_FAIL = false
-    DEFAULT_NAME = 'Report'.freeze
-    ERROR_PARSER_NOT_SET = 'Parser is not set.'.freeze
-    ERROR_FILE_NOT_SET = 'File is not set.'.freeze
-    ERROR_HIGH_SEVERITY = '%s has high severity errors.'.freeze
+    DEFAULT_SUFFIX = 'Report'
+    ERROR_PARSER_NOT_SET = 'Parser is not set.'
+    ERROR_FILE_NOT_SET = 'File is not set.'
+    ERROR_HIGH_SEVERITY = '%s has high severity errors.'
+    ERROR_NOT_SUPPORTED = 'Parser \'%s\' not supported.'
 
-    # The name of this reporter. It is used to identify your report in the comments.
+    # The name of this reporter. It is used to identify your reporter in the comments.
     attr_writer :name
-    # Whether to comment a markdown report or do an inline comment on the file.
+    # Whether to comment a markdown reporter or do an inline comment on the file.
     #
     # @return [Bool] Use inline comments.
     attr_accessor :inline
-    # Whether to filter and report only for changes files.
-    # If this is set to false, all issues are of a report are included in the comment.
+    # Whether to filter and reporter only for changes files.
+    # If this is set to false, all issues are of a reporter are included in the comment.
     #
     # @return [Bool] Filter for changes files.
     attr_accessor :filter
@@ -30,7 +32,7 @@ module Warnings
     # The parser to be used to read issues out of the file.
     #
     # @return [Symbol] Name of the parser.
-    attr_reader :parser
+    attr_writer :format
     # The file path to parse.
     #
     # @return [String] Path to file.
@@ -40,10 +42,10 @@ module Warnings
     #
     # @return [String] Path baseline for git files.
     attr_accessor :baseline
-    # The generated implementation of the :parser.
+    # The parser implementation of the given :format.
     #
     # @return [Parser] Parser implementation
-    attr_reader :parser_impl
+    attr_reader :parser
     attr_reader :issues
 
     def initialize(danger)
@@ -54,7 +56,7 @@ module Warnings
       @issues = []
     end
 
-    # Start generating the report.
+    # Start generating the reporter.
     # Evaluate, parse and comment the found issues.
     def report
       validate
@@ -63,29 +65,43 @@ module Warnings
       comment
     end
 
-    # Define the parser to be used.
-    #
-    # @@raise If no implementation can be found for the symbol.
-    # @param value [Symbol] A symbol key to match a parser implementation.
-    def parser=(value)
-      @parser = value
-      @parser_impl = ParserFactory.create(value)
-    end
-
     # Return the name of this reporter.
     # The name can have 3 values:
     #   - The name set using #name=
     #   - If name is not set, the name of the parser
-    #   - If name and parser are not set, a DEFAULT_NAME
     #
     # @return [String] Name of the reporter.
     def name
       result = @name
-      result ||= "#{@parser_impl.name} #{DEFAULT_NAME}" if @parser_impl
-      result || DEFAULT_NAME
+      result || "#{default_name} #{DEFAULT_SUFFIX}"
+    end
+
+    def default_name
+      raise "#{self.class.name}#default_name must be overridden."
+    end
+
+    def default_format
+      raise "#{self.class.name}#default_format must be overridden."
+    end
+
+    protected
+
+    # Reporter implementations must provide a hash list of available parsers.
+    #
+    # @return [Hash<Symbol, Parser>] Hash of format symbols against their implementation.
+    def parsers
+      raise "#{self.class.name}#parsers must be overridden."
     end
 
     private
+
+    def find_parser
+      key = @format || default_format
+      parser = parsers[key]
+      raise(format(ERROR_NOT_SUPPORTED, key)) if parser.nil?
+
+      parser.new
+    end
 
     def filter_issues
       return unless filter
@@ -97,7 +113,7 @@ module Warnings
     end
 
     def issue_filename(item)
-      result = ''
+      result = +''
       if baseline
         result << baseline
         result << '/' unless baseline.chars.last == '/'
@@ -106,13 +122,13 @@ module Warnings
     end
 
     def validate
-      raise ERROR_PARSER_NOT_SET if @parser_impl.nil?
       raise ERROR_FILE_NOT_SET if @file.nil?
     end
 
     def parse
-      @parser_impl.parse(file)
-      @issues = @parser_impl.issues
+      @parser = find_parser
+      @parser.parse(file)
+      @issues = @parser.issues
     end
 
     def comment
@@ -121,6 +137,7 @@ module Warnings
       inline ? inline_comment : markdown_comment
     end
 
+    # Create and post inline reports containing all found issues.
     def inline_comment
       @issues.each do |issue|
         text = MessageUtil.inline(issue)
@@ -132,12 +149,16 @@ module Warnings
       end
     end
 
+    # Create and post a markdown reporter containing all found issues.
     def markdown_comment
       text = MessageUtil.markdown(name, @issues)
       @danger.markdown(text)
       @danger.fail(format(ERROR_HIGH_SEVERITY, name)) if fail_error && high_issues?
     end
 
+    # Check if the issues contain any high severity item.
+    #
+    # @return [Bool] Found high severity or not.
     def high_issues?
       result = false
       @issues.each do |issue|
@@ -146,6 +167,10 @@ module Warnings
       result
     end
 
+    # Check if the given issue has a high severity.
+    #
+    # @param issue [Issue] Issue to check.
+    # @return [Bool] Is severity high or not.
     def high_issue?(issue)
       issue.severity.eql?(:high)
     end

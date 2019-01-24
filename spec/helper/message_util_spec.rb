@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require_relative '../spec_helper'
 require_relative '../../lib/warnings/helper/message_util'
 
 module Warnings
   describe Warnings::MessageUtil do
-    MARKDOWN_TEST_REPORT_NAME = 'My Report Name'.freeze
+    MARKDOWN_TEST_REPORT_NAME = 'My Report Name'
     COLUMN_ONE = 1
     COLUMN_TWO = 2
     COLUMN_THREE = 3
@@ -13,7 +15,7 @@ module Warnings
         it 'adds header name at first line' do
           result = MessageUtil.markdown(MARKDOWN_TEST_REPORT_NAME, [])
           header_name = result.split(MessageUtil::LINE_SEPARATOR).first
-          expect(header_name).to eq("# #{MARKDOWN_TEST_REPORT_NAME}")
+          expect(header_name).to eq("## #{MARKDOWN_TEST_REPORT_NAME}")
         end
 
         it 'adds table header at second line' do

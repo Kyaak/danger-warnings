@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Warnings
   # Defines severity levels and provides helper methods.
   module SeverityUtil
@@ -14,14 +16,14 @@ module Warnings
     def rcwef_short(name)
       char = name.chars.first.downcase
       case char
-      when 'r', 'c'
-        LOW
-      when 'w'
-        MEDIUM
-      when 'e', 'f'
-        HIGH
-      else
-        LOW
+        when 'r', 'c'
+          LOW
+        when 'w'
+          MEDIUM
+        when 'e', 'f'
+          HIGH
+        else
+          LOW
       end
     end
 
@@ -31,14 +33,14 @@ module Warnings
     # @return [Symbol] Mapped severity level.
     def rcwef_full(name)
       case name.downcase
-      when 'refactor', 'convention'
-        LOW
-      when 'warning'
-        MEDIUM
-      when 'error', 'fatal'
-        HIGH
-      else
-        LOW
+        when 'refactor', 'convention'
+          LOW
+        when 'warning'
+          MEDIUM
+        when 'error', 'fatal'
+          HIGH
+        else
+          LOW
       end
     end
   end

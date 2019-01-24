@@ -1,27 +1,23 @@
+# frozen_string_literal: true
+
 require_relative 'parser'
-require_relative '../report/issue'
+require_relative '../reporter/issue'
 
 module Warnings
-  # Parser class for bandit generated json files.
-  class BanditParser < Parser
-    RESULTS_KEY = 'results'.freeze
-    NAME = 'Bandit'.freeze
-    ERROR_MISSING_KEY = "Missing bandit key '#{RESULTS_KEY}'.".freeze
-
+  # Parser class for bandit 'json' formatted reports.
+  class BanditJsonParser < Parser
     def parse(file)
       json_hash = json(file)
-      results_hash = json_hash[RESULTS_KEY]
-      raise(ERROR_MISSING_KEY) if results_hash.nil?
-
+      results_hash = json_hash['results']
       results_hash.each(&method(:store_issue))
-    end
-
-    def name
-      NAME
     end
 
     private
 
+    # Extract values to create an issue item.
+    # It is stored in @issues.
+    #
+    # @param hash [Hash] Issue hash.
     def store_issue(hash)
       issue = Issue.new
       issue.file_name = hash['filename']
@@ -32,6 +28,9 @@ module Warnings
       @issues << issue
     end
 
+    # Convert bandit json severity to danger::warnings severity symbol.
+    #
+    # @return [Symbol] Warnings severity symbol.
     def to_severity(severity)
       severity.downcase.to_sym
     end
