@@ -35,5 +35,12 @@ module Warnings
       @reporter.report
       expect(@dangerfile.status_report[:warnings]).not_to be_empty
     end
+
+    it 'runs json parser' do
+      @reporter.file = Assets::PYLINT_JSON
+      @reporter.format = :json
+      @reporter.report
+      expect(@dangerfile.status_report[:warnings]).not_to be_empty
+    end
   end
 end

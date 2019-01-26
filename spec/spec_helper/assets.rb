@@ -11,6 +11,7 @@ module Warnings
 
     PYLINT_PARSEABLE_NO_CATEGORIES = "#{ASSETS_DIR}/pylint_parseable_no_categories.txt"
     PYLINT_PARSEABLE_CATEGORIES = "#{ASSETS_DIR}/pylint_parseable_categories.txt"
+    PYLINT_JSON = "#{ASSETS_DIR}/pylint_json.json"
 
     RUBOCOP_JSON = "#{ASSETS_DIR}/rubocop_json.json"
     RUBOCOP_MULTI_JSON = "#{ASSETS_DIR}/rubocop_json_multi_offenses.json"
@@ -46,6 +47,18 @@ module Warnings
       line: '1',
       category: 'C0304 missing-final-newline',
       message: 'Final newline missing'
+    }.freeze
+
+    PYLINT_JSON_ISSUE = {
+      message: 'Final newline missing',
+      obj: '',
+      column: 0,
+      path: 'test_project/__init__.py',
+      line: 1,
+      message_id: 'C0304',
+      type: 'convention',
+      symbol: 'missing-final-newline',
+      module: 'test_project'
     }.freeze
 
     RUBOCOP_FIRST_ISSUE_FULL = {

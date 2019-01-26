@@ -249,5 +249,5 @@ Your reporter / format is missing and you cannot export into another format? -> 
 |Number|Name|ID|Formats|Default|
 |:---:|:---:|:---:|:---:|:----:|
 |1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json|
-|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|parseable|parseable|
+|2|[Pylint](https://github.com/PyCQA/pylint)|pylint|parseable, json|parseable|
 |3|[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|clang, json, simple|clang|
