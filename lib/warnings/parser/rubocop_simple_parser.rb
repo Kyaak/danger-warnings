@@ -8,7 +8,7 @@ module Warnings
   # Parser class for rubocop 'simple' formatted reports.
   class RubocopSimpleParser < Parser
     FILE_PATTERN = /==\s(.*)\s==/.freeze
-    ISSUE_PATTERN = /(\w):\s*(\d+):\s*\d+:\s(.*)/.freeze
+    ISSUE_PATTERN = %r{(\w):\s*(\d+):\s*\d+:\s(\w+/\w+)?(:\s)?(.*)}.freeze
 
     def parse(file)
       last_file = nil
@@ -35,10 +35,12 @@ module Warnings
     # @return [Hash] Mapped issue values.
     def extract_issue(match)
       content = match[0]
+      category = content.count > 2 ? content[2] : nil
       {
         severity: content[0],
         line: content[1],
-        message: content[2]
+        category: category,
+        message: content[content.count - 1]
       }
     end
 
@@ -51,6 +53,7 @@ module Warnings
       issue = Issue.new
       issue.file_name = file
       issue.line = issue_hash[:line].to_i
+      issue.category = issue_hash[:category]
       issue.severity = SeverityUtil.rcwef_full(issue_hash[:severity])
       issue.message = issue_hash[:message]
       @issues << issue

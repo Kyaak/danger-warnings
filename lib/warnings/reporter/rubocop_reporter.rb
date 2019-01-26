@@ -3,6 +3,7 @@
 require_relative 'reporter'
 require_relative '../parser/rubocop_simple_parser'
 require_relative '../parser/rubocop_json_parser'
+require_relative '../parser/clang_parser'
 
 module Warnings
   # Reporter implementation for RuboCop.
@@ -12,7 +13,8 @@ module Warnings
     def parsers
       {
         simple: RubocopSimpleParser,
-        json: RubocopJsonParser
+        json: RubocopJsonParser,
+        clang: ClangParser
       }
     end
 
@@ -21,7 +23,7 @@ module Warnings
     end
 
     def default_format
-      :simple
+      :clang
     end
   end
 end

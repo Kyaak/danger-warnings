@@ -24,7 +24,7 @@ module Warnings
           expect(@issue.file_name).to eq(Assets::PYLINT_FIRST_ISSUE[:filename])
         end
 
-        it 'maps id' do
+        it 'maps category' do
           expect(@issue.category).to eq(Assets::PYLINT_FIRST_ISSUE[:category])
         end
 

@@ -1,0 +1,10 @@
+Inspecting 183 files
+.........................C...................C..........................................................C.C....................C..................C...........W........................
+
+Offenses:
+
+spec/lib/danger/danger_core/plugins/dangerfile_gitlab_plugin_spec.rb:82:65: C: Style/Semicolon: Do not use semicolons to terminate expressions.
+        head_commit = "04e58de1fa97502d7e28c1394d471bb8fb1fc4a8";
+                                                                ^
+
+183 files inspected, 18 offenses detected

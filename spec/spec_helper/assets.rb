@@ -11,7 +11,10 @@ module Warnings
     PYLINT_PARSEABLE = "#{ASSETS_DIR}/pylint_parseable.txt"
     RUBOCOP_JSON = "#{ASSETS_DIR}/rubocop_json.json"
     RUBOCOP_MULTI_JSON = "#{ASSETS_DIR}/rubocop_json_multi_offenses.json"
-    RUBOCOP_SIMPLE = "#{ASSETS_DIR}/rubocop_simple.txt"
+    RUBOCOP_SIMPLE_NO_COPS = "#{ASSETS_DIR}/rubocop_simple_no_cops.txt"
+    RUBOCOP_SIMPLE_COPS = "#{ASSETS_DIR}/rubocop_simple_cops.txt"
+    RUBOCOP_CLANG_NO_COPS = "#{ASSETS_DIR}/rubocop_clang_no_cops.txt"
+    RUBOCOP_CLANG_COPS = "#{ASSETS_DIR}/rubocop_clang_cops.txt"
 
     BANDIT_FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
@@ -35,7 +38,7 @@ module Warnings
       message: "'from test_project import *' used; unable to detect undefined names"
     }.freeze
 
-    RUBOCOP_FIRST_ISSUE = {
+    RUBOCOP_FIRST_ISSUE_FULL = {
       path: 'spec/lib/danger/danger_core/plugins/dangerfile_gitlab_plugin_spec.rb',
       offenses: [
         {
@@ -50,6 +53,13 @@ module Warnings
           }
         }
       ]
+    }.freeze
+
+    RUBOCOP_FIRST_ISSUE_SHORT = {
+      path: 'spec/lib/danger/danger_core/plugins/dangerfile_gitlab_plugin_spec.rb',
+      cop: 'Style/Semicolon',
+      message: 'Do not use semicolons to terminate expressions.',
+      line: 82
     }.freeze
   end
 end
