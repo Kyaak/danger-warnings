@@ -24,13 +24,13 @@ module Warnings
     end
 
     it 'runs default parseable parser' do
-      @reporter.file = Assets::PYLINT_PARSEABLE
+      @reporter.file = Assets::PYLINT_PARSEABLE_NO_CATEGORIES
       @reporter.report
       expect(@dangerfile.status_report[:warnings]).not_to be_empty
     end
 
     it 'runs parseable parser' do
-      @reporter.file = Assets::PYLINT_PARSEABLE
+      @reporter.file = Assets::PYLINT_PARSEABLE_NO_CATEGORIES
       @reporter.format = :parseable
       @reporter.report
       expect(@dangerfile.status_report[:warnings]).not_to be_empty
