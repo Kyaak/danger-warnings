@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Ruby 2.2 support
 
+### Added 
+- ClangParser
+
 ## [0.1.0] - 2019-01-23
 ### Added 
 - PylintParser - Support Pylint formatted reports

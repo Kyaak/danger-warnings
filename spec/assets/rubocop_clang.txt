@@ -1,0 +1,59 @@
+Inspecting 183 files
+.........................C...................C..........................................................C.C....................C..................C...........W........................
+
+Offenses:
+
+spec/lib/danger/danger_core/plugins/dangerfile_gitlab_plugin_spec.rb:82:65: C: Do not use semicolons to terminate expressions.
+        head_commit = "04e58de1fa97502d7e28c1394d471bb8fb1fc4a8";
+                                                                ^
+spec/lib/danger/request_sources/github_spec.rb:598:16: C: Avoid comma after the last parameter of a method call.
+        line: 1,
+               ^
+lib/danger/danger_core/plugins/dangerfile_messaging_plugin.rb:181:5: C: Use alias instead of alias_method in a class body.
+    alias_method :failure, :fail
+    ^^^^^^^^^^^^
+lib/danger/danger_core/plugins/dangerfile_local_only_plugin.rb:9:66: C: Trailing whitespace detected.
+  # @example Check that added lines contains agreed form of words 
+                                                                 ^
+lib/danger/danger_core/plugins/dangerfile_local_only_plugin.rb:14:82: C: Trailing whitespace detected.
+  #             fail "Single 'L' for cancellation-alike words in '#{added_line}'" 
+                                                                                 ^
+lib/danger/request_sources/gitlab.rb:171:20: C: Prefer double-quoted strings unless you need single quotes to avoid extra backslashes for escaping.
+        branch ||= 'master'
+                   ^^^^^^^^
+lib/danger/ci_source/support/find_repo_info_from_url.rb:11:1: C: Trailing whitespace detected.
+lib/danger/ci_source/code_build.rb:19:31: W: Assignment in condition - you probably meant to use ==.
+      return false unless url = self.extract_pr_url(env)
+                              ^
+lib/danger/ci_source/code_build.rb:33:5: C: Keep a blank line before and after private.
+    private
+    ^^^^^^^
+lib/danger/ci_source/code_build.rb:33:5: W: Useless private access modifier.
+    private
+    ^^^^^^^
+lib/danger/ci_source/code_build.rb:34:7: C: Inconsistent indentation detected.
+      def self.extract_repo_slug(env) ...
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/danger/ci_source/code_build.rb:34:7: W: private (on line 33) does not make singleton methods private. Use private_class_method or private inside a class << self block instead.
+      def self.extract_repo_slug(env)
+      ^^^
+lib/danger/ci_source/code_build.rb:37:47: C: Use %r around regular expression.
+        env["CODEBUILD_SOURCE_REPO_URL"].gsub(/^.*?github\.com\/(.*?)\.git$/, '\1')
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/danger/ci_source/code_build.rb:40:7: C: Inconsistent indentation detected.
+      def self.extract_repo_url(env) ...
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/danger/ci_source/code_build.rb:40:7: W: private (on line 33) does not make singleton methods private. Use private_class_method or private inside a class << self block instead.
+      def self.extract_repo_url(env)
+      ^^^
+lib/danger/ci_source/code_build.rb:46:7: C: Inconsistent indentation detected.
+      def self.extract_pr_url(env) ...
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/danger/ci_source/code_build.rb:46:7: W: private (on line 33) does not make singleton methods private. Use private_class_method or private inside a class << self block instead.
+      def self.extract_pr_url(env)
+      ^^^
+lib/danger/ci_source/code_build.rb:51:9: W: Useless assignment to variable - source_origin. Use _ or _source_origin as a variable name to indicate that it won't be used.
+        source_origin, pr_number = env["CODEBUILD_SOURCE_VERSION"].split("/")
+        ^^^^^^^^^^^^^
+
+183 files inspected, 18 offenses detected

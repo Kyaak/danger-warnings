@@ -13,7 +13,7 @@ module Warnings
       before do
         @parser.parse(Assets::RUBOCOP_JSON)
         @issue = @parser.issues.first
-        @first_issue_offense = Assets::RUBOCOP_FIRST_ISSUE[:offenses].first
+        @first_issue_offense = Assets::RUBOCOP_FIRST_ISSUE_FULL[:offenses].first
       end
 
       it 'parses issues' do
@@ -21,7 +21,7 @@ module Warnings
       end
 
       it 'maps path' do
-        expect(@issue.file_name).to eq(Assets::RUBOCOP_FIRST_ISSUE[:path])
+        expect(@issue.file_name).to eq(Assets::RUBOCOP_FIRST_ISSUE_FULL[:path])
       end
 
       it 'maps category' do

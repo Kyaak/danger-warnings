@@ -20,11 +20,11 @@ module Warnings
     end
 
     it '#default_parser' do
-      expect(@reporter.default_format).to eq(:simple)
+      expect(@reporter.default_format).to eq(:clang)
     end
 
-    it 'runs default simple parser' do
-      @reporter.file = Assets::RUBOCOP_SIMPLE
+    it 'runs default parser' do
+      @reporter.file = Assets::RUBOCOP_CLANG
       @reporter.report
       expect(@dangerfile.status_report[:warnings]).not_to be_empty
     end
@@ -39,6 +39,13 @@ module Warnings
     it 'runs json parser' do
       @reporter.file = Assets::RUBOCOP_JSON
       @reporter.format = :json
+      @reporter.report
+      expect(@dangerfile.status_report[:warnings]).not_to be_empty
+    end
+
+    it 'runs clang parser' do
+      @reporter.file = Assets::RUBOCOP_CLANG
+      @reporter.format = :clang
       @reporter.report
       expect(@dangerfile.status_report[:warnings]).not_to be_empty
     end

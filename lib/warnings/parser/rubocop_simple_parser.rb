@@ -51,7 +51,8 @@ module Warnings
       issue = Issue.new
       issue.file_name = file
       issue.line = issue_hash[:line].to_i
-      issue.severity = SeverityUtil.rcwef_full(issue_hash[:severity])
+      issue.severity = issue_hash[:severity]
+      issue.severity = SeverityUtil.rcwef_full(issue.severity)
       issue.message = issue_hash[:message]
       @issues << issue
     end
