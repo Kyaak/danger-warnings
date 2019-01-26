@@ -24,13 +24,13 @@ module Warnings
     end
 
     it 'runs default parser' do
-      @reporter.file = Assets::RUBOCOP_CLANG
+      @reporter.file = Assets::RUBOCOP_CLANG_NO_COPS
       @reporter.report
       expect(@dangerfile.status_report[:warnings]).not_to be_empty
     end
 
     it 'runs simple parser' do
-      @reporter.file = Assets::RUBOCOP_SIMPLE
+      @reporter.file = Assets::RUBOCOP_SIMPLE_NO_COPS
       @reporter.format = :simple
       @reporter.report
       expect(@dangerfile.status_report[:warnings]).not_to be_empty
@@ -44,7 +44,7 @@ module Warnings
     end
 
     it 'runs clang parser' do
-      @reporter.file = Assets::RUBOCOP_CLANG
+      @reporter.file = Assets::RUBOCOP_CLANG_NO_COPS
       @reporter.format = :clang
       @reporter.report
       expect(@dangerfile.status_report[:warnings]).not_to be_empty

@@ -1,0 +1,4 @@
+== spec/lib/danger/danger_core/plugins/dangerfile_gitlab_plugin_spec.rb ==
+C: 82: 65: Style/Semicolon: Do not use semicolons to terminate expressions.
+
+183 files inspected, 18 offenses detected

@@ -11,34 +11,68 @@ module Warnings
 
     context '#parse' do
       context 'rubocop' do
-        before do
-          @parser.parse(Assets::RUBOCOP_CLANG)
-          @issue = @parser.issues.first
-          @first_issue = Assets::RUBOCOP_FIRST_ISSUE_SHORT
+        context 'cops' do
+          before do
+            @parser.parse(Assets::RUBOCOP_CLANG_COPS)
+            @issue = @parser.issues.first
+            @first_issue = Assets::RUBOCOP_FIRST_ISSUE_SHORT
+          end
+
+          it 'parses issues' do
+            expect(@parser.issues).not_to be_empty
+          end
+
+          it 'maps filename' do
+            expect(@issue.file_name).to eq(@first_issue[:path])
+          end
+
+          it 'maps category' do
+            expect(@issue.category).to eq(@first_issue[:cop])
+          end
+
+          it 'maps line' do
+            expect(@issue.line).to eq(@first_issue[:line])
+          end
+
+          it 'maps message' do
+            expect(@issue.message).to eq(@first_issue[:message])
+          end
+
+          it 'maps severity' do
+            expect(@issue.severity).to eq(:low)
+          end
         end
 
-        it 'parses issues' do
-          expect(@parser.issues).not_to be_empty
-        end
+        context 'no cops' do
+          before do
+            @parser.parse(Assets::RUBOCOP_CLANG_NO_COPS)
+            @issue = @parser.issues.first
+            @first_issue = Assets::RUBOCOP_FIRST_ISSUE_SHORT
+          end
 
-        it 'maps filename' do
-          expect(@issue.file_name).to eq(@first_issue[:path])
-        end
+          it 'parses issues' do
+            expect(@parser.issues).not_to be_empty
+          end
 
-        it 'maps category' do
-          expect(@issue.category).to eq(@first_issue[:severity])
-        end
+          it 'maps filename' do
+            expect(@issue.file_name).to eq(@first_issue[:path])
+          end
 
-        it 'maps line' do
-          expect(@issue.line).to eq(@first_issue[:line])
-        end
+          it 'does not map category' do
+            expect(@issue.category).to be_nil
+          end
 
-        it 'maps message' do
-          expect(@issue.message).to eq(@first_issue[:message])
-        end
+          it 'maps line' do
+            expect(@issue.line).to eq(@first_issue[:line])
+          end
 
-        it 'maps severity' do
-          expect(@issue.severity).to eq(:low)
+          it 'maps message' do
+            expect(@issue.message).to eq(@first_issue[:message])
+          end
+
+          it 'maps severity' do
+            expect(@issue.severity).to eq(:low)
+          end
         end
       end
     end

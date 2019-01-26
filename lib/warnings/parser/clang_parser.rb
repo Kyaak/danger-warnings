@@ -7,7 +7,7 @@ require_relative '../helper/severity_util'
 module Warnings
   # Parser class for clang formatted reports.
   class ClangParser < Parser
-    ISSUE_PATTERN = /(.*):(\d+):(\d+):\s(\w):\s(.*)/.freeze
+    ISSUE_PATTERN = %r{(.+):(\d+):\d+:\s*(\w):\s*(\w+/\w+)?(:\s*)?(.+)}.freeze
 
     def parse(file)
       read_lines(file).each do |line|
@@ -26,9 +26,9 @@ module Warnings
       issue = Issue.new
       issue.file_name = match[0]
       issue.line = match[1].to_i
-      issue.category = match[3]
-      issue.severity = SeverityUtil.rcwef_short(issue.category)
-      issue.message = match[4]
+      issue.severity = SeverityUtil.rcwef_short(match[2])
+      issue.category = match[3] if match.count > 3
+      issue.message = match[match.count - 1]
       @issues << issue
     end
   end
