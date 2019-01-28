@@ -109,14 +109,14 @@ This plugin was inspired by the work of [warnings-ng-plugin](https://github.com/
 
 Severity|File|Message
 ---|---|---
-Low|example/ply/yacc_1.py:2853|[B403-blacklist] Consider possible security implications associated with pickle module.
-Medium|example/ply/yacc_2.py:3255|[B102-exec_used] Use of exec detected.
-High|example/ply/yacc_3.py:3255|[B102-exec_used] Use of exec detected.
+High|example/ply/yacc_3.py:3255|[B102 exec_used] Use of exec detected.
+Medium|example/ply/yacc_2.py:3255|[B102 exec_used] Use of exec detected.
+Low|example/ply/yacc_1.py:2853|[B403 blacklist] Consider possible security implications associated with pickle module.
 
 ### As inline comment
 ```text
 Low
-[B403-blacklist]
+[B403 blacklist]
 Consider possible security implications associated with pickle module.
 ```
 
