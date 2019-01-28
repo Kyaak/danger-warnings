@@ -1,0 +1,144 @@
+************* Module test_project
+test_project/__init__.py:1: [C0304(missing-final-newline), ] Final newline missing
+test_project/__init__.py:1: [C0111(missing-docstring), ] Missing module docstring
+test_project/__init__.py:1: [W0401(wildcard-import), ] Wildcard import test_project
+test_project/__init__.py:1: [W0403(relative-import), ] Relative import 'test_project', should be 'test_project.test_project'
+************* Module test_project.Singleton
+test_project/Singleton.py:37: [C0304(missing-final-newline), ] Final newline missing
+test_project/Singleton.py:1: [C0103(invalid-name), ] Module name "Singleton" doesn't conform to snake_case naming style
+test_project/Singleton.py:1: [C0111(missing-docstring), ] Missing module docstring
+test_project/Singleton.py:1: [C1001(old-style-class), Singleton] Old-style class defined.
+test_project/Singleton.py:20: [C0103(invalid-name), Singleton.Instance] Method name "Instance" doesn't conform to snake_case naming style
+test_project/Singleton.py:30: [W0201(attribute-defined-outside-init), Singleton.Instance] Attribute '_instance' defined outside __init__
+************* Module test_project.test_project
+test_project/test_project.py:14: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:25: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:28: [C0326(bad-whitespace), ] Exactly one space required after assignment
+        worker =Thread (target=self.monitorQueue, args=(self.queue,))
+               ^
+test_project/test_project.py:28: [C0326(bad-whitespace), ] No space allowed before bracket
+        worker =Thread (target=self.monitorQueue, args=(self.queue,))
+                       ^
+test_project/test_project.py:39: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:43: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:50: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:54: [C0301(line-too-long), ] Line too long (113/100)
+test_project/test_project.py:54: [C0326(bad-whitespace), ] Exactly one space required after comma
+                if inMode == 4: PyBusThread(randint(1,100), threadName, 1, method, withEvent, subscriber).start()
+                                                     ^
+test_project/test_project.py:55: [C0301(line-too-long), ] Line too long (131/100)
+test_project/test_project.py:55: [C0326(bad-whitespace), ] Exactly one space required after comma
+                elif inMode == 1: self.queue.put(PyBusThread(randint(1,100), threadName, 1, method, withEvent, subscriber).start())
+                                                                      ^
+test_project/test_project.py:56: [C0301(line-too-long), ] Line too long (111/100)
+test_project/test_project.py:57: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:59: [C0301(line-too-long), ] Line too long (106/100)
+test_project/test_project.py:66: [C0301(line-too-long), ] Line too long (165/100)
+test_project/test_project.py:68: [C0301(line-too-long), ] Line too long (125/100)
+test_project/test_project.py:74: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:81: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:82: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:83: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:91: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:91: [W0311(bad-indentation), ] Bad indentation. Found 8 spaces, expected 4
+test_project/test_project.py:92: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:92: [W0311(bad-indentation), ] Bad indentation. Found 8 spaces, expected 4
+test_project/test_project.py:93: [W0311(bad-indentation), ] Bad indentation. Found 8 spaces, expected 4
+test_project/test_project.py:94: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:94: [W0311(bad-indentation), ] Bad indentation. Found 8 spaces, expected 4
+test_project/test_project.py:95: [W0311(bad-indentation), ] Bad indentation. Found 8 spaces, expected 4
+test_project/test_project.py:97: [W0311(bad-indentation), ] Bad indentation. Found 8 spaces, expected 4
+test_project/test_project.py:98: [W0311(bad-indentation), ] Bad indentation. Found 12 spaces, expected 8
+test_project/test_project.py:101: [C0326(bad-whitespace), ] No space allowed before bracket
+class PyBusThread (threading.Thread):
+                  ^
+test_project/test_project.py:103: [W0311(bad-indentation), ] Bad indentation. Found 7 spaces, expected 8
+test_project/test_project.py:104: [W0311(bad-indentation), ] Bad indentation. Found 7 spaces, expected 8
+test_project/test_project.py:105: [W0311(bad-indentation), ] Bad indentation. Found 7 spaces, expected 8
+test_project/test_project.py:106: [W0311(bad-indentation), ] Bad indentation. Found 7 spaces, expected 8
+test_project/test_project.py:107: [W0311(bad-indentation), ] Bad indentation. Found 7 spaces, expected 8
+test_project/test_project.py:108: [W0311(bad-indentation), ] Bad indentation. Found 7 spaces, expected 8
+test_project/test_project.py:109: [W0311(bad-indentation), ] Bad indentation. Found 7 spaces, expected 8
+test_project/test_project.py:115: [C0326(bad-whitespace), ] No space allowed around keyword argument assignment
+def subscribe(threadMode = Mode.POSTING, onEvent = None):
+                         ^
+test_project/test_project.py:115: [C0326(bad-whitespace), ] No space allowed around keyword argument assignment
+def subscribe(threadMode = Mode.POSTING, onEvent = None):
+                                                 ^
+test_project/test_project.py:120: [C0303(trailing-whitespace), ] Trailing whitespace
+test_project/test_project.py:123: [C0305(trailing-newlines), ] Trailing newlines
+test_project/test_project.py:1: [C0111(missing-docstring), ] Missing module docstring
+test_project/test_project.py:1: [W0401(wildcard-import), ] Wildcard import Singleton
+test_project/test_project.py:1: [W0403(relative-import), ] Relative import 'Singleton', should be 'test_project.Singleton'
+test_project/test_project.py:4: [C0410(multiple-imports), ] Multiple imports on one line (time, sys)
+test_project/test_project.py:9: [C0410(multiple-imports), ] Multiple imports on one line (gevent, os)
+test_project/test_project.py:9: [E0401(import-error), ] Unable to import 'gevent'
+test_project/test_project.py:10: [C0103(invalid-name), ] Constant name "exitFlag" doesn't conform to UPPER_CASE naming style
+test_project/test_project.py:12: [C0111(missing-docstring), PyBus] Missing class docstring
+test_project/test_project.py:12: [C1001(old-style-class), PyBus] Old-style class defined.
+test_project/test_project.py:24: [W0108(unnecessary-lambda), PyBus.__init__.<lambda>] Lambda may not be necessary
+test_project/test_project.py:24: [C0321(multiple-statements), PyBus.__init__] More than one statement on a single line
+test_project/test_project.py:24: [W0612(unused-variable), PyBus.__init__] Unused variable 'i'
+test_project/test_project.py:27: [C0103(invalid-name), PyBus.startWorkers] Method name "startWorkers" doesn't conform to snake_case naming style
+test_project/test_project.py:27: [C0111(missing-docstring), PyBus.startWorkers] Missing method docstring
+test_project/test_project.py:32: [C0103(invalid-name), PyBus.monitorQueue] Method name "monitorQueue" doesn't conform to snake_case naming style
+test_project/test_project.py:32: [C0103(invalid-name), PyBus.monitorQueue] Argument name "q" doesn't conform to snake_case naming style
+test_project/test_project.py:32: [C0111(missing-docstring), PyBus.monitorQueue] Missing method docstring
+test_project/test_project.py:32: [R0201(no-self-use), PyBus.monitorQueue] Method could be a function
+test_project/test_project.py:37: [C0111(missing-docstring), PyBus.register] Missing method docstring
+test_project/test_project.py:40: [C0111(missing-docstring), PyBus.post] Missing method docstring
+test_project/test_project.py:44: [C0103(invalid-name), PyBus.DoesSubscribersContainThisMethod] Method name "DoesSubscribersContainThisMethod" doesn't conform to snake_case naming style
+test_project/test_project.py:44: [C0111(missing-docstring), PyBus.DoesSubscribersContainThisMethod] Missing method docstring
+test_project/test_project.py:44: [R0201(no-self-use), PyBus.DoesSubscribersContainThisMethod] Method could be a function
+test_project/test_project.py:48: [C0103(invalid-name), PyBus.call] Argument name "withEvent" doesn't conform to snake_case naming style
+test_project/test_project.py:48: [C0103(invalid-name), PyBus.call] Argument name "inMode" doesn't conform to snake_case naming style
+test_project/test_project.py:48: [C0111(missing-docstring), PyBus.call] Missing method docstring
+test_project/test_project.py:50: [C0321(multiple-statements), PyBus.call] More than one statement on a single line
+test_project/test_project.py:53: [C0103(invalid-name), PyBus.call] Variable name "threadName" doesn't conform to snake_case naming style
+test_project/test_project.py:54: [C0321(multiple-statements), PyBus.call] More than one statement on a single line
+test_project/test_project.py:55: [C0321(multiple-statements), PyBus.call] More than one statement on a single line
+test_project/test_project.py:56: [C0321(multiple-statements), PyBus.call] More than one statement on a single line
+test_project/test_project.py:57: [C0321(multiple-statements), PyBus.call] More than one statement on a single line
+test_project/test_project.py:61: [C0111(missing-docstring), PyBus.execute] Missing method docstring
+test_project/test_project.py:66: [C0103(invalid-name), PyBus.execute] Variable name "subscribersContainingThisMethod" doesn't conform to snake_case naming style
+test_project/test_project.py:66: [W0110(deprecated-lambda), PyBus.execute] map/filter on lambda could be replaced by comprehension
+test_project/test_project.py:66: [W0640(cell-var-from-loop), PyBus.execute.<lambda>] Cell variable method defined in loop
+test_project/test_project.py:72: [C0103(invalid-name), PyBus.addEventsWithMethods] Method name "addEventsWithMethods" doesn't conform to snake_case naming style
+test_project/test_project.py:72: [C0103(invalid-name), PyBus.addEventsWithMethods] Argument name "threadMode" doesn't conform to snake_case naming style
+test_project/test_project.py:72: [C0111(missing-docstring), PyBus.addEventsWithMethods] Missing method docstring
+test_project/test_project.py:75: [C0103(invalid-name), PyBus.addEventsWithMethods] Variable name "subscribedMethodsForEvent" doesn't conform to snake_case naming style
+test_project/test_project.py:77: [R1704(redefined-argument-from-local), PyBus.addEventsWithMethods] Redefining argument with the local name 'method'
+test_project/test_project.py:90: [C0111(missing-docstring), Mode] Missing class docstring
+test_project/test_project.py:90: [C1001(old-style-class), Mode] Old-style class defined.
+test_project/test_project.py:90: [R0903(too-few-public-methods), Mode] Too few public methods (0/2)
+test_project/test_project.py:104: [C0103(invalid-name), PyBusThread.__init__] Attribute name "threadID" doesn't conform to snake_case naming style
+test_project/test_project.py:101: [C0111(missing-docstring), PyBusThread] Missing class docstring
+test_project/test_project.py:102: [R0913(too-many-arguments), PyBusThread.__init__] Too many arguments (7/5)
+test_project/test_project.py:114: [C0413(wrong-import-position), ] Import "from test_project import Mode" should be placed at the top of the module
+test_project/test_project.py:114: [W0406(import-self), ] Module import itself
+test_project/test_project.py:115: [C0103(invalid-name), subscribe] Argument name "threadMode" doesn't conform to snake_case naming style
+test_project/test_project.py:115: [C0103(invalid-name), subscribe] Argument name "onEvent" doesn't conform to snake_case naming style
+test_project/test_project.py:115: [C0111(missing-docstring), subscribe] Missing function docstring
+test_project/test_project.py:116: [E1101(no-member), subscribe] Class 'PyBus' has no 'Instance' member
+test_project/test_project.py:117: [C0111(missing-docstring), subscribe.real_decorator] Missing function docstring
+test_project/test_project.py:119: [C0111(missing-docstring), subscribe.real_decorator.wrapper] Missing function docstring
+test_project/test_project.py:2: [W0611(unused-import), ] Unused import thread
+test_project/test_project.py:4: [W0611(unused-import), ] Unused import sys
+test_project/test_project.py:4: [W0611(unused-import), ] Unused import time
+test_project/test_project.py:7: [W0611(unused-import), ] Unused Pool imported from multiprocessing.dummy as ThreadPool
+test_project/test_project.py:9: [W0611(unused-import), ] Unused import os
+test_project/test_project.py:2: [C0411(wrong-import-order), ] standard import "import thread" should be placed before "from Singleton import *"
+test_project/test_project.py:3: [C0411(wrong-import-order), ] standard import "import threading" should be placed before "from Singleton import *"
+test_project/test_project.py:4: [C0411(wrong-import-order), ] standard import "import time, sys" should be placed before "from Singleton import *"
+test_project/test_project.py:4: [C0411(wrong-import-order), ] standard import "import time, sys" should be placed before "from Singleton import *"
+test_project/test_project.py:5: [C0411(wrong-import-order), ] standard import "from Queue import Queue" should be placed before "from Singleton import *"
+test_project/test_project.py:6: [C0411(wrong-import-order), ] standard import "from threading import Thread" should be placed before "from Singleton import *"
+test_project/test_project.py:7: [C0411(wrong-import-order), ] standard import "from multiprocessing.dummy import Pool as ThreadPool" should be placed before "from Singleton import *"
+test_project/test_project.py:8: [C0411(wrong-import-order), ] standard import "import multiprocessing" should be placed before "from Singleton import *"
+test_project/test_project.py:9: [C0411(wrong-import-order), ] standard import "import gevent, os" should be placed before "from Singleton import *"
+test_project/test_project.py:6: [C0412(ungrouped-imports), ] Imports from package threading are not grouped
+test_project/test_project.py:114: [C0412(ungrouped-imports), ] Imports from package test_project are not grouped
+
+--------------------------------------------------------------------
+Your code has been rated at -1.59/10 (previous run: -1.59/10, +0.00)
+

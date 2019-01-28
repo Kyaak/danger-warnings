@@ -8,7 +8,11 @@ module Warnings
     BANDIT_JSON = "#{ASSETS_DIR}/bandit_json.json"
     BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_json_empty.json"
     BANDIT_MISSING_RESULTS = "#{ASSETS_DIR}/bandit_json_missing_results.json"
-    PYLINT_PARSEABLE = "#{ASSETS_DIR}/pylint_parseable.txt"
+
+    PYLINT_PARSEABLE_NO_CATEGORIES = "#{ASSETS_DIR}/pylint_parseable_no_categories.txt"
+    PYLINT_PARSEABLE_CATEGORIES = "#{ASSETS_DIR}/pylint_parseable_categories.txt"
+    PYLINT_JSON = "#{ASSETS_DIR}/pylint_json.json"
+
     RUBOCOP_JSON = "#{ASSETS_DIR}/rubocop_json.json"
     RUBOCOP_MULTI_JSON = "#{ASSETS_DIR}/rubocop_json_multi_offenses.json"
     RUBOCOP_SIMPLE_NO_COPS = "#{ASSETS_DIR}/rubocop_simple_no_cops.txt"
@@ -31,11 +35,30 @@ module Warnings
       test_name: 'blacklist'
     }.freeze
 
-    PYLINT_FIRST_ISSUE = {
+    PYLINT_PARSEABLE_NO_CAT_ISSUE = {
       filename: 'test_project/__init__.py',
       line: '1',
       category: 'F403',
       message: "'from test_project import *' used; unable to detect undefined names"
+    }.freeze
+
+    PYLINT_PARSEABLE_CAT_ISSUE = {
+      filename: 'test_project/__init__.py',
+      line: '1',
+      category: 'C0304 missing-final-newline',
+      message: 'Final newline missing'
+    }.freeze
+
+    PYLINT_JSON_ISSUE = {
+      message: 'Final newline missing',
+      obj: '',
+      column: 0,
+      path: 'test_project/__init__.py',
+      line: 1,
+      message_id: 'C0304',
+      type: 'convention',
+      symbol: 'missing-final-newline',
+      module: 'test_project'
     }.freeze
 
     RUBOCOP_FIRST_ISSUE_FULL = {

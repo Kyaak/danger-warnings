@@ -27,7 +27,7 @@ module Warnings
         end
 
         it 'maps id-name' do
-          expect(@issue.category).to eq("#{Assets::BANDIT_FIRST_ISSUE[:test_id]}-#{Assets::BANDIT_FIRST_ISSUE[:test_name]}")
+          expect(@issue.category).to eq("#{Assets::BANDIT_FIRST_ISSUE[:test_id]} #{Assets::BANDIT_FIRST_ISSUE[:test_name]}")
         end
 
         it 'maps line' do

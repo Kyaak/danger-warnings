@@ -4,12 +4,11 @@ require_relative 'parser'
 require_relative '../reporter/issue'
 
 module Warnings
-  # Parser class for bandit 'json' formatted reports.
-  class BanditJsonParser < Parser
+  # Parser class for pylint 'json' formatted reports.
+  class PylintJsonParser < Parser
     def parse(file)
       json_hash = json(file)
-      results_hash = json_hash['results']
-      results_hash.each(&method(:store_issue))
+      json_hash.each(&method(:store_issue))
     end
 
     private
@@ -20,11 +19,11 @@ module Warnings
     # @param hash [Hash] Issue hash.
     def store_issue(hash)
       issue = Issue.new
-      issue.file_name = hash['filename']
-      issue.severity = to_severity(hash['issue_severity'])
-      issue.message = hash['issue_text']
-      issue.line = hash['line_number']
-      issue.category = "#{hash['test_id']} #{hash['test_name']}"
+      issue.file_name = hash['path']
+      issue.severity = SeverityUtil.rcwef_full(hash['type'])
+      issue.message = hash['message']
+      issue.line = hash['line']
+      issue.category = "#{hash['message-id']} #{hash['type']}"
       @issues << issue
     end
 

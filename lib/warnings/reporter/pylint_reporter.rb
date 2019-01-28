@@ -2,6 +2,7 @@
 
 require_relative 'reporter'
 require_relative '../parser/pylint_parseable_parser'
+require_relative '../parser/pylint_json_parser'
 
 module Warnings
   # Reporter implementation for Pylint.
@@ -10,7 +11,8 @@ module Warnings
 
     def parsers
       {
-        parseable: PylintParseableParser
+        parseable: PylintParseableParser,
+        json: PylintJsonParser
       }
     end
 
