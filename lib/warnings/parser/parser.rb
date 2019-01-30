@@ -1,13 +1,17 @@
 # frozen_string_literal: true
 
 require 'json'
+require 'ox'
 
 module Warnings
   # Base parser class to define common methods.
   class Parser
     ERROR_FILE_NOT_EXIST = 'File <%s> does not exist.'
     ERROR_EXT_NOT_JSON = '%s is not a json file.'
+    ERROR_EXT_NOT_XML = '%s is not an xml file.'
     EXT_JSON = 'json'
+    EXT_XML = 'xml'
+
     # All issues found by the parser.
     #
     # @return [Array<Issue>] Array of issues.
@@ -36,6 +40,14 @@ module Warnings
       File.extname(file_path).delete('.').downcase.eql?(EXT_JSON)
     end
 
+    # Check if the file is an xml file.
+    #
+    # @param file_path [String] Path to a file to be read as xml.
+    # @return [Bool] Whether the file is an xml or not.
+    def xml?(file_path)
+      File.extname(file_path).delete('.').downcase.eql?(EXT_XML)
+    end
+
     # Parse a file as json content.
     #
     # @param file_path [String] Path to a file to be read as json.
@@ -45,6 +57,17 @@ module Warnings
 
       content = read_file(file_path)
       JSON.parse(content)
+    end
+
+    # Parse a file as xml content.
+    #
+    # @param file_path [String] Path to a file to be read as xml.
+    # @return [String] Hash of xml values.
+    def xml(file_path)
+      raise(format(ERROR_EXT_NOT_XML, file_path)) unless xml?(file_path)
+
+      content = read_file(file_path)
+      Ox.load(content, nil)
     end
 
     # Read the file into memory and serve each line.

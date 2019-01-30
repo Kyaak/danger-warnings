@@ -50,7 +50,7 @@ module Warnings
 
     context 'not a json' do
       it 'raises error' do
-        expect { @parser.parse(Assets::EMPTY_FILE) }.to raise_error(format('%<name>s is not a json file.', name: Assets::EMPTY_FILE))
+        expect { @parser.parse(Assets::EMPTY_TXT) }.to raise_error(format('%<name>s is not a json file.', name: Assets::EMPTY_TXT))
       end
     end
   end

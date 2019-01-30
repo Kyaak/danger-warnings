@@ -3,18 +3,26 @@
 module Warnings
   module Assets
     ASSETS_DIR = Pathname.new(File.expand_path('../assets', __dir__))
-    EMPTY_FILE = "#{ASSETS_DIR}/empty.txt"
+    EMPTY_TXT = "#{ASSETS_DIR}/empty.txt"
+    EMPTY_XML = "#{ASSETS_DIR}/empty.xml"
 
-    BANDIT_JSON = "#{ASSETS_DIR}/bandit_json.json"
-    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit_json_empty.json"
-    BANDIT_MISSING_RESULTS = "#{ASSETS_DIR}/bandit_json_missing_results.json"
-    PYLINT_PARSEABLE = "#{ASSETS_DIR}/pylint_parseable.txt"
-    RUBOCOP_JSON = "#{ASSETS_DIR}/rubocop_json.json"
-    RUBOCOP_MULTI_JSON = "#{ASSETS_DIR}/rubocop_json_multi_offenses.json"
-    RUBOCOP_SIMPLE_NO_COPS = "#{ASSETS_DIR}/rubocop_simple_no_cops.txt"
-    RUBOCOP_SIMPLE_COPS = "#{ASSETS_DIR}/rubocop_simple_cops.txt"
-    RUBOCOP_CLANG_NO_COPS = "#{ASSETS_DIR}/rubocop_clang_no_cops.txt"
-    RUBOCOP_CLANG_COPS = "#{ASSETS_DIR}/rubocop_clang_cops.txt"
+    BANDIT_JSON = "#{ASSETS_DIR}/bandit/bandit_json.json"
+    BANDIT_EMPTY = "#{ASSETS_DIR}/bandit/bandit_json_empty.json"
+    BANDIT_MISSING_RESULTS = "#{ASSETS_DIR}/bandit/bandit_json_missing_results.json"
+
+    PYLINT_PARSEABLE = "#{ASSETS_DIR}/pylint/pylint_parseable.txt"
+
+    RUBOCOP_JSON = "#{ASSETS_DIR}/rubocop/rubocop_json.json"
+    RUBOCOP_MULTI_JSON = "#{ASSETS_DIR}/rubocop/rubocop_json_multi_offenses.json"
+    RUBOCOP_SIMPLE_NO_COPS = "#{ASSETS_DIR}/rubocop/rubocop_simple_no_cops.txt"
+    RUBOCOP_SIMPLE_COPS = "#{ASSETS_DIR}/rubocop/rubocop_simple_cops.txt"
+    RUBOCOP_CLANG_NO_COPS = "#{ASSETS_DIR}/rubocop/rubocop_clang_no_cops.txt"
+    RUBOCOP_CLANG_COPS = "#{ASSETS_DIR}/rubocop/rubocop_clang_cops.txt"
+
+    CPPCHECK_XML = "#{ASSETS_DIR}/cppcheck/cppcheck.xml"
+    CPPCHECK_EMPTY_RESULTS_XML = "#{ASSETS_DIR}/cppcheck/cppcheck_empty_results.xml"
+    CPPCHECK_EMPTY_ERRORS_XML = "#{ASSETS_DIR}/cppcheck/cppcheck_empty_errors.xml"
+    CPPCHECK_MULTI_LOCATION_XML = "#{ASSETS_DIR}/cppcheck/cppcheck_multi_location.xml"
 
     BANDIT_FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
@@ -60,6 +68,32 @@ module Warnings
       cop: 'Style/Semicolon',
       message: 'Do not use semicolons to terminate expressions.',
       line: 82
+    }.freeze
+
+    CPPCHECK_FIRST_ISSUE = {
+      location: 'src/private/api/manager/ManagerStatusHelperImpl.cpp',
+      line: 59,
+      category: 'useStlAlgorithm',
+      message: 'Consider using std::find_if algorithm instead of a raw loop.',
+      severity: :low
+    }.freeze
+
+    CPPCHECK_MULTI_LOCATION_ISSUE = {
+      locations: [
+        {
+          location: 'src/private/database/domain/DbTrack.h',
+          line: 68,
+          info: "Derived variable 'DbTrack::COLUMN_CREATED_DATE'"
+        },
+        {
+          location: 'src/private/database/domain/DbBaseModel.h',
+          line: 263,
+          info: "Parent variable 'DbBaseModel::COLUMN_CREATED_DATE'"
+        }
+      ],
+      category: 'duplInheritedMember',
+      message: "The class 'DbTrack' defines member variable with name 'COLUMN_CREATED_DATE' also defined in its parent class 'DbBaseModel'.",
+      severity: :medium
     }.freeze
   end
 end

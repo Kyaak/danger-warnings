@@ -43,7 +43,7 @@ module Warnings
 
       context 'empty file' do
         it 'has no issues' do
-          @parser.parse(Assets::EMPTY_FILE)
+          @parser.parse(Assets::EMPTY_TXT)
           expect(@parser.issues).to be_empty
         end
       end

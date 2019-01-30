@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.86"/>
+    <errors>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398">
+            <location file="src/private/api/manager/ManagerStatusHelperImpl.cpp" line="59"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398">
+            <location file="src/private/api/model/TrackingContext.cpp" line="82"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;asString&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;asString&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="142"/>
+            <symbol>asString</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="86"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="91"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="96"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="101"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="106"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="111"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="116"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="121"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="126"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="131"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="136"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbBaseModel.cpp" file="src/private/database/domain/DbBaseModel.h" line="141"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;asString&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;asString&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="142"/>
+            <symbol>asString</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="86"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="91"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="96"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="101"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="106"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="111"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="116"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="121"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="126"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="131"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="136"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbLocation.cpp" file="src/private/database/domain/DbBaseModel.h" line="141"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;asString&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;asString&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="142"/>
+            <symbol>asString</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="86"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="91"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="96"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="101"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="106"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="111"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="116"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="121"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="126"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="131"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="136"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbPreference.cpp" file="src/private/database/domain/DbBaseModel.h" line="141"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;asString&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;asString&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="142"/>
+            <symbol>asString</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;DbTrack&apos; defines member variable with name &apos;COLUMN_CREATED_DATE&apos; also defined in its parent class &apos;DbBaseModel&apos;." verbose="The class &apos;DbTrack&apos; defines member variable with name &apos;COLUMN_CREATED_DATE&apos; also defined in its parent class &apos;DbBaseModel&apos;." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbTrack.h" line="68" info="Derived variable &apos;DbTrack::COLUMN_CREATED_DATE&apos;"/>
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="263" info="Parent variable &apos;DbBaseModel::COLUMN_CREATED_DATE&apos;"/>
+            <symbol>DbTrack</symbol>
+            <symbol>COLUMN_CREATED_DATE</symbol>
+            <symbol>DbBaseModel</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;DbTrack&apos; defines member variable with name &apos;COLUMN_UPDATED_DATE&apos; also defined in its parent class &apos;DbBaseModel&apos;." verbose="The class &apos;DbTrack&apos; defines member variable with name &apos;COLUMN_UPDATED_DATE&apos; also defined in its parent class &apos;DbBaseModel&apos;." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbTrack.h" line="69" info="Derived variable &apos;DbTrack::COLUMN_UPDATED_DATE&apos;"/>
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="264" info="Parent variable &apos;DbBaseModel::COLUMN_UPDATED_DATE&apos;"/>
+            <symbol>DbTrack</symbol>
+            <symbol>COLUMN_UPDATED_DATE</symbol>
+            <symbol>DbBaseModel</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="86"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="91"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="96"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="101"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="106"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="111"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="116"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="121"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="126"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="131"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="136"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h" line="141"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;correlationId&apos; should be passed by const reference." verbose="Parameter &apos;correlationId&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file="src/private/database/domain/DbTrack.cpp" line="67"/>
+            <symbol>correlationId</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;asString&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;asString&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="142"/>
+            <symbol>asString</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="86"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="91"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="96"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="101"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="106"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="111"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="116"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="121"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="126"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="131"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="136"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbTrackingContext.cpp" file="src/private/database/domain/DbBaseModel.h" line="141"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398">
+            <location file="src/private/database/domain/DbTrackingContext.cpp" line="76"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398">
+            <location file="src/private/database/domain/DbTrackingContext.cpp" line="98"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;asString&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;asString&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="142"/>
+            <symbol>asString</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="86"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="91"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="96"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="101"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="106"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="111"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="116"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="121"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="126"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="131"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="136"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Values&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="src/private/database/domain/DbValue.cpp" file="src/private/database/domain/DbBaseModel.h" line="141"/>
+            <symbol>Values</symbol>
+        </error>
+        <error id="noConstructor" severity="style" msg="The class &apos;ResultSetSQLite&apos; does not have a constructor although it has private member variables." verbose="The class &apos;ResultSetSQLite&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="src/private/database/result/ResultSetSQLite.cpp" file="src/private/database/result/ResultSetSQLite.h" line="25"/>
+            <symbol>ResultSetSQLite</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: trackList" verbose="Unused variable: trackList" cwe="563">
+            <location file="src/private/database/util/DbCleanupManager.cpp" line="22"/>
+            <symbol>trackList</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;machineId&apos; should be passed by const reference." verbose="Parameter &apos;machineId&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file="src/private/sync/AwsSyncManager.cpp" line="152"/>
+            <symbol>machineId</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="style" msg="Class &apos;LocationHistoryScheduler&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;LocationHistoryScheduler&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398">
+            <location file="src/private/sync/LocationHistoryScheduler.cpp" line="25"/>
+            <symbol>LocationHistoryScheduler</symbol>
+        </error>
+        <error id="noOperatorEq" severity="style" msg="Class &apos;LocationHistoryScheduler&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;LocationHistoryScheduler&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398">
+            <location file="src/private/sync/LocationHistoryScheduler.cpp" line="25"/>
+            <symbol>LocationHistoryScheduler</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;machineId&apos; should be passed by const reference." verbose="Parameter &apos;machineId&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file="src/private/sync/LocationHistoryScheduler.cpp" line="143"/>
+            <symbol>machineId</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_machineId&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_machineId&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="src/private/sync/LocationHistoryUploadManager.cpp" line="34"/>
+            <symbol>_machineId</symbol>
+        </error>
+        <error id="unusedPrivateFunction" severity="style" msg="Unused private function: &apos;JsonArray::isNull&apos;" verbose="Unused private function: &apos;JsonArray::isNull&apos;" cwe="398">
+            <location file0="src/private/util/json/JsonArray.cpp" file="src/private/util/json/JsonArray.h" line="354"/>
+            <symbol>JsonArray::isNull</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_currentKey&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_currentKey&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/util/json/JsonArray.cpp" file="src/private/util/json/JsonModel.h" line="153"/>
+            <symbol>_currentKey</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_currentKey&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_currentKey&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/util/json/JsonModel.cpp" file="src/private/util/json/JsonModel.h" line="153"/>
+            <symbol>_currentKey</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_currentKey&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_currentKey&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="src/private/util/json/JsonObject.cpp" file="src/private/util/json/JsonModel.h" line="153"/>
+            <symbol>_currentKey</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;logMessage&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;logMessage&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="src/private/util/log/LoggerAndroid.cpp" file="src/private/util/log/LoggerAndroid.h" line="27" info="Function in derived class"/>
+            <location file0="src/private/util/log/LoggerAndroid.cpp" file="src/private/util/log/LoggerDefaultImpl.h" line="30" info="Virtual function in base class"/>
+            <symbol>logMessage</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!result&apos; is always true" verbose="Condition &apos;!result&apos; is always true" cwe="571">
+            <location file="src/private/util/log/LoggerFactory.cpp" line="49" info="Condition &apos;!result&apos; is always true"/>
+            <location file="src/private/util/log/LoggerFactory.cpp" line="36" info="Assignment &apos;result=nullptr&apos;, assigned value is 0"/>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;logMessage&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;logMessage&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="src/private/util/log/LoggerFactory.cpp" file="src/private/util/log/LoggerAndroid.h" line="27" info="Function in derived class"/>
+            <location file0="src/private/util/log/LoggerFactory.cpp" file="src/private/util/log/LoggerDefaultImpl.h" line="30" info="Virtual function in base class"/>
+            <symbol>logMessage</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Bool&apos; is never used." verbose="The function &apos;Bool&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="480"/>
+            <symbol>Bool</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Double&apos; is never used." verbose="The function &apos;Double&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="440"/>
+            <symbol>Double</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;EndArray&apos; is never used." verbose="The function &apos;EndArray&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="314"/>
+            <symbol>EndArray</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;EndObject&apos; is never used." verbose="The function &apos;EndObject&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="304"/>
+            <symbol>EndObject</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Int&apos; is never used." verbose="The function &apos;Int&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="356"/>
+            <symbol>Int</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Int64&apos; is never used." verbose="The function &apos;Int64&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="398"/>
+            <symbol>Int64</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Java_$PACKAGE_PLACEHOLDER_DefaultLocationProvider_createNativeObject&apos; is never used." verbose="The function &apos;Java_$PACKAGE_PLACEHOLDER_DefaultLocationProvider_createNativeObject&apos; is never used." cwe="561">
+            <location file="src/platform_specific/android/jni/DefaultLocationProvider.cpp" line="20"/>
+            <symbol>Java_$PACKAGE_PLACEHOLDER_DefaultLocationProvider_createNativeObject</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Java_$PACKAGE_PLACEHOLDER_DefaultLocationProvider_deleteNativeObject&apos; is never used." verbose="The function &apos;Java_$PACKAGE_PLACEHOLDER_DefaultLocationProvider_deleteNativeObject&apos; is never used." cwe="561">
+            <location file="src/platform_specific/android/jni/DefaultLocationProvider.cpp" line="29"/>
+            <symbol>Java_$PACKAGE_PLACEHOLDER_DefaultLocationProvider_deleteNativeObject</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Key&apos; is never used." verbose="The function &apos;Key&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="324"/>
+            <symbol>Key</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Null&apos; is never used." verbose="The function &apos;Null&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="460"/>
+            <symbol>Null</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;RawNumber&apos; is never used." verbose="The function &apos;RawNumber&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="521"/>
+            <symbol>RawNumber</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;StartArray&apos; is never used." verbose="The function &apos;StartArray&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="272"/>
+            <symbol>StartArray</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;StartObject&apos; is never used." verbose="The function &apos;StartObject&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="240"/>
+            <symbol>StartObject</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;String&apos; is never used." verbose="The function &apos;String&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="332"/>
+            <symbol>String</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Uint&apos; is never used." verbose="The function &apos;Uint&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="376"/>
+            <symbol>Uint</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Uint64&apos; is never used." verbose="The function &apos;Uint64&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="419"/>
+            <symbol>Uint64</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;addColumnEntry&apos; is never used." verbose="The function &apos;addColumnEntry&apos; is never used." cwe="561">
+            <location file="src/private/database/result/RecordSQLite.cpp" line="107"/>
+            <symbol>addColumnEntry</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;addFloat&apos; is never used." verbose="The function &apos;addFloat&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="60"/>
+            <symbol>addFloat</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;convertContext&apos; is never used." verbose="The function &apos;convertContext&apos; is never used." cwe="561">
+            <location file="src/private/api/manager/AwsCredentialsManager.cpp" line="120"/>
+            <symbol>convertContext</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;convertTrackToDbTrack&apos; is never used." verbose="The function &apos;convertTrackToDbTrack&apos; is never used." cwe="561">
+            <location file="src/private/api/converter/TrackConverter.cpp" line="25"/>
+            <symbol>convertTrackToDbTrack</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteAllObjects&apos; is never used." verbose="The function &apos;deleteAllObjects&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/BaseDao.cpp" line="131"/>
+            <symbol>deleteAllObjects</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteBoolForKey&apos; is never used." verbose="The function &apos;deleteBoolForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="448"/>
+            <symbol>deleteBoolForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteById&apos; is never used." verbose="The function &apos;deleteById&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/BaseDao.cpp" line="96"/>
+            <symbol>deleteById</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteByObject&apos; is never used." verbose="The function &apos;deleteByObject&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/BaseDao.cpp" line="109"/>
+            <symbol>deleteByObject</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteDatabase&apos; is never used." verbose="The function &apos;deleteDatabase&apos; is never used." cwe="561">
+            <location file="src/private/database/connection/DatabaseConnectionSQLite.cpp" line="131"/>
+            <symbol>deleteDatabase</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteFloatForKey&apos; is never used." verbose="The function &apos;deleteFloatForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="420"/>
+            <symbol>deleteFloatForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteIntegerForKey&apos; is never used." verbose="The function &apos;deleteIntegerForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="438"/>
+            <symbol>deleteIntegerForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteJsonArrayForKey&apos; is never used." verbose="The function &apos;deleteJsonArrayForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="463"/>
+            <symbol>deleteJsonArrayForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteJsonObjectForKey&apos; is never used." verbose="The function &apos;deleteJsonObjectForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="458"/>
+            <symbol>deleteJsonObjectForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteLongForKey&apos; is never used." verbose="The function &apos;deleteLongForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="443"/>
+            <symbol>deleteLongForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteNullValueIfKeyExists&apos; is never used." verbose="The function &apos;deleteNullValueIfKeyExists&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="453"/>
+            <symbol>deleteNullValueIfKeyExists</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteStringForKey&apos; is never used." verbose="The function &apos;deleteStringForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="399"/>
+            <symbol>deleteStringForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;fetchLocations&apos; is never used." verbose="The function &apos;fetchLocations&apos; is never used." cwe="561">
+            <location file="src/private/sync/AwsSyncManager.cpp" line="152"/>
+            <symbol>fetchLocations</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;findAll&apos; is never used." verbose="The function &apos;findAll&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/BaseDao.cpp" line="49"/>
+            <symbol>findAll</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;findAllLocations&apos; is never used." verbose="The function &apos;findAllLocations&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/LocationDao.cpp" line="149"/>
+            <symbol>findAllLocations</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;findAllUnusedTracks&apos; is never used." verbose="The function &apos;findAllUnusedTracks&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/TrackDao.cpp" line="62"/>
+            <symbol>findAllUnusedTracks</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;findLastCreatedTrack&apos; is never used." verbose="The function &apos;findLastCreatedTrack&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/TrackDao.cpp" line="25"/>
+            <symbol>findLastCreatedTrack</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;findLastUpdatedTrack&apos; is never used." verbose="The function &apos;findLastUpdatedTrack&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/TrackDao.cpp" line="37"/>
+            <symbol>findLastUpdatedTrack</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;findTrackByMachineId&apos; is never used." verbose="The function &apos;findTrackByMachineId&apos; is never used." cwe="561">
+            <location file="src/private/database/dao/TrackingContextDao.cpp" line="92"/>
+            <symbol>findTrackByMachineId</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;forceUploadLocationHistory&apos; is never used." verbose="The function &apos;forceUploadLocationHistory&apos; is never used." cwe="561">
+            <location file="src/private/sync/LocationHistoryScheduler.cpp" line="143"/>
+            <symbol>forceUploadLocationHistory</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getAbsolutePathOfDatabase&apos; is never used." verbose="The function &apos;getAbsolutePathOfDatabase&apos; is never used." cwe="561">
+            <location file="src/private/database/connection/DatabaseConnectionSQLite.cpp" line="192"/>
+            <symbol>getAbsolutePathOfDatabase</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getBlob&apos; is never used." verbose="The function &apos;getBlob&apos; is never used." cwe="561">
+            <location file="src/private/database/result/RecordSQLite.cpp" line="92"/>
+            <symbol>getBlob</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getBoolAtPosition&apos; is never used." verbose="The function &apos;getBoolAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="358"/>
+            <symbol>getBoolAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getBoolForKey&apos; is never used." verbose="The function &apos;getBoolForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="321"/>
+            <symbol>getBoolForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getConfiguration&apos; is never used." verbose="The function &apos;getConfiguration&apos; is never used." cwe="561">
+            <location file="src/private/sync/awsfacade/AwsFacadeNetworkManager.cpp" line="30"/>
+            <symbol>getConfiguration</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getCorrelationId&apos; is never used." verbose="The function &apos;getCorrelationId&apos; is never used." cwe="561">
+            <location file="src/private/database/domain/DbTrack.cpp" line="62"/>
+            <symbol>getCorrelationId</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getFloatAtPosition&apos; is never used." verbose="The function &apos;getFloatAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="275"/>
+            <symbol>getFloatAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getFloatForKey&apos; is never used." verbose="The function &apos;getFloatForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="217"/>
+            <symbol>getFloatForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getIotTopicVersion&apos; is never used." verbose="The function &apos;getIotTopicVersion&apos; is never used." cwe="561">
+            <location file="src/private/util/json/topic_version_json_parser/IotPayloadBuilderV1.cpp" line="32"/>
+            <symbol>getIotTopicVersion</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getJsonArrayAtPosition&apos; is never used." verbose="The function &apos;getJsonArrayAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="408"/>
+            <symbol>getJsonArrayAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getJsonArrayForKey&apos; is never used." verbose="The function &apos;getJsonArrayForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="373"/>
+            <symbol>getJsonArrayForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getJsonObjectAtPosition&apos; is never used." verbose="The function &apos;getJsonObjectAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="383"/>
+            <symbol>getJsonObjectAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getJsonObjectForKey&apos; is never used." verbose="The function &apos;getJsonObjectForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="350"/>
+            <symbol>getJsonObjectForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getLiveBreadCrumbStatus&apos; is never used." verbose="The function &apos;getLiveBreadCrumbStatus&apos; is never used." cwe="561">
+            <location file="src/private/database/domain/DbLocation.cpp" line="247"/>
+            <symbol>getLiveBreadCrumbStatus</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getLocationList&apos; is never used." verbose="The function &apos;getLocationList&apos; is never used." cwe="561">
+            <location file="src/private/sync/LocationHistoryUploadDTO.cpp" line="38"/>
+            <symbol>getLocationList</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getLongAtPosition&apos; is never used." verbose="The function &apos;getLongAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="328"/>
+            <symbol>getLongAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getLongForKey&apos; is never used." verbose="The function &apos;getLongForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="287"/>
+            <symbol>getLongForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getNetworkConnection&apos; is never used." verbose="The function &apos;getNetworkConnection&apos; is never used." cwe="561">
+            <location file="src/private/sync/awsfacade/AwsFacadeNetworkManager.cpp" line="17"/>
+            <symbol>getNetworkConnection</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getStringAtPosition&apos; is never used." verbose="The function &apos;getStringAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="250"/>
+            <symbol>getStringAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getStringForKey&apos; is never used." verbose="The function &apos;getStringForKey&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="189"/>
+            <symbol>getStringForKey</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getUploadedDate&apos; is never used." verbose="The function &apos;getUploadedDate&apos; is never used." cwe="561">
+            <location file="src/private/database/domain/DbLocation.cpp" line="229"/>
+            <symbol>getUploadedDate</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;isEmpty&apos; is never used." verbose="The function &apos;isEmpty&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonObject.cpp" line="554"/>
+            <symbol>isEmpty</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;isNotInitialized&apos; is never used." verbose="The function &apos;isNotInitialized&apos; is never used." cwe="561">
+            <location file="src/private/api/manager/ManagerStatusHelperImpl.cpp" line="50"/>
+            <symbol>isNotInitialized</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;isPhysicalLayerConnected&apos; is never used." verbose="The function &apos;isPhysicalLayerConnected&apos; is never used." cwe="561">
+            <location file="src/private/sync/awsfacade/AwsFacadeNetworkManagerImpl.cpp" line="42"/>
+            <symbol>isPhysicalLayerConnected</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;isWalModeEnabled&apos; is never used." verbose="The function &apos;isWalModeEnabled&apos; is never used." cwe="561">
+            <location file="src/private/database/connection/DatabaseConnectionSQLite.cpp" line="161"/>
+            <symbol>isWalModeEnabled</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;onLogLevelChanged&apos; is never used." verbose="The function &apos;onLogLevelChanged&apos; is never used." cwe="561">
+            <location file="src/private/database/DatabaseInitializer.cpp" line="91"/>
+            <symbol>onLogLevelChanged</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;onPause&apos; is never used." verbose="The function &apos;onPause&apos; is never used." cwe="561">
+            <location file="src/private/database/DatabaseInitializer.cpp" line="77"/>
+            <symbol>onPause</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;onResume&apos; is never used." verbose="The function &apos;onResume&apos; is never used." cwe="561">
+            <location file="src/private/database/DatabaseInitializer.cpp" line="80"/>
+            <symbol>onResume</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;onStart&apos; is never used." verbose="The function &apos;onStart&apos; is never used." cwe="561">
+            <location file="src/private/database/DatabaseInitializer.cpp" line="61"/>
+            <symbol>onStart</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;onStop&apos; is never used." verbose="The function &apos;onStop&apos; is never used." cwe="561">
+            <location file="src/private/database/DatabaseInitializer.cpp" line="69"/>
+            <symbol>onStop</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;parseJsonArray&apos; is never used." verbose="The function &apos;parseJsonArray&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="120"/>
+            <symbol>parseJsonArray</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;parseJsonObject&apos; is never used." verbose="The function &apos;parseJsonObject&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonModel.cpp" line="46"/>
+            <symbol>parseJsonObject</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;parseStatementsFromFile&apos; is never used." verbose="The function &apos;parseStatementsFromFile&apos; is never used." cwe="561">
+            <location file="src/private/util/file/SQLiteStatementUtil.cpp" line="20"/>
+            <symbol>parseStatementsFromFile</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;radiansToDegrees&apos; is never used." verbose="The function &apos;radiansToDegrees&apos; is never used." cwe="561">
+            <location file="src/private/util/converter/GeoUtil.cpp" line="40"/>
+            <symbol>radiansToDegrees</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;read&apos; is never used." verbose="The function &apos;read&apos; is never used." cwe="561">
+            <location file="src/private/sync/awsfacade/AwsFacadeNetworkManagerImpl.cpp" line="70"/>
+            <symbol>read</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setBooleanAtPosition&apos; is never used." verbose="The function &apos;setBooleanAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="186"/>
+            <symbol>setBooleanAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setEscapeCharacters&apos; is never used." verbose="The function &apos;setEscapeCharacters&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="500"/>
+            <symbol>setEscapeCharacters</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setFloatAtPosition&apos; is never used." verbose="The function &apos;setFloatAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="134"/>
+            <symbol>setFloatAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setIntegerAtPosition&apos; is never used." verbose="The function &apos;setIntegerAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="155"/>
+            <symbol>setIntegerAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setJsonArrayAtPosition&apos; is never used." verbose="The function &apos;setJsonArrayAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="218"/>
+            <symbol>setJsonArrayAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setJsonObjectAtPosition&apos; is never used." verbose="The function &apos;setJsonObjectAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="202"/>
+            <symbol>setJsonObjectAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setLocationList&apos; is never used." verbose="The function &apos;setLocationList&apos; is never used." cwe="561">
+            <location file="src/private/sync/LocationHistoryUploadDTO.cpp" line="42"/>
+            <symbol>setLocationList</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setLongAtPosition&apos; is never used." verbose="The function &apos;setLongAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="170"/>
+            <symbol>setLongAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setMaxFileSize&apos; is never used." verbose="The function &apos;setMaxFileSize&apos; is never used." cwe="561">
+            <location file="src/private/util/log/FileAppender.cpp" line="83"/>
+            <symbol>setMaxFileSize</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setMaxNumberOfFiles&apos; is never used." verbose="The function &apos;setMaxNumberOfFiles&apos; is never used." cwe="561">
+            <location file="src/private/util/log/FileAppender.cpp" line="87"/>
+            <symbol>setMaxNumberOfFiles</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setNetworkConnection&apos; is never used." verbose="The function &apos;setNetworkConnection&apos; is never used." cwe="561">
+            <location file="src/private/sync/awsfacade/AwsFacadeNetworkManager.cpp" line="21"/>
+            <symbol>setNetworkConnection</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setStringAtPosition&apos; is never used." verbose="The function &apos;setStringAtPosition&apos; is never used." cwe="561">
+            <location file="src/private/util/json/JsonArray.cpp" line="118"/>
+            <symbol>setStringAtPosition</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;unInitialize&apos; is never used." verbose="The function &apos;unInitialize&apos; is never used." cwe="561">
+            <location file="src/private/ClassRegistry.cpp" line="56"/>
+            <symbol>unInitialize</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;write&apos; is never used." verbose="The function &apos;write&apos; is never used." cwe="561">
+            <location file="src/private/sync/awsfacade/AwsFacadeNetworkManagerImpl.cpp" line="51"/>
+            <symbol>write</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>
