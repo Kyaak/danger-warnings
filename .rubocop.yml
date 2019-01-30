@@ -20,6 +20,7 @@ Metrics/LineLength:
 Metrics/ModuleLength:
   Exclude:
     - "**/*_spec.rb"
+    - "**/spec/spec_helper/assets.rb"
 
 Metrics/MethodLength:
   Max: 60
