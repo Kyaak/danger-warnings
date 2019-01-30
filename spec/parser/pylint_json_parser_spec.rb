@@ -16,6 +16,11 @@ module Warnings
         expect(@issue).not_to be_nil
       end
 
+      it 'parses issues' do
+        expect(@parser.issues).not_to be_empty
+        expect(@parser.issues.count).not_to eq(1)
+      end
+
       it 'maps filename' do
         expect(@issue.file_name).to eq(Assets::PYLINT_JSON_ISSUE[:path])
       end

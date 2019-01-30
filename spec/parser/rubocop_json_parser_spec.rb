@@ -18,6 +18,7 @@ module Warnings
 
       it 'parses issues' do
         expect(@parser.issues).not_to be_empty
+        expect(@parser.issues).not_to eq(1)
       end
 
       it 'maps path' do

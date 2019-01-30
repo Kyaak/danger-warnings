@@ -5,7 +5,7 @@ require_relative '../reporter/issue'
 require_relative '../helper/severity_util'
 
 module Warnings
-  # Parser class for bandit 'json' formatted reports.
+  # Parser class for cppcheck 'xml' formatted reports.
   class CppcheckXmlParser < Parser
     SEVERITY_ERROR = 'error'
     SEVERITY_WARNING = 'warning'

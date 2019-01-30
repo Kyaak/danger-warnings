@@ -26,6 +26,10 @@ module Warnings
     CPPCHECK_EMPTY_ERRORS_XML = "#{ASSETS_DIR}/cppcheck/cppcheck_empty_errors.xml"
     CPPCHECK_MULTI_LOCATION_XML = "#{ASSETS_DIR}/cppcheck/cppcheck_multi_location.xml"
 
+    ANDROID_LINT = "#{ASSETS_DIR}/android_lint/android_lint.xml"
+    ANDROID_LINT_EMPTY_ISSUES = "#{ASSETS_DIR}/android_lint/android_lint_empty_issues.xml"
+    ANDROID_LINT_MULTI_LOCATION = "#{ASSETS_DIR}/android_lint/android_lint_multi_locations.xml"
+
     BANDIT_FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
       filename: 'example/ply/yacc_1.py',
@@ -115,6 +119,22 @@ module Warnings
       category: 'duplInheritedMember',
       message: "The class 'DbTrack' defines member variable with name 'COLUMN_CREATED_DATE' also defined in its parent class 'DbBaseModel'.",
       severity: :medium
+    }.freeze
+
+    ANDROID_LINT_FIRST_ISSUE = {
+      id: 'GradleDependency',
+      severity: 'Warning',
+      message: 'A newer version of androidx.appcompat:appcompat than 1.0.0-beta01 is available: 1.1.0-alpha01',
+      category: 'Correctness',
+      priority: 4,
+      summary: 'Obsolete Gradle Dependency',
+      errorLine1: '    implementation &apos;androidx.appcompat:appcompat:1.0.0-beta01&apos;',
+      errorLine2: '    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
+      location: {
+        file: '/Users/Martin/Downloads/MyApplication/app/build.gradle',
+        line: 23,
+        column: 5
+      }
     }.freeze
   end
 end
