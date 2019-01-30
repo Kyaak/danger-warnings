@@ -223,7 +223,7 @@ Configure the details of your report using the arguments passed by.
 |format|`Symbol`| Define the format the reporter uses If not set, the default format is used. Must be a key of the supported [reporters](#reporters)
 |name|`String`| A custom name for this report. If none is given, the reporter name is used. Useful to separate different reports using the same common style (e.g. checkstyle).
 |file|`String`| Path to the file to read and parse.
-|baseline|`String`| Define a baseline for your files. Useful if the report removes a path segment but is required to identify them in the repository. E.g. `/src/main/java`
+|baseline|`String`| Define a baseline for your git files. Useful if the report removes a path segment but is required to identify them in the repository. E.g. file: `/src/..`, git: `moduleA/src/..` => baseline: `moduleA`
 
 All [default](#override-default-settings) fields can be passed as parameters to `report`.
 - inline
@@ -246,9 +246,10 @@ the report in a different style (and give it a custom name when calling `warning
 
 Your reporter / format is missing and you cannot export into another format? -> [Create an Issue](https://github.com/Kyaak/danger-warnings/issues) 
 
-|Number|Name|ID|Formats|Default|
-|:---:|:---:|:---:|:---:|:----:|
-|1|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json|
-|2|[Cppcheck](https://github.com/danmar/cppcheck)|cppcheck|xml|xml|
-|3|[Pylint](https://github.com/PyCQA/pylint)|pylint|parseable, json|parseable|
-|4|[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|clang, json, simple|clang|
+|Name|ID|Formats|Default|
+|:---:|:---:|:---:|:----:|
+|[AndroidLint](https://developer.android.com/studio/write/lint)|android_lint|xml|xml|
+|[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json|
+|[Cppcheck](https://github.com/danmar/cppcheck)|cppcheck|xml|xml|
+|[Pylint](https://github.com/PyCQA/pylint)|pylint|parseable, json|parseable|
+|[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|clang, json, simple|clang|

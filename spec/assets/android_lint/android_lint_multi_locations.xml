@@ -9,13 +9,13 @@
             summary="Unused resources"
             explanation="Unused resources make applications larger and slow down builds.">
         <location
-                file="res/drawable-hdpi/ic_launcher.png"/>
+                file="/Users/Martin/Downloads/MyApplication/app/src/main/res/drawable-hdpi/ic_launcher.png"/>
         <location
-                file="res/drawable-ldpi/ic_launcher.png"/>
+                file="/Users/Martin/Downloads/MyApplication/app/src/main/res/drawable-ldpi/ic_launcher.png"/>
         <location
-                file="res/drawable-mdpi/ic_launcher.png"/>
+                file="/Users/Martin/Downloads/MyApplication/app/src/main/res/drawable-mdpi/ic_launcher.png"/>
         <location
-                file="res/drawable-xhdpi/ic_launcher.png"/>
+                file="/Users/Martin/Downloads/MyApplication/app/src/main/res/drawable-xhdpi/ic_launcher.png"/>
     </issue>
 
 </issues>

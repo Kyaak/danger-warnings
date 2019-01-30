@@ -29,6 +29,7 @@ module Warnings
     ANDROID_LINT = "#{ASSETS_DIR}/android_lint/android_lint.xml"
     ANDROID_LINT_EMPTY_ISSUES = "#{ASSETS_DIR}/android_lint/android_lint_empty_issues.xml"
     ANDROID_LINT_MULTI_LOCATION = "#{ASSETS_DIR}/android_lint/android_lint_multi_locations.xml"
+    ANDROID_LINT_MULTI_MODULES = "#{ASSETS_DIR}/android_lint/android_lint_multi_modules.xml"
 
     BANDIT_FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
@@ -131,7 +132,8 @@ module Warnings
       errorLine1: '    implementation &apos;androidx.appcompat:appcompat:1.0.0-beta01&apos;',
       errorLine2: '    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
       location: {
-        file: '/Users/Martin/Downloads/MyApplication/app/build.gradle',
+        # working dir path should be removed
+        file: 'app/build.gradle',
         line: 23,
         column: 5
       }

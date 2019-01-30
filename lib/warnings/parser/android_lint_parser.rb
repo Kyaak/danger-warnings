@@ -18,6 +18,10 @@ module Warnings
       errors.each(&method(:store_issue))
     end
 
+    def working_directory
+      "#{Dir.pwd}/"
+    end
+
     private
 
     # Store the issue element.
@@ -38,7 +42,7 @@ module Warnings
     # @return [Issue] New Issue item.
     def create_issue(error, location)
       issue = Issue.new
-      issue.file_name = location.file
+      issue.file_name = location.file.gsub(working_directory, '')
       issue.severity = to_severity(error.severity)
       issue.line = location.line.to_i if location.attributes.include?(:line)
       issue.category = "#{error.category} #{error.id}"

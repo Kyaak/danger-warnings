@@ -37,15 +37,23 @@ module Warnings
     #
     # @return [String] Path to file.
     attr_accessor :file
-    # Defines the baseline of file paths if needed.
-    # @example src/main/java
+    # Defines the baseline of git file paths if needed.
+    # Useful if the report creates file locations relative to a git subdirectory.
+    # @example
+    #   git repository:
+    #     - root
+    #       - moduleA
+    #         - src
+    #           - my_file.py
+    #   issue file location: src/my_file.py
+    #   baseline: moduleA
     #
     # @return [String] Path baseline for git files.
     attr_accessor :baseline
     # The parser implementation of the given :format.
     #
     # @return [Parser] Parser implementation
-    attr_reader :parser
+    attr_accessor :parser
     attr_reader :issues
 
     def initialize(danger)
@@ -61,7 +69,7 @@ module Warnings
     def report
       validate
       parse
-      filter_issues
+      filter_git_files
       comment
     end
 
@@ -103,7 +111,7 @@ module Warnings
       parser.new
     end
 
-    def filter_issues
+    def filter_git_files
       return unless filter
 
       git_files = @danger.git.modified_files + @danger.git.added_files
@@ -126,7 +134,7 @@ module Warnings
     end
 
     def parse
-      @parser = find_parser
+      @parser ||= find_parser
       @parser.parse(file)
       @issues = @parser.issues
     end
