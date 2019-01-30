@@ -26,11 +26,16 @@ module Warnings
       issue = Issue.new
       issue.file_name = match[0]
       issue.line = match[1]
-      issue.category = match[2]
-      issue.severity = SeverityUtil.rcwef_short(issue.category)
+      issue.category = category(match)
       issue.message = match[match.count - 1]
-      issue.category = "#{issue.category} #{match[4]}" if match.count > 4 && !match[4].nil?
+      issue.severity = SeverityUtil.rcwef_short(issue.category)
       @issues << issue
+    end
+
+    def category(match)
+      category = match[2]
+      category = "#{category} #{match[4]}" if match.count > 4 && !match[4].nil?
+      category
     end
   end
 end

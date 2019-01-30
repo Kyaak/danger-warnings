@@ -1,0 +1,121 @@
+[src/private/api/manager/ManagerStatusHelperImpl.cpp:59]: (style) Consider using std::find_if algorithm instead of a raw loop.
+[src/private/api/model/TrackingContext.cpp:82]: (style) Consider using std::transform algorithm instead of a raw loop.
+[src/private/database/domain/DbBaseModel.h:142]: (performance) Variable 'asString' is assigned in constructor body. Consider performing initialization in initialization list.
+[src/private/database/domain/DbBaseModel.h:86]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:91]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:96]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:101]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:106]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:111]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:116]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:121]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:126]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:131]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:136]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:141]: (style) Class 'Values' has a constructor with 1 argument that is not explicit.
+[src/private/database/domain/DbBaseModel.h:263] -> [src/private/database/domain/DbTrack.h:68]: (warning) The class 'DbTrack' defines member variable with name 'COLUMN_CREATED_DATE' also defined in its parent class 'DbBaseModel'.
+[src/private/database/domain/DbBaseModel.h:264] -> [src/private/database/domain/DbTrack.h:69]: (warning) The class 'DbTrack' defines member variable with name 'COLUMN_UPDATED_DATE' also defined in its parent class 'DbBaseModel'.
+[src/private/database/domain/DbTrack.cpp:67]: (performance) Function parameter 'correlationId' should be passed by const reference.
+[src/private/database/domain/DbTrackingContext.cpp:76]: (style) Consider using std::find_if algorithm instead of a raw loop.
+[src/private/database/domain/DbTrackingContext.cpp:98]: (style) Consider using std::find_if algorithm instead of a raw loop.
+[src/private/database/result/ResultSetSQLite.h:25]: (style) The class 'ResultSetSQLite' does not have a constructor although it has private member variables.
+[src/private/database/util/DbCleanupManager.cpp:22]: (style) Unused variable: trackList
+[src/private/sync/AwsSyncManager.cpp:152]: (performance) Function parameter 'machineId' should be passed by const reference.
+[src/private/sync/LocationHistoryScheduler.cpp:25]: (style) Class 'LocationHistoryScheduler' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s).
+[src/private/sync/LocationHistoryScheduler.cpp:25]: (style) Class 'LocationHistoryScheduler' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s).
+[src/private/sync/LocationHistoryScheduler.cpp:143]: (performance) Function parameter 'machineId' should be passed by const reference.
+[src/private/sync/LocationHistoryUploadManager.cpp:34]: (performance) Variable '_machineId' is assigned in constructor body. Consider performing initialization in initialization list.
+[src/private/util/json/JsonArray.h:354]: (style) Unused private function: 'JsonArray::isNull'
+[src/private/util/json/JsonModel.h:153]: (performance) Variable '_currentKey' is assigned in constructor body. Consider performing initialization in initialization list.
+[src/private/util/log/LoggerDefaultImpl.h:30] -> [src/private/util/log/LoggerAndroid.h:27]: (style) The function 'logMessage' overrides a function in a base class but is not marked with a 'override' specifier.
+[src/private/util/log/LoggerFactory.cpp:49]: (style) Condition '!result' is always true
+[src/private/util/json/JsonModel.cpp:480]: (style) The function 'Bool' is never used.
+[src/private/util/json/JsonModel.cpp:440]: (style) The function 'Double' is never used.
+[src/private/util/json/JsonModel.cpp:314]: (style) The function 'EndArray' is never used.
+[src/private/util/json/JsonModel.cpp:304]: (style) The function 'EndObject' is never used.
+[src/private/util/json/JsonModel.cpp:356]: (style) The function 'Int' is never used.
+[src/private/util/json/JsonModel.cpp:398]: (style) The function 'Int64' is never used.
+[src/platform_specific/android/jni/DefaultLocationProvider.cpp:20]: (style) The function 'Java_$PACKAGE_PLACEHOLDER_DefaultLocationProvider_createNativeObject' is never used.
+[src/platform_specific/android/jni/DefaultLocationProvider.cpp:29]: (style) The function 'Java_$PACKAGE_PLACEHOLDER_DefaultLocationProvider_deleteNativeObject' is never used.
+[src/private/util/json/JsonModel.cpp:324]: (style) The function 'Key' is never used.
+[src/private/util/json/JsonModel.cpp:460]: (style) The function 'Null' is never used.
+[src/private/util/json/JsonModel.cpp:521]: (style) The function 'RawNumber' is never used.
+[src/private/util/json/JsonModel.cpp:272]: (style) The function 'StartArray' is never used.
+[src/private/util/json/JsonModel.cpp:240]: (style) The function 'StartObject' is never used.
+[src/private/util/json/JsonModel.cpp:332]: (style) The function 'String' is never used.
+[src/private/util/json/JsonModel.cpp:376]: (style) The function 'Uint' is never used.
+[src/private/util/json/JsonModel.cpp:419]: (style) The function 'Uint64' is never used.
+[src/private/database/result/RecordSQLite.cpp:107]: (style) The function 'addColumnEntry' is never used.
+[src/private/util/json/JsonArray.cpp:60]: (style) The function 'addFloat' is never used.
+[src/private/api/manager/AwsCredentialsManager.cpp:120]: (style) The function 'convertContext' is never used.
+[src/private/api/converter/TrackConverter.cpp:25]: (style) The function 'convertTrackToDbTrack' is never used.
+[src/private/database/dao/BaseDao.cpp:131]: (style) The function 'deleteAllObjects' is never used.
+[src/private/util/json/JsonObject.cpp:448]: (style) The function 'deleteBoolForKey' is never used.
+[src/private/database/dao/BaseDao.cpp:96]: (style) The function 'deleteById' is never used.
+[src/private/database/dao/BaseDao.cpp:109]: (style) The function 'deleteByObject' is never used.
+[src/private/database/connection/DatabaseConnectionSQLite.cpp:131]: (style) The function 'deleteDatabase' is never used.
+[src/private/util/json/JsonObject.cpp:420]: (style) The function 'deleteFloatForKey' is never used.
+[src/private/util/json/JsonObject.cpp:438]: (style) The function 'deleteIntegerForKey' is never used.
+[src/private/util/json/JsonObject.cpp:463]: (style) The function 'deleteJsonArrayForKey' is never used.
+[src/private/util/json/JsonObject.cpp:458]: (style) The function 'deleteJsonObjectForKey' is never used.
+[src/private/util/json/JsonObject.cpp:443]: (style) The function 'deleteLongForKey' is never used.
+[src/private/util/json/JsonObject.cpp:453]: (style) The function 'deleteNullValueIfKeyExists' is never used.
+[src/private/util/json/JsonObject.cpp:399]: (style) The function 'deleteStringForKey' is never used.
+[src/private/sync/AwsSyncManager.cpp:152]: (style) The function 'fetchLocations' is never used.
+[src/private/database/dao/BaseDao.cpp:49]: (style) The function 'findAll' is never used.
+[src/private/database/dao/LocationDao.cpp:149]: (style) The function 'findAllLocations' is never used.
+[src/private/database/dao/TrackDao.cpp:62]: (style) The function 'findAllUnusedTracks' is never used.
+[src/private/database/dao/TrackDao.cpp:25]: (style) The function 'findLastCreatedTrack' is never used.
+[src/private/database/dao/TrackDao.cpp:37]: (style) The function 'findLastUpdatedTrack' is never used.
+[src/private/database/dao/TrackingContextDao.cpp:92]: (style) The function 'findTrackByMachineId' is never used.
+[src/private/sync/LocationHistoryScheduler.cpp:143]: (style) The function 'forceUploadLocationHistory' is never used.
+[src/private/database/connection/DatabaseConnectionSQLite.cpp:192]: (style) The function 'getAbsolutePathOfDatabase' is never used.
+[src/private/database/result/RecordSQLite.cpp:92]: (style) The function 'getBlob' is never used.
+[src/private/util/json/JsonArray.cpp:358]: (style) The function 'getBoolAtPosition' is never used.
+[src/private/util/json/JsonObject.cpp:321]: (style) The function 'getBoolForKey' is never used.
+[src/private/sync/awsfacade/AwsFacadeNetworkManager.cpp:30]: (style) The function 'getConfiguration' is never used.
+[src/private/database/domain/DbTrack.cpp:62]: (style) The function 'getCorrelationId' is never used.
+[src/private/util/json/JsonArray.cpp:275]: (style) The function 'getFloatAtPosition' is never used.
+[src/private/util/json/JsonObject.cpp:217]: (style) The function 'getFloatForKey' is never used.
+[src/private/util/json/topic_version_json_parser/IotPayloadBuilderV1.cpp:32]: (style) The function 'getIotTopicVersion' is never used.
+[src/private/util/json/JsonArray.cpp:408]: (style) The function 'getJsonArrayAtPosition' is never used.
+[src/private/util/json/JsonObject.cpp:373]: (style) The function 'getJsonArrayForKey' is never used.
+[src/private/util/json/JsonArray.cpp:383]: (style) The function 'getJsonObjectAtPosition' is never used.
+[src/private/util/json/JsonObject.cpp:350]: (style) The function 'getJsonObjectForKey' is never used.
+[src/private/database/domain/DbLocation.cpp:247]: (style) The function 'getLiveBreadCrumbStatus' is never used.
+[src/private/sync/LocationHistoryUploadDTO.cpp:38]: (style) The function 'getLocationList' is never used.
+[src/private/util/json/JsonArray.cpp:328]: (style) The function 'getLongAtPosition' is never used.
+[src/private/util/json/JsonObject.cpp:287]: (style) The function 'getLongForKey' is never used.
+[src/private/sync/awsfacade/AwsFacadeNetworkManager.cpp:17]: (style) The function 'getNetworkConnection' is never used.
+[src/private/util/json/JsonArray.cpp:250]: (style) The function 'getStringAtPosition' is never used.
+[src/private/util/json/JsonObject.cpp:189]: (style) The function 'getStringForKey' is never used.
+[src/private/database/domain/DbLocation.cpp:229]: (style) The function 'getUploadedDate' is never used.
+[src/private/util/json/JsonObject.cpp:554]: (style) The function 'isEmpty' is never used.
+[src/private/api/manager/ManagerStatusHelperImpl.cpp:50]: (style) The function 'isNotInitialized' is never used.
+[src/private/sync/awsfacade/AwsFacadeNetworkManagerImpl.cpp:42]: (style) The function 'isPhysicalLayerConnected' is never used.
+[src/private/database/connection/DatabaseConnectionSQLite.cpp:161]: (style) The function 'isWalModeEnabled' is never used.
+[src/private/database/DatabaseInitializer.cpp:91]: (style) The function 'onLogLevelChanged' is never used.
+[src/private/database/DatabaseInitializer.cpp:77]: (style) The function 'onPause' is never used.
+[src/private/database/DatabaseInitializer.cpp:80]: (style) The function 'onResume' is never used.
+[src/private/database/DatabaseInitializer.cpp:61]: (style) The function 'onStart' is never used.
+[src/private/database/DatabaseInitializer.cpp:69]: (style) The function 'onStop' is never used.
+[src/private/util/json/JsonModel.cpp:120]: (style) The function 'parseJsonArray' is never used.
+[src/private/util/json/JsonModel.cpp:46]: (style) The function 'parseJsonObject' is never used.
+[src/private/util/file/SQLiteStatementUtil.cpp:20]: (style) The function 'parseStatementsFromFile' is never used.
+[src/private/util/converter/GeoUtil.cpp:40]: (style) The function 'radiansToDegrees' is never used.
+[src/private/sync/awsfacade/AwsFacadeNetworkManagerImpl.cpp:70]: (style) The function 'read' is never used.
+[src/private/util/json/JsonArray.cpp:186]: (style) The function 'setBooleanAtPosition' is never used.
+[src/private/util/json/JsonArray.cpp:500]: (style) The function 'setEscapeCharacters' is never used.
+[src/private/util/json/JsonArray.cpp:134]: (style) The function 'setFloatAtPosition' is never used.
+[src/private/util/json/JsonArray.cpp:155]: (style) The function 'setIntegerAtPosition' is never used.
+[src/private/util/json/JsonArray.cpp:218]: (style) The function 'setJsonArrayAtPosition' is never used.
+[src/private/util/json/JsonArray.cpp:202]: (style) The function 'setJsonObjectAtPosition' is never used.
+[src/private/sync/LocationHistoryUploadDTO.cpp:42]: (style) The function 'setLocationList' is never used.
+[src/private/util/json/JsonArray.cpp:170]: (style) The function 'setLongAtPosition' is never used.
+[src/private/util/log/FileAppender.cpp:83]: (style) The function 'setMaxFileSize' is never used.
+[src/private/util/log/FileAppender.cpp:87]: (style) The function 'setMaxNumberOfFiles' is never used.
+[src/private/sync/awsfacade/AwsFacadeNetworkManager.cpp:21]: (style) The function 'setNetworkConnection' is never used.
+[src/private/util/json/JsonArray.cpp:118]: (style) The function 'setStringAtPosition' is never used.
+[src/private/ClassRegistry.cpp:56]: (style) The function 'unInitialize' is never used.
+[src/private/sync/awsfacade/AwsFacadeNetworkManagerImpl.cpp:51]: (style) The function 'write' is never used.
+(information) Cppcheck cannot find all the include files (use --check-config for details)

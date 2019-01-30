@@ -3,6 +3,7 @@
 require_relative 'bandit_reporter'
 require_relative 'pylint_reporter'
 require_relative 'rubocop_reporter'
+require_relative 'cppcheck_reporter'
 
 module Warnings
   # Factory class for supported reporter.
@@ -11,7 +12,8 @@ module Warnings
     REPORTERS = {
       bandit: BanditReporter,
       pylint: PylintReporter,
-      rubocop: RubocopReporter
+      rubocop: RubocopReporter,
+      cppcheck: CppcheckReporter
     }.freeze
 
     # Create a new parser implementation.

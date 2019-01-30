@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+  <cppcheck version="1.86"/>
+  <errors>
+    <error id="duplInheritedMember" severity="warning"
+           msg="The class &apos;DbTrack&apos; defines member variable with name &apos;COLUMN_CREATED_DATE&apos; also defined in its parent class &apos;DbBaseModel&apos;."
+           verbose="The class &apos;DbTrack&apos; defines member variable with name &apos;COLUMN_CREATED_DATE&apos; also defined in its parent class &apos;DbBaseModel&apos;."
+           cwe="398">
+      <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbTrack.h" line="68"
+                info="Derived variable &apos;DbTrack::COLUMN_CREATED_DATE&apos;"/>
+      <location file0="src/private/database/domain/DbTrack.cpp" file="src/private/database/domain/DbBaseModel.h"
+                line="263" info="Parent variable &apos;DbBaseModel::COLUMN_CREATED_DATE&apos;"/>
+      <symbol>DbTrack</symbol>
+      <symbol>COLUMN_CREATED_DATE</symbol>
+      <symbol>DbBaseModel</symbol>
+    </error>
+  </errors>
+</results>
