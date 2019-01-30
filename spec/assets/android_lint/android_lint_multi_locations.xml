@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 3.3.0">
+    <issue
+            id="UnusedResources"
+            severity="Warning"
+            message="The resource `R.drawable.ic_launcher` appears to be unused"
+            category="Performance"
+            priority="3"
+            summary="Unused resources"
+            explanation="Unused resources make applications larger and slow down builds.">
+        <location
+                file="/Users/Martin/Downloads/MyApplication/app/src/main/res/drawable-hdpi/ic_launcher.png"/>
+        <location
+                file="/Users/Martin/Downloads/MyApplication/app/src/main/res/drawable-ldpi/ic_launcher.png"/>
+        <location
+                file="/Users/Martin/Downloads/MyApplication/app/src/main/res/drawable-mdpi/ic_launcher.png"/>
+        <location
+                file="/Users/Martin/Downloads/MyApplication/app/src/main/res/drawable-xhdpi/ic_launcher.png"/>
+    </issue>
+
+</issues>
