@@ -41,6 +41,12 @@ module Warnings
         expect(result).not_to be_nil
         expect(result).to be_a(CppcheckReporter)
       end
+
+      it 'android_lint' do
+        result = ReporterFactory.create(:android_lint, nil)
+        expect(result).not_to be_nil
+        expect(result).to be_a(AndroidLintReporter)
+      end
     end
   end
 end

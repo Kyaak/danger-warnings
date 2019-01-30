@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 warnings.report(
-  id: :rubocop,
-  file: 'spec/assets/rubocop_simple.txt',
+  id: :android_lint,
+  file: 'spec/assets/android_lint/android_lint.xml',
   filter: false
 )

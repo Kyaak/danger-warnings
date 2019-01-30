@@ -4,6 +4,7 @@ require_relative 'bandit_reporter'
 require_relative 'pylint_reporter'
 require_relative 'rubocop_reporter'
 require_relative 'cppcheck_reporter'
+require_relative 'android_lint_reporter'
 
 module Warnings
   # Factory class for supported reporter.
@@ -13,7 +14,8 @@ module Warnings
       bandit: BanditReporter,
       pylint: PylintReporter,
       rubocop: RubocopReporter,
-      cppcheck: CppcheckReporter
+      cppcheck: CppcheckReporter,
+      android_lint: AndroidLintReporter
     }.freeze
 
     # Create a new parser implementation.
