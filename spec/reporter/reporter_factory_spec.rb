@@ -35,6 +35,12 @@ module Warnings
         expect(result).not_to be_nil
         expect(result).to be_a(RubocopReporter)
       end
+
+      it 'cppcheck' do
+        result = ReporterFactory.create(:cppcheck, nil)
+        expect(result).not_to be_nil
+        expect(result).to be_a(CppcheckReporter)
+      end
     end
   end
 end
