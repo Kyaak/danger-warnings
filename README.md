@@ -250,6 +250,7 @@ Your reporter / format is missing and you cannot export into another format? -> 
 |:---:|:---:|:---:|:----:|
 |[AndroidLint](https://developer.android.com/studio/write/lint)|android_lint|xml|xml|
 |[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json|
+|[Checkstyle](http://checkstyle.sourceforge.net/)|checkstyle|xml|xml|
 |[Cppcheck](https://github.com/danmar/cppcheck)|cppcheck|xml|xml|
 |[Pylint](https://github.com/PyCQA/pylint)|pylint|parseable, json|parseable|
 |[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|clang, json, simple|clang|

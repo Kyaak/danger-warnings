@@ -31,6 +31,9 @@ module Warnings
     ANDROID_LINT_MULTI_LOCATION = "#{ASSETS_DIR}/android_lint/android_lint_multi_locations.xml"
     ANDROID_LINT_MULTI_MODULES = "#{ASSETS_DIR}/android_lint/android_lint_multi_modules.xml"
 
+    CHECKSTYLE_XML = "#{ASSETS_DIR}/checkstyle/checkstyle.xml"
+    CHECKSTYLE_EMPTY_XML = "#{ASSETS_DIR}/checkstyle/checkstyle_empty.xml"
+
     BANDIT_FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
       filename: 'example/ply/yacc_1.py',
@@ -137,6 +140,14 @@ module Warnings
         line: 23,
         column: 5
       }
+    }.freeze
+
+    CHECKSTYLE_XML_FIRST_ISSUE = {
+      name: 'app/src/androidTest/java/de/test/javaandroidapplication/ExampleInstrumentedTest.java',
+      line: 10,
+      severity: 'warning',
+      message: 'Using the \'.*\' form of import should be avoided - org.junit.Assert.*.',
+      source: 'com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck'
     }.freeze
   end
 end

@@ -5,17 +5,19 @@ require_relative 'pylint_reporter'
 require_relative 'rubocop_reporter'
 require_relative 'cppcheck_reporter'
 require_relative 'android_lint_reporter'
+require_relative 'checkstyle_reporter'
 
 module Warnings
   # Factory class for supported reporter.
   class ReporterFactory
     ERROR_NOT_SUPPORTED = 'Reporter \'%s\' not supported.'
     REPORTERS = {
+      android_lint: AndroidLintReporter,
       bandit: BanditReporter,
-      pylint: PylintReporter,
-      rubocop: RubocopReporter,
+      checkstyle: CheckstyleReporter,
       cppcheck: CppcheckReporter,
-      android_lint: AndroidLintReporter
+      rubocop: RubocopReporter,
+      pylint: PylintReporter
     }.freeze
 
     # Create a new parser implementation.

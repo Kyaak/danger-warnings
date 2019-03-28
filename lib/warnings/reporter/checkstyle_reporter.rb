@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
 require_relative 'reporter'
-require_relative '../parser/android_lint_parser'
+require_relative '../parser/checkstyle_parser'
 
 module Warnings
-  # Reporter implementation for AndroidLint.
-  class AndroidLintReporter < Reporter
-    NAME = 'AndroidLint'
+  # Reporter implementation for Checkstyle.
+  class CheckstyleReporter < Reporter
+    NAME = 'Checkstyle'
 
     def parsers
       {
-        xml: AndroidLintParser
+        xml: CheckstyleParser
       }
     end
 
