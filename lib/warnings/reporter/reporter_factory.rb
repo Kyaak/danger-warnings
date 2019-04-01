@@ -6,6 +6,7 @@ require_relative 'rubocop_reporter'
 require_relative 'cppcheck_reporter'
 require_relative 'android_lint_reporter'
 require_relative 'checkstyle_reporter'
+require_relative 'ktlint_reporter'
 
 module Warnings
   # Factory class for supported reporter.
@@ -17,7 +18,8 @@ module Warnings
       checkstyle: CheckstyleReporter,
       cppcheck: CppcheckReporter,
       rubocop: RubocopReporter,
-      pylint: PylintReporter
+      pylint: PylintReporter,
+      ktlint: KtlintReporter
     }.freeze
 
     # Create a new parser implementation.

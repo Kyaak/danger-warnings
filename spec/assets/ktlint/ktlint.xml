@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="8.0">
+  <file name="/Users/Martin/Desktop/KotlinAndroidApplication/app/src/androidTest/java/de/test/kotlinandroidapplication/ExampleInstrumentedTest.kt">
+    <error line="9" column="1" severity="error" message="Wildcard import (cannot be auto-corrected)"
+           source="no-wildcard-imports"/>
+  </file>
+  <file name="/Users/Martin/Desktop/KotlinAndroidApplication/app/src/main/java/de/test/kotlinandroidapplication/ItemDetailFragment.kt">
+    <error line="40" column="35" severity="error"
+           message="Parameter should be on a separate line (unless all parameters can fit a single line)"
+           source="parameter-list-wrapping"/>
+  </file>
+  <file name="/Users/Martin/Desktop/KotlinAndroidApplication/app/src/test/java/de/test/kotlinandroidapplication/ExampleUnitTest.kt">
+    <error line="5" column="1" severity="error" message="Wildcard import (cannot be auto-corrected)"
+           source="no-wildcard-imports"/>
+  </file>
+</checkstyle>

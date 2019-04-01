@@ -34,6 +34,8 @@ module Warnings
     CHECKSTYLE_XML = "#{ASSETS_DIR}/checkstyle/checkstyle.xml"
     CHECKSTYLE_EMPTY_XML = "#{ASSETS_DIR}/checkstyle/checkstyle_empty.xml"
 
+    KTLINT_XML = "#{ASSETS_DIR}/ktlint/ktlint.xml"
+
     BANDIT_FIRST_ISSUE = {
       code: "2852         except ImportError:\n2853             import pickle\n2854         with open(filename, 'wb') as outf:\n",
       filename: 'example/ply/yacc_1.py',
@@ -148,6 +150,15 @@ module Warnings
       severity: 'warning',
       message: 'Using the \'.*\' form of import should be avoided - org.junit.Assert.*.',
       source: 'com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck'
+    }.freeze
+
+    KTLINT_XML_FIRST_ISSUE = {
+      name: '/Users/Martin/Desktop/KotlinAndroidApplication/app/src/androidTest/java/de/test/kotlinandroidapplication/ExampleInstrumentedTest.kt',
+      line: '9',
+      column: '1',
+      severity: 'error',
+      message: 'Wildcard import (cannot be auto-corrected)',
+      source: 'no-wildcard-imports'
     }.freeze
   end
 end
