@@ -9,16 +9,10 @@ module Warnings
       @parser = CheckstyleParser.new
     end
 
-    describe '#working_directory' do
-      it 'returns current directory with slash' do
-        expect(@parser.working_directory).to eq("#{Dir.pwd}/")
-      end
-    end
-
     describe '#parse' do
       context 'filled results' do
         before do
-          @parser.stubs(:working_directory).returns('/Users/Martin/Desktop/JavaAndroidApplication/')
+          @parser.stubs(:work_dir).returns('/Users/Martin/Desktop/JavaAndroidApplication/')
           @parser.parse(Assets::CHECKSTYLE_XML)
           @issue = @parser.issues[0]
           expect(@issue).not_to be_nil

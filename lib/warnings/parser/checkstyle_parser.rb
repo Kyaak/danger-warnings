@@ -15,10 +15,6 @@ module Warnings
       files.each(&method(:store_file))
     end
 
-    def working_directory
-      "#{Dir.pwd}/"
-    end
-
     private
 
     # Store the file element.
@@ -39,7 +35,7 @@ module Warnings
     # @return [Issue] New Issue item.
     def create_issue(error, file_name)
       issue = Issue.new
-      issue.file_name = file_name.gsub(working_directory, '')
+      issue.file_name = file_name.gsub(work_dir, '')
       issue.severity = SeverityUtil.rcwef_full(error.severity)
       issue.line = error.line.to_i
       issue.category = error.source.split('.').last.to_s

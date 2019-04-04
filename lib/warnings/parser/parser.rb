@@ -81,6 +81,13 @@ module Warnings
       File.readlines(file_path, chomp: true)
     end
 
+    # Return the current working directory.
+    #
+    # @return [String] Path of the working directory
+    def work_dir
+      "#{Dir.pwd}/"
+    end
+
     private
 
     # Evaluate and read the file into memory.
