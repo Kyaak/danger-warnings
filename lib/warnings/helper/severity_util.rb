@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-module Warnings
-  # Defines severity levels and provides helper methods.
-  module SeverityUtil
-    LOW = :low
-    MEDIUM = :medium
-    HIGH = :high
+require_relative '../const/severity'
 
+module Warnings
+  # Defines severity helper methods.
+  module SeverityUtil
     module_function
 
     # Map a common shortened severity [R/C/W/E/F0000] to a defined severity level.
@@ -17,13 +15,13 @@ module Warnings
       char = name.chars.first.downcase
       case char
         when 'r', 'c'
-          LOW
+          Severity::LOW
         when 'w'
-          MEDIUM
+          Severity::MEDIUM
         when 'e', 'f'
-          HIGH
+          Severity::HIGH
         else
-          LOW
+          Severity::LOW
       end
     end
 
@@ -34,13 +32,13 @@ module Warnings
     def rcwef_full(name)
       case name.downcase
         when 'refactor', 'convention'
-          LOW
+          Severity::LOW
         when 'warning'
-          MEDIUM
+          Severity::MEDIUM
         when 'error', 'fatal'
-          HIGH
+          Severity::HIGH
         else
-          LOW
+          Severity::LOW
       end
     end
   end

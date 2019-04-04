@@ -5,11 +5,8 @@ require_relative '../reporter/issue'
 require_relative '../helper/severity_util'
 
 module Warnings
-  # Parser class for AndroidLint 'xml' formatted reports.
+  # Parser class for Checkstyle default formatted reports.
   class CheckstyleParser < Parser
-    SEVERITY_ERROR = 'error'
-    SEVERITY_WARNING = 'warning'
-
     def parse(file)
       xml = xml(file)
       return if xml.nil?
@@ -43,25 +40,11 @@ module Warnings
     def create_issue(error, file_name)
       issue = Issue.new
       issue.file_name = file_name.gsub(working_directory, '')
-      issue.severity = to_severity(error.severity)
+      issue.severity = SeverityUtil.rcwef_full(error.severity)
       issue.line = error.line.to_i
       issue.category = error.source.split('.').last.to_s
       issue.message = error.message
       issue
-    end
-
-    # Convert checkstyle xml severity to danger::warnings severity symbol.
-    #
-    # @return [Symbol] Warnings severity symbol.
-    def to_severity(severity)
-      case severity.downcase
-        when SEVERITY_ERROR
-          SeverityUtil::HIGH
-        when SEVERITY_WARNING
-          SeverityUtil::MEDIUM
-        else
-          SeverityUtil::LOW
-      end
     end
   end
 end

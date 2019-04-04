@@ -7,9 +7,6 @@ require_relative '../helper/severity_util'
 module Warnings
   # Parser class for AndroidLint 'xml' formatted reports.
   class AndroidLintParser < Parser
-    SEVERITY_ERROR = 'error'
-    SEVERITY_WARNING = 'warning'
-
     def parse(file)
       xml = xml(file)
       return if xml.nil?
@@ -43,25 +40,11 @@ module Warnings
     def create_issue(error, location)
       issue = Issue.new
       issue.file_name = location.file.gsub(working_directory, '')
-      issue.severity = to_severity(error.severity)
+      issue.severity = SeverityUtil.rcwef_full(error.severity)
       issue.line = location.line.to_i if location.attributes.include?(:line)
       issue.category = "#{error.category} #{error.id}"
       issue.message = error.message
       issue
-    end
-
-    # Convert android lint xml severity to danger::warnings severity symbol.
-    #
-    # @return [Symbol] Warnings severity symbol.
-    def to_severity(severity)
-      case severity.downcase
-        when SEVERITY_ERROR
-          SeverityUtil::HIGH
-        when SEVERITY_WARNING
-          SeverityUtil::MEDIUM
-        else
-          SeverityUtil::LOW
-      end
     end
   end
 end
