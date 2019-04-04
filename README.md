@@ -252,5 +252,6 @@ Your reporter / format is missing and you cannot export into another format? -> 
 |[Bandit](https://github.com/PyCQA/bandit)|bandit|json|json|
 |[Checkstyle](http://checkstyle.sourceforge.net/)|checkstyle|xml|xml|
 |[Cppcheck](https://github.com/danmar/cppcheck)|cppcheck|xml|xml|
+|[Ktlint](https://github.com/pinterest/ktlint)|ktlint|xml|xml|
 |[Pylint](https://github.com/PyCQA/pylint)|pylint|parseable, json|parseable|
 |[RuboCop](https://github.com/rubocop-hq/rubocop)|rubocop|clang, json, simple|clang|
