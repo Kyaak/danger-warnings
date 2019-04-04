@@ -3,17 +3,11 @@
 require_relative 'parser'
 require_relative '../reporter/issue'
 require_relative '../helper/severity_util'
+require_relative '../const/severity'
 
 module Warnings
   # Parser class for cppcheck 'xml' formatted reports.
   class CppcheckXmlParser < Parser
-    SEVERITY_ERROR = 'error'
-    SEVERITY_WARNING = 'warning'
-    SEVERITY_STYLE = 'style'
-    SEVERITY_PERFORMANCE = 'performance'
-    SEVERITY_PORTABILITY = 'portability'
-    SEVERITY_INFORMATION = 'information'
-
     def parse(file)
       xml = xml(file)
       return if xml.nil?
@@ -50,20 +44,21 @@ module Warnings
 
     # Convert cppcheck xml severity to danger::warnings severity symbol.
     #
+    # @param [String] severity Cppcheck severity level.
     # @return [Symbol] Warnings severity symbol.
     def to_severity(severity)
       case severity.downcase
-        when SEVERITY_ERROR
-          SeverityUtil::HIGH
-        when SEVERITY_WARNING,
-          SEVERITY_PERFORMANCE,
-          SEVERITY_PORTABILITY
-          SeverityUtil::MEDIUM
-        when SEVERITY_INFORMATION,
-          SEVERITY_STYLE
-          SeverityUtil::LOW
+        when Severity::ERROR
+          Severity::HIGH
+        when Severity::WARNING,
+          Severity::PERFORMANCE,
+          Severity::PORTABILITY
+          Severity::MEDIUM
+        when Severity::INFORMATION,
+          Severity::STYLE
+          Severity::LOW
         else
-          SeverityUtil::LOW
+          Severity::LOW
       end
     end
   end
